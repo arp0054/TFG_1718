@@ -1,0 +1,371 @@
+\apendice{Plan de Proyecto Software}
+
+\section{Introducción}
+En esta sección voy a detallar como se fue planificando todo el proyecto. Como gestor de tareas he utilizado sprintometter, donde he ido apuntando en detalle las tareas de cada sprint, así como la duración de estas.
+Como he escrito en la memoria de este proyecto, he utilizado la metodología SCRUM \cite{SCRUM} como metodología ágil. Esa metodología ágil es adaptativa, por lo que no es totalmente estricta. El objetivo de cada sprint era conseguir una funcionalidad nueva, la cual se pudiera ver y enseñar al cliente (tutor). Las iteraciones entre cada sprint duraron entre 1 y 3 semanas. A continuación especificaré cada fase de cada sprint.
+
+\section{Planificación temporal}
+Como hemos mencionado en el apartado de introducción, especificaremos los periodos y las tareas realizadas en cada sping. Este proyecto lo hemos dividido en 10 sprints que detallaremos a continuación.
+
+\subsection{Sprint 1: 01/02 – 13/02}
+\subsubsection{Tareas}
+\begin{itemize}
+	\item Reuniones con tutor para especificación de requisitos.
+
+	\item Estudio de herramienta para realizar el proyecto.
+
+	\item Prototipo básico en papel de la herramienta.
+
+\end{itemize}
+\subsubsection{Backlog}
+Esta iteración consta básicamente de negociaciones con el tutor y obtención de información para realizar el proyecto.
+En primer lugar, se nos presenta el proyecto, en el cual sólo teníamos una breve descripción, y desarrollamos las ideas para saber qué estamos buscando y qué queremos hacer.
+En principio el proyecto iba a ser programado únicamente en PHP, pero investigamos que se tenían que procesar una cantidad muy alta de datos, y que PHP no es una opción viable por lo que se decide realizar el proyecto en javascript, y que sea la máquina cliente la encargada de realizar todo el procesamiento de ficheros.
+
+ 
+
+\subsection{Sprint 2: 23/02-20/02}
+\subsubsection{Tareas}
+\begin{enumerate}
+	\item Creación de clases de extracción de datos.
+	\item Aplicación prototipado con morris.js
+\end{enumerate}
+ 
+\subsubsection{Backlog}
+
+En esta fase del proyecto se realiza un desarrollo primitivo de las clases de extracción de datos con un ejemplo totalmente inventado (aleatorio) por nosotros al disponer de ejemplos reales. Entre los ejemplos creados, éstos son cargados por ruta absoluta por javascript por lo que aún no es necesario un servidor PHP. 
+Estos ficheros cargados de forma manual por javascript son:
+\begin{itemize}
+	\item Ficheros con tramas de datos.
+	\item XML que contiene la disposición de los datos.
+\end{itemize}
+
+También creamos la página principal index.html, en la cual se va a desarrollar de forma gráfica todo el proyecto.
+El tutor (cliente) ya puede ver la extracción y la disposición de los datos en el modo de depuración 
+
+\subsection{Sprint 3: 20/02-27/02}
+\subsubsection{Tareas}
+Realizar correcciones en la forma de extracción de datos.
+\subsubsection{Backlog}
+\begin{itemize}
+	\item Documentar los requisitos.
+	\item Reunión con el cliente (tutor) para mostrar los resultados.
+
+\end{itemize}
+
+En este sprint, básicamente consistió en la validación y corrección de datos de la parte crítica del proyecto que sería la de los datos.
+También se desarrollan y generan nuevos requisitos con respecto a los iniciales para dar fuerza al proyecto. Donde destacan toda la funcionalidad añadida a las gráficas deseada por el cliente. 
+Entre la detección de posibles problemas, comprobamos que la aplicación funciona de forma asincrona, y hay que forzar sincronismos para que funcione correctamente (carga de ficheros).
+
+\subsection{Sprint 4: 27/02-13/3}
+\subsubsection{Tareas}
+\begin{itemize}
+	\item Graficar datos.
+
+	\item Añadir spinners entre las distintas pantallas de la aplicación.
+
+\end{itemize}
+
+\subsubsection{Backlog}
+\begin{itemize}
+	\item Añadida carga de ficheros por ajax de forma sincrona.
+
+	\item Añadidos listener a elementos HTML
+
+	\item Restructuración de las clases de extracción de datos.
+
+\end{itemize}
+
+Entre las distintas herramientas para graficar, seleccionamos la librería más completa: Highcharts que cumple varios requisitos a priori del proyecto, creando nuevas clases.
+
+Como habíamos adelantado en el sprint anterior realizamos una restructuración de las clases, para que podamos adaptar la lectura síncrona de ficheros y poder adaptar los datos de la biblioteca a una biblioteca en particular.
+
+En la carga de ficheros, realizamos una lectura síncrona gracias a ajax forzando el sincronismo.
+Entre los distintos elementos, modificamos el prototipado anterior y creamos uno nuevo, donde habrá dos pantallas: una para seleccionar el fichero XML por defecto o uno nuevo, y otro para ver la gráfica. 
+
+Creamos un spinner intermedio mientras se procesa dicho fichero. También detectamos que hay casos anómalos donde hay picos de datos, que no corresponden a la realidad.
+
+\subsection{Sprint 5: 13/03-03/04}
+\subsubsection{Tareas}
+
+\begin{itemize}
+	\item Mapeo de directorios por PHP.
+
+	\item Selección previa de ficheros en la pantalla de carga.
+
+
+\end{itemize}
+\subsubsection{Backlog}
+\begin{itemize}
+	\item Muestra spinner de carga más llamativo.
+
+	\item Corrección automática de tramas.
+
+	\item Mejora de interfaz gráfica.
+
+	\item Detectamos que hay casos anómalos donde en los datos que se nos han pasado, no son correctos, y procedemos a repararlos, reparando la fecha de estos (el segundero no aumentaba correctamente).
+
+	\item Procedemos a leer los ficheros de la máquina dinámicamente, (antes forzabamos la lectura dando las rutas absolutas) a través de PHP.
+
+	\item Realizamos pequeñas correcciones a nivel visual y cargamos la carga inicial de la aplicación por otra donde podamos seleccionar con qué ficheros queremos extraer las bibliotecas (si seleccionábamos todos en principio la carga era muy alta).
+
+\end{itemize}
+
+
+En esta iteración detectamos las limitaciones de la librería de pago, y tenemos que dar un paso atrás y cambiar de librería gráfica por lo que nos supone en iteraciones futuras una carga más de trabajo.
+
+
+\subsection{Sprint 6: 03/04-10/04}
+En esta iteración realizamos buena cantidad de los requisitos pedidos por el tutor, entre los cuales programamos los siguientes cambios, con su correspondiente explicación:
+
+\subsubsection{Tareas}
+\begin{itemize}
+	\item Migrar de librerías a chartjs. Creación y modulación de las clases para poderse aplicar un graficado correcto.
+
+	\item Añadir funcionalidad de un diezmado simple para que las gráficas vayan mucho más fluidas.
+
+	\item Crear debajo del gráfico, un gráfico maestro.
+
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Backlog}
+\begin{itemize}
+	\item Mejorar las clases (más métodos) de opcionesGrafica y opcionesVariable del paquete de gráficas para poder aplicar a posteriori cambios en paneles de gráfica o paneles de variable.
+
+	\item Añadir un  atributo de grosor de linea para gráficas con muchos datos. 
+
+	\item Adaptar  funcionalidad para que los datos sacados de la biblioteca funcionen con la nueva librería.
+
+	\item Arreglar bugs añadiendo estilo al canvas. Arreglado bug del solapmiento de capas inyectando HTML. Añadida función de zoom gracias al plugin.
+
+	\item Añadir funcionalidad para que cuando desplacemos el ratón por la gráfica te haga grande el punto más cercano y te grafique en un label su valor (funcionalidad que venía con la gráfica). Programada funcionalidad (no venía en la herramienta gráfica) para que cuando hagamos click podamos obtener el valor del eje x e y del punto más cercano.
+
+	\item Añadir funcionalidad en la que te calcula el punto más cerca del click del ratón, y los puntos de las otras variables que están a la izquierda de dicho punto
+
+\end{itemize}
+
+
+
+
+\subsection{Sprint 7: 10/04-17/04}
+En esta iteración programamos distintas tareas a realizar como la anterior, en la busqueda de cumplir todos los requisitos:
+\subsubsection{Tareas}
+\begin{itemize}
+	\item Creación de tabla. 
+
+	\item Añadidos botones para la gráfica temporal y una caja temporal que señalará el tiempo graficado
+
+\end{itemize}
+
+
+\subsubsection{Backlog}
+
+\begin{itemize}
+\item Funcionalidad a los clicks de la gráfica. 
+
+\item Funcionalidad a los botones de selección display de la gráfica.
+
+\item Aplicada funcionalidad de reproducción en la ventana temporal. 
+
+\item Arreglados algunos bugs en la reproducción.
+
+\item Arreglados bugs visuales/diezmado.
+
+\end{itemize}
+
+
+Como sucede en reuniones anteriores con el cliente (tutor) se observan fallos, y surgen nuevos cambios que tienen que ser solucionados en sprints posteriores.
+\subsection{Sprint 8: 17/04-1/05}
+
+Este sprint lo usamos básicamente para documentar y arreglar diversos bugs.
+
+\subsubsection{Tareas}
+\begin{itemize}
+	\item Documentación.
+
+	\item Añadir funcionalidad de retroceder y avanzar en el modo reproductor
+
+\end{itemize}
+
+
+\subsubsection{Backlog}
+
+\begin{itemize}
+	\item Arreglar bug cuando había 3 variables o más. 
+
+	\item Añadir funcionalidad de pintar puntero.
+
+	\item Reparar bug cuando había 3 variables o más.
+
+	\item Reparar bug en el que se necesitaban al menos 2 variables para mostrarse la tabla
+
+\end{itemize}
+
+
+
+
+\subsection{Sprint 9: 1/05-20/05}
+
+El objetivo de esta iteración es acabar la aplicación. Para ello marcamos distintas tareas a realizar:
+\subsubsection{Tareas}
+\begin{itemize}
+\item Creación de lógica de intervalos.
+
+\item Aplicación de una interfaz de filtros.
+
+\item Añadir filtros a las gráficas
+
+\item Añadir búsquedas a las gráficas.
+
+
+\item Importación de vistas a través de un JSON.
+
+\item Exportación de vistas a través de un JSON.
+
+
+\item Creación de gráficas XY.
+
+\item Creación de vistas para las gráficas y variables.
+\end{itemize}
+\subsubsection{Backlog}
+\begin{itemize}
+\item Creación de interfaces gráficas para las vistas.
+
+\item Corrección de errores, mejora gráfica.
+\end{itemize}
+
+\subsection{Sprint 10: 20/05-2/07}
+
+
+El objetivo de esta iteración es preparar la entrega del proyecto.
+Esta iteración básicamente se basará en documentar el proyecto, mejorar algún detalle de la aplicación y reparar bugs.
+Se alarga hasta el 2/07 para mejorar la calidad de la documentación.
+
+\subsubsection{Tareas}
+\begin{itemize}
+\item Acabar memoria de la documentación.
+
+\item Acabar anexos de la documentación.
+\end{itemize}
+\subsubsection{Backlog}
+\begin{itemize}
+
+\item Preparar formato físico para la entrega de la documentación.
+
+\item Arreglar bugs conocidos de la aplicación.
+
+\item Correcciones en el código y documentación de este.
+\end{itemize}
+
+\section{Estudio de viabilidad}
+Este estudio se hace para ver si realmente es viable el desarrollo de la aplicación.
+El estudio se reparte en dos tipos de viabilidades:
+\begin{itemize}
+	\item Económica: donde se considera si una vez realizado el proyecto se considera rentable o no, es decir, que si el beneficio que se puede sacar por la herramienta es mayor al coste del desarrollo.
+
+	\item Legal: donde estudiamos si nuestra herramienta viola alguna legalidad en el transcurso del desarrollo del programa. 
+
+\end{itemize}
+
+
+\subsection{Viabilidad económica}
+Es el apartado, donde se desarrolla el análisis económico. Como hemos mencionado antes, consideramos el beneficio que se puede sacar por la herramienta es mayor al coste del desarrollo.
+
+\subsubsection{Análisis de costes.}
+Coste de personal: 
+En este proyecto hemos considerado que ha trabajado una persona durante 4 meses: Febrero, Marzo, Abril, Mayo. Considerando que se han trabajado 6 horas diarias , 20 dias del mes, y que el desarrollador de este proyecto, es un programador junior sin experiencia, el cual puede cobrar 12 euros/hora. El coste derivado por el desarrollo de este proyecto es el siguiente:
+
+$12 euros / hora * 6 horas/ dia = 72  euros / diarios$
+
+$72 euros / dia * 5 dias / semana  = 360 euros/ semanales$
+
+$360 euros /semana * 4 semanas = 1440 euros / mes$
+
+$1440 euros/mes * 4 meses= $ 5760 euros de salario bruto por el equipo de desarrollo.
+
+A Esto habría que sumarle por parte del empleador los costes derivados de la seguridad social, que dependerán de cada caso.
+
+
+
+
+\subsubsection{Costes de hardware}
+El coste aproximado del equipo con el que se ha derralloado el trabajo es de 500 euros. 
+(Ordenador de sobremesa con intel i5, 6 GB Ram, 256 GB SSD). Por tanto aplicando la siguiente formula y que según la ley de impuesto de sociedades de España, la vida útil del harware es de entre 4-8 años, y nosotros estimamos que son 6 años, obtenemos que:
+
+Amortización=$( V0 – Vr ) /  Vida util$
+
+Amortización = $500 euros / (12*4) meses = 10,42 euros / mes.$
+
+Como la duración de este proyecto a sido de 4 meses, el coste total del hardware ha sido:
+
+Coste de hardware = $10,42 euros / mes * 4 meses=$ 41,68 euros brutos
+
+\subsubsection{Costes de software}
+Este apartado es el coste de todas las licencias de software utilizados para la realización del proyecto. Contemplando que se han utilizando licencias de estudiantes, MIT, y gratuitas, salvo en Microsoft Windows, y que este tiene una licencia comercial de 120 euros. 
+
+El coste total respecto al software es de:
+
+Amortización=$(V0–Vr)/$Vida útil
+
+Amortización = $120 euros / (12*4) meses = 2.5 euros / mes.$
+
+Como la duración de este proyecto a sido de 4 meses, el coste total del software ha sido:
+
+Coste de software =$ 2.5 euros / mes * 4 meses=$ 10  euros brutos.
+\subsubsection{Coste total}
+Teniendo en cuenta estos factores (recordamos que el gasto de la seguridad no lo hemos estimado porque depende de cada caso, pero se tiene que contar igual):
+
+Coste total bruto=  5760 euros $+$ 10 euros $+$ 41.68 euros $=$ 5811.68 euros
+
+Suponiendo que el coste de la seguridad social de esa persona se estime de la siguiente forma:
+
+TIPOS DE COTIZACIÓN RÉGIMEN GENERAL EJERCICIO 2017 - ORDEN ESS/106/2017, de 09/02 (BOE del 11/02)
+ 
+Para el empresario:
+
+23.60 por ciento en contingencias comunes.
+
+0.60 por ciento en formación profesional.
+ 
+7.70 por ciento en concepto de desempleo.
+
+Total  31.9 por ciento
+
+Por tanto el coste total bruto real= $5760 euros$ + $(5760*0,319) euros$ + $41.68+ 10 = 7649,12$ euros
+
+
+\subsubsection{Análisis coste-beneficio.}
+
+En este apartado, estimamos los beneficios de la empresa que utilice esta herramienta. Suponiendo que instalando esta  herramienta en cada caja negra de cada máquina, y  suponiendo que cada instalación contará como una licencia. 
+
+También suponiendo que la empresa propietaria estime que el producto añadido de tener esta herramienta de monitorización es de 5 euros al año por cada máquina (la librería hightstocks cobraba 80 euros su licencia anual).
+Y suponiendo que esta aplicación se instale en una flota de 1000 robots obtendremos los siguientes números:
+
+Ingresos por cada unidad = 5 euros / año.
+
+Número de máquinas esta aplicación = 1000.
+
+Ingresos anuales= 1000*5 = 5000 euros anuales
+
+Recuperación inversión = 7649.12 /  5000 = 1.53 años para recuperar la inversión la empresa. 
+
+A partir del año y medio aproximadamente, la empresa compradora empezará a generar beneficios con la aplicación.
+
+\subsection{Viabilidad legal}
+Este apartado fue un problema en nuestro proyecto. En principio, la aplicación se iba a desarrollar en Hightstocks. Una de las razones de usar esta librería respecto a las demás es que muchos de los requisitos negociados con el tutor se cumplían.
+
+\imagen{oem}{El precio que se nos ofreció para usarlo en hardware fue de 80 euros al año por dispositivo.}
+
+
+Aunque la licencia fuera gratuita si lo usara de forma no comercial, no podría instalarlo en ninguna máquina ni probarlo por políticas de la empresa, ya que la propiedad del dispositivo es de la empresa. 
+
+Por ello, me puse en contacto con la empresa Highsoft, para ver que precios ofrecían por cada licencia. El precio que me calcularon ellos fue de 80 euros /año por cada máquina que se instalara, con un mínimo de 30 máquinas. 
+
+Cómo no se trataba de un proyecto de empresa, y el objetivo del proyecto era que funcionara en una máquina real, por lo que se decidió buscar otro tipo de librería que cumplieran los requisitos del proyecto, y se seleccionó Chartjs.org que contaba licencia MIT, lo cual implicaba que podía dar uso y disfrute de la librería gratuitamente con muy pocas limitaciones.
+
+La licencia de esta aplicación esta bajo una "licencia de creative commons reconocimiento-Sin obraDerivada 4.0 internacional", la cual no se permite que se compartan las adaptaciones de la obra, pero si que se permite la reproducción, distribución y comunicación publica de la obra, incluso para fines comerciales.
