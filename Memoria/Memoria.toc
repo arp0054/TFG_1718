@@ -20,5 +20,7 @@
 \contentsline {subsection}{Metodolog\IeC {\'\i }a de gesti\IeC {\'o}n y herramientas asociadas}{11}{section*.13}
 \contentsline {subsection}{Patrones de dise\IeC {\~n}o empleados}{11}{section*.14}
 \contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{13}{chapter*.15}
+\contentsline {section}{\numberline {5.1}Parte Software}{13}{section.5.1}
+\contentsline {section}{\numberline {5.2}Parte Hardware}{13}{section.5.2}
 \contentsline {chapter}{Trabajos relacionados}{15}{chapter*.16}
 \contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{17}{chapter*.17}
