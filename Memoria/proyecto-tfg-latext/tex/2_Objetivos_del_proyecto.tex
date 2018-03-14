@@ -1,0 +1,67 @@
+\capitulo{2}{Objetivos del proyecto}
+
+\section{Objetivos generales}
+
+En esta memoria, se desarrolla una herramienta de graficado, con carácter de herramienta de soporte, para ser empleado por técnicos especializados para monitorear variables. Este proyecto, ha sido aplicado directamente a un caso práctico para monitorear variables de vehículos de guiado autónomo (AGV).
+
+\section{Objetivos funcionales}
+
+Los objetivos funcionales de esta aplicación son:
+\begin{itemize}
+	\item El técnico o ingeniero, en adelante usuario, podrá conectarse a través de la red que crea el dispositivo con linux embebido, en adelante caja negra o datalogger, con un móvil, ordenador o tablet al dispositivo, en el que accediendo a una ip predefinida (192.168.5.1) podrá dar uso y disfrute de la aplicación.
+
+	\item El usuario seleccionará los ficheros donde quiere obtener los datos deseados a monitorear.
+
+	\item El usuario en todo momento podrá cargar otro XML, y obtener nuevos datos junto a nuevas variables de los ficheros seleccionados.
+	
+	\item El usuario podrá seleccionar el tipo de gráfica que quiere visualizar, donde, podrá elegir en tipo de gráfica temporal o gráfica XY, con distintas opciones únicas dentro de la gráfica.
+
+	\item El usuario podrá seleccionar la vista de variables, seleccionando una variable y otorgándole ciertos atributos como umbrales o escalados de los datos, así como ciertos atributos dentro de la gráfica, como puede ser el color dentro de la gráfica.
+	\item Los 2 puntos anteriores serán reconocidos como vistas, que el usuario podrá importar y exportar para posibles ficheros, o para graficar únicamente ciertas gráficas.
+
+\item Aparte, la herramienta tiene un modo de graficado rápido en el cual únicamente nos dirá que tipos de variables queremos ver, así como los distintos ficheros, y el tipo de gráfica, el cual nos generará una vista por defecto, la cual, podremos modificar o personalizar en todo momento.
+
+\item Tanto en la gráfica temporal, como en la XY, tendremos una gráfica maestra, o gráfica temporal, la cual veremos en pequeño, debajo de la gráfica principal. Esta nos permitirá seleccionar periodos de tiempo deseados, así como la evolución de la gráfica en el tiempo a través de la función de reproducción. La cual nos permitirá observar la evolución en el tiempo, con los fragmentos deseados por él.
+
+\imagen{ventanaTemporal}{Ventana temporal resultante del proyecto}
+
+\item En todo momento la gráfica principal mostrará un máximo de 700 puntos, y la gráfica maestra o temporal un máximo de 300. Como en la mayoría de casos el número deseado de casos el número de variables es superior a estos números, la herramienta realizará un diezmado. Cada vez que se aplique un zoom, los intervalos de tiempo serán diferentes, por lo tanto, el diezmado también lo será. 
+
+\item Únicamente en la gráfica temporal, tendremos a nuestra disposición 2 cursores, que podremos situar en la gráfica a nuestro gusto. Cuando se sitúen los 2 dentro de la gráfica, saldrá una tabla comparativa de los valores en el eje Y, capturando los valores de cada variable en cada uno de los 2 cursores, y comparando los valores en cada instante de tiempo que está situado el cursor.
+
+\imagen{cursores}{Imagen con dos cursores con su respectiva tabla del proyecto.}
+
+\item La herramienta gráfica tiene una búsqueda de datos, en la cual, tras realizar una consulta, te colocará un cursor una vez encontrado el primer valor. A partir de ese cursor se realizarán distintas búsquedas con referencia de ese cursor. Esta funcionalidad tiene el añadido que te realizará un zoom automático para que veas que ese punto existe, puesto que es posible que debido al diezmado no esté visible ese punto.
+
+\item Además, tendremos un filtraje de datos, en la cual la herramienta solo te graficará los puntos que cumplan la consulta.
+
+
+\end{itemize}
+
+
+
+
+\section{Objetivos tecnológicos}
+
+\begin{itemize}
+
+\item Los objetivos tecnológicos utilizados en esta aplicación han sido:
+
+\item La aplicación tenía que tener la menor carga posible para el Datalogger.
+
+\item Utilización de bootstrap\cite{Bootstrap} para lograr que la aplicación web sea responsive, de tal manera que se pueda utilizar tanto en plataformas de escritorio como web.
+
+\imagen{responsive}{Diagrama responsive. Fuente: http://johnpolacek.github.io}
+
+\item Desarrollo de la aplicación con el formato single-page application, de tal manera que ofrecemos desde un único sitio web toda la herramienta de principio a fin\cite{SPA}, simulando una aplicación de escritorio para los usuarios y por ello dando una sensación de aplicación compacta y fluida.
+\item PHP 5.5 para mapear los ficheros del dispositivo.
+
+\item Ejecución enteramente en javascript, para que el dispositivo solo tenga que enviar datos al dispositivo cliente, salvo cuando se realiza el mapeo de ficheros en PHP, ofreciendo por tanto seguridad en el contenido de los archivos y apenas dando carga al dispositivo.
+\item Página moderna gracias a la utilización de HTML5
+\item Página dinámica, por la cual puede interactuar el usuario, gracias a la utilización de la liberia de JQUERY.
+\imagen{chartjs}{Portada de la página oficial chartjs}
+
+\item Utilización de librería de gráficos (Chartjs) en la cual podamos añadir nuevas funcionalidades a las ya disponibles.
+
+
+\end{itemize}

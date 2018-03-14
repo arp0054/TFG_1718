@@ -1,0 +1,56 @@
+\apendice{Especificación de diseño}
+
+\section{Introducción}
+En este apartado hablaremos del diseño del proyecto. Para ello nos basaremos en diagramas de clases en UML. Para facilitar legibilidad omitiremos ciertos métodos y atributos de las clases que a continuación vamos a mostrar.
+\section{Diseño de datos}
+En primer lugar vamos a definir el diseño de los datos.
+\subsection{Configuración}
+Por un lado, tendremos las estructuras correspondientes a la creación del archivo configuración, que es creado a partir del parseo del XML. Este archivo de configuración está estructurado en distintas clases, que permiten una posterior modificación en el caso que el XML en el que está estructurado evolucione.
+\imagen{Clases1}{Diagrama de clases de configuración}
+
+\subsection{Biblioteca}
+
+Por otro lado, tenemos la creación de la biblioteca aplicando el archivo de configuración antes mostrado. Para ello creamos una distinta estructurada en distintas clases donde guardaremos las distintas variables, como los datos creados en ellos.
+
+\imagen{Clases2}{Diagrama de clases de biblioteca}
+
+
+\subsection{Cargador de ficheros}
+
+Por último lugar tendremos el cargador de ficheros, que engloba todas las estructuras de datos anterior mencionadas.
+\imagen{Clases3}{Diagrama de clases del fileloader}
+
+
+\section{Diseño procedimental}
+En este apartado, vamos a realizar una especificación más detallada del funcionamiento de ciertas funcionalidades.
+Para ello diversificamos:
+
+\begin{itemize}
+	\item Comportamientos de la tabla y botones asociadas.
+	\item Interfaz gráfica de las vistas gráficas.
+	\item Búsqueda y filtrados.
+\end{itemize}
+
+\subsection{Comportamientos de la tabla y botones asociadas.}
+En este caso, mostramos los diagramas de clase asociados a los comportamientos de los elementos de la gráfica así como su creación.
+\imagen{Clases4}{Diagrama clases tabla y botones asociadas}
+\subsection{Interfaz gráfica de las vistas gráficas.}
+En este apartado mostramos los diagramas de clases correspondientes a la creación de la interfaz gráfica de las vistas (Creación y modificación de vistas).
+Todas ellas reutilizan el DOM del modal con un patrón decorador.
+
+\imagen{Clases5}{Diagrama de clases vistas gráficas}
+\subsection{Búsqueda y filtrados.}
+Diagrama de clases correspondiente al funcionamiento de la búsqueda y filtrados de la gráfica.
+En primer lugar se calculan los intervalos que cumplen las sentencias, y luego se calculan los puntos que cumplen dichos intervalos tanto para la búsqueda como para los filtrados.
+\imagen{Clases6}{Diagrama clases Búsqueda y filtrados}
+
+
+\section{Diseño arquitectónico}
+
+En este apartado, tendremos un diagrama más general del conjunto de los elementos de la aplicación de visualización de variables.
+\imagen{Clases7}{Diagrama clases general}
+ 
+
+
+
+

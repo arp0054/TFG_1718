@@ -1,0 +1,182 @@
+\apendice{Especificación de Requisitos}
+
+\section{Introducción}
+
+El siguiente anexo, tiene como objetivo mostrar las distintas características y necesidades funcionales que se tienen que desarrollar en la aplicación, así como las no funcionales. Dichos requisitos se reflejarán en un diagrama de casos de usos.
+
+\section{Objetivos generales}
+
+A continuación los requisitos funcionales de la aplicación:
+
+\subsection{Traductor de tramas a variables informativas}
+La traducción se define en un fichero XML.
+
+El formato tipo seria el siguiente:
+
+
+$trama xxx1$
+
+$variable xxx; bitIni xxx;bitFin xxx; Formato xxx$
+
+$Variable yyy; bitIni xxx;bitFin xxx; Formato xxx.$
+
+$trama xxx2$
+
+Las variables pueden mapearse al menos en los siguientes formatos:
+
+BOOL,UInt8,Int8,UInt16,Int16,UInt32,Int32. 
+
+Todas ellas con el formato littleEndian.
+
+\subsection{Visualización de variables}
+Tienen que poder abrirse varios ficheros a la vez. 
+
+El usuario podrá visualizar el listado de ficheros disponibles e indicará con qué ficheros quiere trabajar.
+
+Al añadir cada ventana indicamos el tipo de representación entre:
+
+\begin{enumerate}
+	\item Representación temporal
+	\item Gráficas tipo XY (2 Variables)
+\end{enumerate}
+
+Por cada ventana de visualización se nos permite añadir varias gráficas y modificar ciertos parámetros en función del tipo de representación:
+
+Representación temporal:
+
+\begin{itemize}
+	\item Variable asociada
+	\item Color de representación
+	\item Escala
+	\item Valor de referencia
+	\item Tipo de gráfica: Curva, texto, cronograma...
+\end{itemize}
+
+Gráficas tipo XY:
+
+\begin{itemize}
+	\item Variable asociada a X.
+	\item Variable asociada a Y.
+	\item Tipo de puntero de dibujo: color.
+\end{itemize}
+
+
+\subsection{Cursores}
+
+En cada ventana se pueden añadir 2 cursores. Los cursores se pueden mover con el ratón. Se indicará el valor de las variables en las posiciones que indiquen los cursores. Es interesante poder hacer operaciones con los valores de los cursores (sumas, restas...). 
+
+
+\subsection{Manejo de ventana temporal}
+
+Esto es valido para todos los tipos de gráficas no sólo para la representación temporal.
+
+El usuario indicará cuanto tiempo quiere visualizar en la misma ventana (zoom horizontal) y el instante inicial de visualización.
+
+Ambos valores podrán cambiarse con barra de desplazamiento.
+
+Los datos se ajustarán para que puedan ser visualizados en el tamaño de la ventana sin sufrir deformación.
+
+Modo película: botón PLAY, PAUSE, STOP y PASO A PASO. Pulsando en el botón play el instante inicial de la ventana temporal se irá incrementando hasta que se llegue al final de los ficheros. Con el botón PAUSE se parará. Con el botón STOP volverá al estado inicial del gráfico. Se podrá modificar la velocidad de reproducción.
+
+
+\subsection{Diezmado de datos}
+
+Si el tamaño de la ventana es tal que hay mas datos que pixeles posibles para representar se realizará un diezmado de la señal, es necesario que la página vaya fluida por lo que el programador tiene que estimar hasta cuantos puntos puede gráficar.
+
+
+\subsection{Filtraje de datos}
+
+En las gráficas temporales, se deben poder aplicar filtros de datos.
+
+Es decir, representar sólo aquellos tramos de las señales que cumplan ciertas condiciones.
+
+Para cada gráfica se podrán seleccionar un conjunto de condiciones (en formato textual tipo SQL) que deben cumplir cada tramo de señal para que sea visualizado. 
+Por ejemplo:
+Voltaje$>30$ AND Temperatura$<15$. 
+
+Sólo se visualizarán los tramos en los que se cumplan simultáneamente esas condiciones.
+
+
+
+\subsection{Búsqueda de datos}
+
+Inspirado en el modo de filtraje de datos anterior. 
+
+Mediante la búsqueda de datos se puede localizar el siguiente o el anterior valor temporal en el que se cumplan un conjunto de condiciones (especificadas en un formato textual similar al SQL). Y se posicionara el cursor en ese valor. De no verse ese valor por el diezmado, se realizará un zoom automático.
+
+
+\subsection{Vistas}
+
+Se crearán vistas con las variables y gráficas creadas, de tal forma, que se pueda graficar la misma variable con distintas opciones y poder asignar un nombre a cada variable, con las opciones asociadas a dicha variable y a dicha gráfica. Por ejemplo, si a esa variable queremos representarla de dos formas, con o sin escalado.
+Aparte de la creación de vistas, se deberán poder exportar e importar independientemente de los ficheros que se apliquen.
+
+\section{Catalogo de requisitos}
+
+\subsection{Requisitos funcionales}
+
+
+\begin{itemize}
+	\item R1. Traducción a variables informativas
+
+	\item R2. Creación de vistas.
+	\item R3. Visualización de variables
+	\item R4. Manejo de cursores y tablas
+	\item R5. Manejo de ventana temporal
+
+	\item R6. Búsqueda de datos.
+
+	\item R7. Filtro de datos.
+
+	\item R8. Importar vistas.
+
+	\item R9. Exportar vistas.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Requisitos no funcionales.}
+
+A continuación los requisitos no funcionales:
+
+\begin{itemize}
+	\item La aplicación tiene que ser compatible con las versiones de navegador más utilizadas.
+
+	\item La aplicación se tiene que poder ejecutar tanto en móvil como en ordenador con un diseño responsive.
+
+	\item El formato del archivo de configuración de las variables informativas debe ser un xml.
+
+	\item El formato de importación y exportación debe ser un JSON.
+
+	\item El proyecto deberá funcionar con los minimos recursos posibles del datalogger.
+
+	\item El proyecto se podrá expandir en el futuro, por lo que el código tiene que ser debidamente comentado.
+
+\end{itemize}
+
+
+
+
+\section{Especificación de requisitos}
+
+\imagen{rf1}{Requisito funcional 1}
+\imagen{rf2}{Requisito funcional 2}
+\imagen{rf3}{Requisito funcional 3}
+\imagen{rf4}{Requisito funcional 4}
+\imagen{rf5}{Requisito funcional 5}
+\imagen{rf6}{Requisito funcional 6}
+\imagen{rf7}{Requisito funcional 7}
+\imagen{rf8}{Requisito funcional 8}
+\imagen{rf9}{Requisito funcional 9}
+
+\section{Casos de uso}
+A continuación mostramos los casos de usos del proyecto. En principio existe un único actor que podrá realizar todas las funcionalidades disponibles del proyecto.
+
+\imagen{casos_uso}{Casos de uso del proyecto}
