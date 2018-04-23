@@ -17,11 +17,13 @@ private:
 	PuntoDetectado* detect;
 	Procesador pro;
 public:
-	TUI();
+	TUI(Area*);
 	~TUI();
 	Area* getAreas();
 	void setAreas(Area*);
 	PuntoDetectado* getDetectados();
+	void setDetectados(PuntoDetectado*);
+	void setProcesador(Procesador);
 	Procesador getProcesador();
 	bool* hayObjeto(Area*, Procesador);
 };
