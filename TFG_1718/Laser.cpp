@@ -8,7 +8,9 @@
 #include "Laser.h"
 
 Laser::Laser() {
-	// TODO Auto-generated constructor stub
+	datos=NULL;
+	inter=NULL;
+	entrada=NULL;
 
 }
 
