@@ -11,15 +11,15 @@
 
 class Interfaz {
 private:
-	Laser* lasers;
+	Laser laser;
 	int* le;
 public:
 	Interfaz();
 	~Interfaz();
 	int* getLecturas();
-	void setLecturas(int*);
-	Laser* getLaser();
-	void setLaser(Laser*);
+	void setLecturas();
+	Laser getLaser();
+	void setLaser();
 };
 
 #endif /* INTERFAZ_H_ */

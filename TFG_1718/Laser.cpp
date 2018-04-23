@@ -9,7 +9,7 @@
 
 Laser::Laser() {
 	datos=NULL;
-	inter=NULL;
+	inter = new Interfaz();
 	entrada=NULL;
 
 }

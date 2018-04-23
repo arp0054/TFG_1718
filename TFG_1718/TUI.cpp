@@ -6,14 +6,13 @@
  */
 
 #include "TUI.h"
-#include "Area.cpp"
-#include "PuntoDetectado.cpp"
 #include "Procesador.cpp"
 
-TUI::TUI(Area* ar) {
-	areas=ar;
-	detect= new PuntoDetectado[sizeof(areas)]();
+TUI::TUI() {
+	areas=NULL;
 	pro=new Procesador();
+	detect=NULL;
+
 }
 
 TUI::~TUI() {
