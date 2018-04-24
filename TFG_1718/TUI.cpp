@@ -43,5 +43,5 @@ Procesador TUI::getProcesador(){
 	return pro;
 }
 bool* TUI::hayObjeto(Area* as, Procesador pr){
-
+	return true;
 }

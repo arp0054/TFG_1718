@@ -17,7 +17,7 @@ private:
 	PuntoDetectado* detect;
 	Procesador pro;
 public:
-	TUI(Area*);
+	TUI();
 	~TUI();
 	Area* getAreas();
 	void setAreas(Area*);

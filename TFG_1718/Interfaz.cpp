@@ -9,12 +9,26 @@
 #include "Laser.cpp"
 
 Interfaz::Interfaz() {
-	lasers=new Laser[]();
+	laser=new Laser();
 	le= NULL;
 
 }
 
 Interfaz::~Interfaz() {
-	// TODO Auto-generated destructor stub
 }
 
+int* Interfaz::getLecturas(){
+	return le;
+}
+
+void Interfaz::setLecturas(){
+	le= laser.getDatos();
+}
+
+Laser Interfaz::getLaser(){
+	return laser;
+}
+
+void Interfaz::setLaser(){
+
+}
