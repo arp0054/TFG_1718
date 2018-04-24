@@ -6,9 +6,12 @@
  */
 
 #include "TUI.h"
+#include "Procesador.cpp"
 
 TUI::TUI() {
-	// TODO Auto-generated constructor stub
+	areas=NULL;
+	pro=new Procesador();
+	detect=NULL;
 
 }
 

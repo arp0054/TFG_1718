@@ -6,9 +6,11 @@
  */
 
 #include "Interfaz.h"
+#include "Laser.cpp"
 
 Interfaz::Interfaz() {
-	// TODO Auto-generated constructor stub
+	lasers=new Laser[]();
+	le= NULL;
 
 }
 
