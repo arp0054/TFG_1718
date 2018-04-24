@@ -22,8 +22,8 @@ public:
 	Procesador getInstance();
 	Punto* getEntrada();
 	void setEntrada(Punto*);
-	Laser* getEntrada();
-	void setEntrada(Laser*);
+	Laser* getLaser();
+	void setLaser(Laser*);
 	PuntoDetectado* creaObjetoDetect(Punto*);
 };
 

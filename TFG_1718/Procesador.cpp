@@ -8,11 +8,11 @@
 #include "Procesador.h"
 
 Procesador::Procesador() {
-	// TODO Auto-generated constructor stub
-
+	entrada=new Punto[]();
+	lasr=new Laser();
+	instance=NULL;
 }
 
 Procesador::~Procesador() {
-	// TODO Auto-generated destructor stub
 }
 
