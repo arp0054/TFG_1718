@@ -13,17 +13,17 @@
 
 class Procesador {
 private:
-	Punto* entrada;
-	Laser lasr;
-	Procesador instance;
+	Punto* entrada=new Punto[]();
+	Laser lasr=new Laser();
+	Procesador instance=NULL;
 public:
 	Procesador();
 	~Procesador();
 	Procesador getInstance();
 	Punto* getEntrada();
 	void setEntrada(Punto*);
-	Laser* getLaser();
-	void setLaser(Laser*);
+	Laser getLaser();
+	void setLaser(Laser);
 	PuntoDetectado* creaObjetoDetect(Punto*);
 };
 

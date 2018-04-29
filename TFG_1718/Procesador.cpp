@@ -8,11 +8,34 @@
 #include "Procesador.h"
 
 Procesador::Procesador() {
-	entrada=new Punto[]();
-	lasr=new Laser();
-	instance=NULL;
 }
 
 Procesador::~Procesador() {
 }
 
+Procesador Procesador::getInstance(){
+	if (instance==NULL){
+		instance=new Procesador();
+	}
+	return instance;
+}
+
+Punto* Procesador::getEntrada(){
+	return entrada;
+}
+
+void Procesador::setEntrada(Punto* e){
+	entrada=e;
+}
+
+Laser Procesador::getLaser(){
+	return lasr;
+}
+
+void Procesador::setLaser(Laser l){
+	lasr=l;
+}
+
+PuntoDetectado* Procesador::creaObjetoDetect(Punto* p){
+	return NULL;
+}
