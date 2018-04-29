@@ -16,13 +16,12 @@ private:
 	int* datos;
 	Interfaz inter;
 	Punto* entrada;
-	void setInterfaz(Interfaz);
 public:
 	Laser();
 	~Laser();
+	void setInterfaz(Interfaz);
 	Punto* dividirDatos(int*);
 	int* getDatos();
 	void setDatos(int*);
 };
 
-#endif /* LASER_H_ */

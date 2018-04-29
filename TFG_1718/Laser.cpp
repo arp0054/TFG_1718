@@ -6,6 +6,7 @@
  */
 
 #include "Laser.h"
+#include "Interfaz.cpp"
 
 Laser::Laser() {
 	datos=NULL;
@@ -15,6 +16,17 @@ Laser::Laser() {
 }
 
 Laser::~Laser() {
-	// TODO Auto-generated destructor stub
 }
 
+void Laser::setInterfaz(Interfaz inter){
+}
+
+Punto* Laser::dividirDatos(int*){
+	return entrada;
+}
+int* Laser::getDatos(){
+	return datos;
+}
+void Laser::setDatos(int*){
+
+}
