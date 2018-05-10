@@ -9,9 +9,6 @@
 #include "Laser.cpp"
 
 Interfaz::Interfaz() {
-	laser=new Laser();
-	le= NULL;
-
 }
 
 Interfaz::~Interfaz() {

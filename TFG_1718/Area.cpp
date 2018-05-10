@@ -19,8 +19,8 @@ int Area::getId(){
 	return id;
 }
 
-void Area:: setId(int newId){
-	id=newId;
+void Area:: setId(){
+	id=seq_id+1;
 }
 
 bool Area:: getObj(){

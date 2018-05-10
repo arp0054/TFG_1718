@@ -14,12 +14,13 @@ class Area {
 private:
 	Punto limites[4];
 	int id=0;
+	int seq_id=0;
 	bool obj=false;
 public:
 	Area();
 	~Area();
 	int getId();
-	void setId(int);
+	void setId();
 	bool getObj();
 	void setObj(bool);
 	Punto* getLimites();

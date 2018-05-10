@@ -9,16 +9,13 @@
 #include "Interfaz.cpp"
 
 Laser::Laser() {
-	datos=NULL;
-	inter = new Interfaz();
-	entrada=NULL;
-
 }
 
 Laser::~Laser() {
 }
 
-void Laser::setInterfaz(Interfaz inter){
+void Laser::setInterfaz(Interfaz _inter){
+	inter=_inter;
 }
 
 Punto* Laser::dividirDatos(int*){

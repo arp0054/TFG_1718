@@ -13,9 +13,9 @@
 
 class Laser {
 private:
-	int* datos;
-	Interfaz inter;
-	Punto* entrada;
+	int* datos=NULL;
+	Interfaz inter=new Interfaz();
+	Punto* entrada=NULL;
 public:
 	Laser();
 	~Laser();

@@ -6,6 +6,7 @@
  */
 
 #include "Procesador.h"
+#include "Interfaz.cpp"
 
 Procesador::Procesador() {
 }
