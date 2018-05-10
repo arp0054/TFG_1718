@@ -14,11 +14,12 @@
 class Laser {
 private:
 	int* datos=NULL;
-	Interfaz inter=new Interfaz();
+	Interfaz inter=NULL;
 	Punto* entrada=NULL;
 public:
 	Laser();
 	~Laser();
+	Interfaz getInterfaz();
 	void setInterfaz(Interfaz);
 	Punto* dividirDatos(int*);
 	int* getDatos();

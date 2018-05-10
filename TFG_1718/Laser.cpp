@@ -2,7 +2,7 @@
  * Laser.cpp
  *
  *  Created on: 12 mar. 2018
- *      Author: alvarorui
+ *      Author: Alvaro Ruifernández Palacios
  */
 
 #include "Laser.h"
@@ -12,6 +12,10 @@ Laser::Laser() {
 }
 
 Laser::~Laser() {
+}
+
+Interfaz Laser::getInterfaz(){
+	return inter;
 }
 
 void Laser::setInterfaz(Interfaz _inter){
