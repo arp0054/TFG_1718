@@ -22,12 +22,14 @@ void Laser::setInterfaz(Interfaz _inter){
 	inter=_inter;
 }
 
-Punto* Laser::dividirDatos(int*){
+Punto* Laser::dividirDatos(int* datos){
 	return entrada;
 }
+
 int* Laser::getDatos(){
 	return datos;
 }
-void Laser::setDatos(int*){
+
+void Laser::setDatos(int* dat){
 
 }
