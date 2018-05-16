@@ -1,19 +1,24 @@
 \capitulo{4}{Técnicas y herramientas}
 
-Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto. Si se han estudiado diferentes alternativas de metodologías, herramientas, bibliotecas se puede hacer un resumen de los aspectos más destacados de cada alternativa, incluyendo comparativas entre las distintas opciones y una justificación de las elecciones realizadas. 
+Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto. Si se han estudiado diferentes alternativas de metodologías, herramientas, bibliotecas se puede hacer un resumen de los aspectos más destacados de cada alternativa, incluyendo comparativas entre las distintas opciones y una justificación de las elecciones realizadas. \\
+
 No se pretende que este apartado se convierta en un capítulo de un libro dedicado a cada una de las alternativas, sino comentar los aspectos más destacados de cada opción, con un repaso somero a los fundamentos esenciales y referencias bibliográficas para que el lector pueda ampliar su conocimiento sobre el tema.
 
 
 \subsection{Desarrollo de la memoria}
 
 En este aspecto se ha querido emplear LaTeX en contraposición a otros programas de propósito similar como pueden ser Microsoft Word o Open Office Writer ya que esta aplicación nos permite una mayor cantidad de posible acciones a realizar en el documento a realizar. \\
+
 Por ejemplo, a presentación del documento puede quedar más limpia con esta aplicación ya que el usuario puede manejar el espacio de cada hoja a su antojo y poder disponer de todo él ya que se puede variar los márgenes de las páginas de una forma sencilla (introducción de un comando), lo que en los otros programas antes mencionados resultaría demasiado complicado a demás de ser potencialmente peligroso debido a que, gracias a las acciones automáticas que poseen, podrían desajustar todo el contenido de la hoja en sí haciendo que el usuario tenga que ajustar cada uno de los elementos que antes poseía. LaTeX permite saltarse los márgenes establecidos, por ejemplo, para insertar una imagen. en cuanto a los encabezados, pies de página y numeración de página también se puede realizar con un simple comando. \\
+
 Con todo esto y con la característica de que permite guardar el archivo directamente en PDF sin realizar ninguna conversión (aunque para ello necesite crear algún archivo debido a la compilación) es por la que se ha escogido para este 
 
 \subsection{Desarrollo del código}
 
 Debido a que es un programa familiar debido a su utilización en diferentes asignaturas a lo largo del grado, se ha escogido Eclipse para el desarrollo de esta parte del proyecto. Para poder emplearlo de forma dirigida a este proyecto se ha necesitado integrar este programa con el entorno de desarrollo necesario para la interacción del equipo, más en concreto el programa Eclipse, con el dispositivo  MTX-GTW. \\
+
 Este entorno es el que permitirá la extracción de medidas necesarias para saber la distancia a la que se encuentra un objeto del láser si es que se detecta un objeto. Otra característica de este entorno es la compatibilidad con el sistema operativo, ya que solo es compatible con sistemas Ubuntu y demás distribuciones de Linux. \\
+
 Como ya se ha dicho en la introducción,  para el desarrollo del código se necesita tener la máquina virtual del sistema operativo Ubuntu 16.04. LTS. Este sistema se ha escogido, al igual que Eclipse, debido a que se han empleado en otras asignaturas del grado con lo que resulta familiar para poder trabajar de manera más cómoda y eficiente que si se debiera aprender su modo de empleo. A demás de estas características, se ha escogido por el tema de la compatibilidad explicado anteriormente.\\
 
 \subsection{Planteamiento de las tareas}
@@ -27,6 +32,7 @@ Para este proyecto se ha decidido utilizar la metodología de SCRUM. Esta metodo
 \subsection{Patrones de diseño empleados}
 
 Los patrones de diseño son herramientas reutilizables empleadas para resolver problemas que resultan comunes a la hora tanto de desarrollar el software como el diseño de las interacciones e interfaces empleadas para que el usuario pueda emplear el sistema.\\
+
 En el desarrollo de el sistema en el que se basa el proyecto se han utilizado los siguientes patrones:
 \begin{itemize}
     \item Plantilla: para la realización de las clases \textit{Láser} e \textit{Interfaz} ya que aunque cada interfaz y cada láser tienen ciertas funciones específicas hay una parte de estas que son comunes por lo que, para evitar tener que duplicar código y mejorar la eficiencia de estas partes del sistema.
@@ -36,5 +42,7 @@ En el desarrollo de el sistema en el que se basa el proyecto se han utilizado lo
 \subsection{Herramienta de manejo de láser}
 
 Aunque el manejo de este elemento del proyecto se va a realizar a través de funciones presentes en Eclipse y el código implementado para el proyecto, se va a utilizar una aplicación instalada vía CD llamada UAM Proyect Designer. Esta aplicación, cuando el equipo en el que se instala está conectado al láser, permite observar los datos relacionados con la nube de puntos creada por este aparato al realizar sus operaciones de lectura de su entorno.\\
+
 En este caso esta herramienta será utilizada para la comprobación de que el código desarrollado para alcanzar los objetos del proyecto funciona de forma correcta comparando los resultados obtenidos por el código y la aplicación, los cuales deberían de coincidir.\\
+
 Como bien se ha dicho al principio de esta sección, la aplicación se ha instalado utilizando el CD presente en el paquete en el que el láser se encuentra almacenado. 
