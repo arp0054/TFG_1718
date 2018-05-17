@@ -7,6 +7,7 @@
 
 #include "Laser.h"
 #include "Interfaz.cpp"
+#include "math_utilities.h"
 
 Laser::Laser() {
 }
