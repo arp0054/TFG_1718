@@ -7,6 +7,7 @@
 
 #include "Procesador.h"
 #include "Interfaz.cpp"
+#include "Laser.h"
 
 Procesador::Procesador() {
 }
@@ -26,7 +27,7 @@ Punto* Procesador::getEntrada(){
 }
 
 void Procesador::setEntrada(Punto* e){
-	entrada=e;
+	entrada=lasr.dividirDatos();
 }
 
 Laser Procesador::getLaser(){

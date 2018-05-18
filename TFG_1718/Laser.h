@@ -10,6 +10,10 @@
 #include <stdio.h>
 #include "Interfaz.h"
 #include "Punto.h"
+#include <Urg_driver.h>
+#include <Connection_information.h>
+#include <math_utilities.h>
+#include <iostream>
 
 class Laser {
 private:
@@ -21,7 +25,7 @@ public:
 	~Laser();
 	Interfaz getInterfaz();
 	void setInterfaz(Interfaz);
-	Punto* dividirDatos(int*);
+	Punto* dividirDatos();
 	int* getDatos();
 	void setDatos(int*);
 };
