@@ -7,9 +7,9 @@
 
 #include "Laser.h"
 #include "Interfaz.cpp"
-#include "Urg_driver.cpp"
 
 Laser::Laser() {
+	Connection_information con=new Connection_information("/dev/ttyACM0");
 }
 
 Laser::~Laser() {
@@ -20,7 +20,12 @@ Interfaz Laser::getInterfaz(){
 }
 
 void Laser::setInterfaz(Interfaz _inter){
-	inter=_inter;
+
+	Urg_driver::connection_type_t connection_type_;
+	    string device_ip;
+	    long baudrate_or_port_number_;
+	    device_ip = "192.168.1.37";
+	    baudrate_or_port_number_ = 10940;
 }
 
 Punto* Laser::dividirDatos(){

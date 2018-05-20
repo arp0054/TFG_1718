@@ -10,16 +10,18 @@
 #include <stdio.h>
 #include "Interfaz.h"
 #include "Punto.h"
-#include <Urg_driver.h>
+#include <Urg_driver.cpp>
 #include <Connection_information.h>
 #include <math_utilities.h>
 #include <iostream>
 
 class Laser {
 private:
+	Urg_driver urgd=NULL;
 	int* datos=NULL;
 	Interfaz inter=NULL;
 	Punto* entrada=NULL;
+
 public:
 	Laser();
 	~Laser();
