@@ -40,9 +40,9 @@ int* Laser::getDatos(){
 	            cout << "Urg_driver::get_distance(): " << urg.what() << endl;
 	            return 1;
 	        }
-	        cout<<(urg, data, time_stamp);
+	        datos==(urg, data, time_stamp);
 	    }
-	return datos;
+	return datos[1];
 }
 
 void Laser::setDatos(int* dat){
