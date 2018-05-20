@@ -7,7 +7,7 @@
 
 #include "Laser.h"
 #include "Interfaz.cpp"
-
+#include "Urg_driver.cpp"
 
 Laser::Laser() {
 }
@@ -40,7 +40,7 @@ int* Laser::getDatos(){
 	            cout << "Urg_driver::get_distance(): " << urg.what() << endl;
 	            return 1;
 	        }
-	        print_data(urg, data, time_stamp);
+	        cout<<(urg, data, time_stamp);
 	    }
 	return datos;
 }
