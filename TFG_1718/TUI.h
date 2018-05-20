@@ -13,9 +13,9 @@
 
 class TUI {
 private:
-	Area* areas;
-	PuntoDetectado* detect;
-	Procesador pro;
+	Area* areas=NULL;
+	PuntoDetectado* detect=NULL;
+	Procesador pro= pro.getInstance();
 public:
 	TUI();
 	~TUI();

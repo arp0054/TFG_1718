@@ -16,9 +16,9 @@ private:
 	Punto* entrada=new Punto[]();
 	Laser lasr=new Laser();
 	Procesador instance=NULL;
-public:
 	Procesador();
 	~Procesador();
+public:
 	Procesador getInstance();
 	Punto* getEntrada();
 	void setEntrada(Punto*);

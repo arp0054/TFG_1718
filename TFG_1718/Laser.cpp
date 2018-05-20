@@ -20,12 +20,8 @@ Interfaz Laser::getInterfaz(){
 }
 
 void Laser::setInterfaz(Interfaz _inter){
-
 	Urg_driver::connection_type_t connection_type_;
-	    string device_ip;
-	    long baudrate_or_port_number_;
-	    device_ip = "192.168.1.37";
-	    baudrate_or_port_number_ = 10940;
+	connection_type_ = Urg_driver::Ethernet;
 }
 
 Punto* Laser::dividirDatos(){

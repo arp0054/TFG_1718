@@ -9,9 +9,6 @@
 #include "Procesador.cpp"
 
 TUI::TUI() {
-	areas=NULL;
-	pro=new Procesador();
-	detect=NULL;
 
 }
 
