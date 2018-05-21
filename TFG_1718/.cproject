@@ -28,7 +28,8 @@
 									<listOptionValue builtIn="false" value="/opt/MTX-GATEWAY-BSP-REV.0103/platform-tqma28/sysroot-target/include"/>
 									<listOptionValue builtIn="false" value="/opt/MTX-GATEWAY-BSP-REV.0103/platform-tqma28/sysroot-target/usr/include"/>
 									<listOptionValue builtIn="false" value="/usr/include"/>
-									<listOptionValue builtIn="false" value="/usr/include/c++5.4.0"/>
+									<listOptionValue builtIn="false" value="/usr/include/c++/5.4.0"/>
+									<listOptionValue builtIn="false" value="/TFG_1718/TFG_1718"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1976218462" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>

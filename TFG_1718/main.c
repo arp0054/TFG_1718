@@ -1,23 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <Procesador.cpp>
-#include <Area.cpp>
-#include <Punto.cpp>
+#include "Procesador.h"
+#include "Area.h"
+#include "Punto.h"
+#include "PuntoDetectado.h"
+#include "Laser.h"
 
 Area* setAreas(int n){
-	Area areas[n];
+	Area ars[n];
 	for(int i =0;i<n;i++){
 		Punto lim[4];
 		for(int j=0;j<4;j++){
-			double x;
-			double y;
-			printf("Introduce las coordenadas de limite %i de 4: (formato x,y)", j+1);
-			scanf("%d,%d", x,y);
-			lim[j].setPunto(x,y);
+			lim[j].setPunto();
 		}
-		areas[i].setLimites(lim);
+		ars[i].setLimites(lim);
 	}
-	return areas;
+	return ars;
+}
+
+PuntoDetectado* setDetectados(){
+	Procesador pro;
+	pro=pro.getInstance();
+	Laser l;
+	return pro.creaObjetoDetect(l.dividirDatos());
+}
+
+_Bool hayObjeto(Area a, PuntoDetectado* pts){
+	return 1;
 }
 
 int main (void){

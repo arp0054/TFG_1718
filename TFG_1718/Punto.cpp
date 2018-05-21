@@ -7,6 +7,9 @@
 
 #include "Punto.h"
 #include <math.h>
+#include "iostream"
+
+using namespace std;
 
 
 Punto::Punto(){
@@ -17,16 +20,22 @@ Punto::~Punto(){
 
 }
 
-void Punto::setPunto(double cX,double cY){
-	coorX= cX;
-	coorY= cY;
+void Punto::setCoors(){
+	double x;
+	double y;
+	cout<<"Introduce coordenada x: "<<endl;
+	cin>>x;
+	cout<<"Introduce coordenada y: "<<endl;
+	cin>>y;
+	coorX= x;
+	coorY= y;
 }
 
-double Punto::getPuntoX(){
+double Punto::getCoorX(){
 	return coorX;
 }
 
-double Punto::getPuntoY(){
+double Punto::getCoorY(){
 	return coorY;
 }
 

@@ -6,7 +6,7 @@
  */
 
 #include "Area.h"
-#include "Punto.cpp"
+#include "Punto.h"
 
 Area::Area() {
 }
