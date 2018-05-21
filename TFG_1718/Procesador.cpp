@@ -6,7 +6,7 @@
  */
 
 #include "Procesador.h"
-#include "Interfaz.cpp"
+#include "Interfaz.h"
 #include "Laser.h"
 
 Procesador::Procesador() {

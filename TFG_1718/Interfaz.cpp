@@ -6,7 +6,7 @@
  */
 
 #include "Interfaz.h"
-#include "Laser.cpp"
+#include "Laser.h"
 
 Interfaz::Interfaz() {
 }

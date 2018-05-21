@@ -6,7 +6,7 @@
  */
 
 #include "Laser.h"
-#include "Interfaz.cpp"
+#include "Interfaz.h"
 
 Laser::Laser() {
 	Connection_information con=new Connection_information("/dev/ttyACM0");
