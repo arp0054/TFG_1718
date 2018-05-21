@@ -18,9 +18,7 @@ Area* setAreas(int n){
 	return ars;
 }
 
-PuntoDetectado* setDetectados(){
-	Procesador pro;
-	pro=pro.getInstance();
+PuntoDetectado* setDetectados(Procesador pro){
 	Laser l;
 	return pro.creaObjetoDetect(l.dividirDatos());
 }
