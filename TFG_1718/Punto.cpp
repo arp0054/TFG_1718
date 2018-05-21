@@ -5,8 +5,11 @@
  *      Author: alvarorui
  */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "Punto.h"
 #include <math.h>
+using namespace std;
 
 
 Punto::Punto(){
@@ -17,7 +20,13 @@ Punto::~Punto(){
 
 }
 
-void Punto::setPunto(double cX,double cY){
+void Punto::setPunto(){
+	double cX;
+	double cY;
+	cout<<"Introduce coordenada X: "<<endl;
+	cin>>cX;
+	cout<<"Introduce coordenada Y: "<<endl;
+	cin>>cY;
 	coorX= cX;
 	coorY= cY;
 }

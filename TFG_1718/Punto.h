@@ -14,7 +14,7 @@ private:
 public:
 	Punto();
 	~Punto();
-	void setPunto(double,double);
+	void setPunto();
 	double getPuntoX();
 	double getPuntoY();
 	double* traducir(double,double);

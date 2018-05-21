@@ -27,6 +27,8 @@
 								<option id="gnu.c.compiler.option.include.paths.1846463368" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="/opt/MTX-GATEWAY-BSP-REV.0103/platform-tqma28/sysroot-target/include"/>
 									<listOptionValue builtIn="false" value="/opt/MTX-GATEWAY-BSP-REV.0103/platform-tqma28/sysroot-target/usr/include"/>
+									<listOptionValue builtIn="false" value="/usr/include"/>
+									<listOptionValue builtIn="false" value="/usr/include/c++5.4.0"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1976218462" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
