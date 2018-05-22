@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include "Interfaz.h"
 #include "Punto.h"
-#include <Urg_driver.cpp>
+#include <Urg_driver.h>
 #include <Connection_information.h>
 #include <iostream>
 
@@ -27,6 +27,7 @@ public:
 	void setInterfaz(Interfaz);
 	Punto* dividirDatos();
 	int* getDatos();
-	void setDatos(int*);
+	void setDatos();
 };
 
+#endif /* LASER_H_ */

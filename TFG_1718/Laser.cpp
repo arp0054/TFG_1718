@@ -29,23 +29,25 @@ Punto* Laser::dividirDatos(){
 }
 
 int* Laser::getDatos(){
-	Urg_driver urg;
-	urg.set_scanning_parameter(urg.deg2step(-90), urg.deg2step(+90), 0);
-	    enum { Capture_times = 10 };
-	    urg.start_measurement(Urg_driver::Distance, Urg_driver::Infinity_times, 0);
-	    for (int i = 0; i < Capture_times; ++i) {
-	        vector<long> data;
-	        long time_stamp = 0;
-
-	        if (!urg.get_distance(data, &time_stamp)) {
-	            cout << "Urg_driver::get_distance(): " << urg.what() << endl;
-	            return 1;
-	        }
-	        datos==(urg, data, time_stamp);
-	    }
-	return datos[1];
+	return datos;
 }
 
-void Laser::setDatos(int* dat){
+void Laser::setDatos(){
+	Urg_driver urg;
+	int* dat;
+	urg.set_scanning_parameter(urg.deg2step(-90), urg.deg2step(+90), 0);
+		enum { Capture_times = 10 };
+		urg.start_measurement(Urg_driver::Distance, Urg_driver::Infinity_times, 0);
+		for (int i = 0; i < Capture_times; ++i) {
+			vector<long> data;
+			long time_stamp = 0;
+
+			if (!urg.get_distance(data, &time_stamp)) {
+				cout << "Urg_driver::get_distance(): " << urg.what() << endl;
+				dat= 1;
+			}
+			dat==(urg, data, time_stamp);
+		}
+	datos=dat;
 
 }
