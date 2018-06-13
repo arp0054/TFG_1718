@@ -1,5 +1,23 @@
 \capitulo{2}{Objetivos del proyecto}
 
-Los objetivos de este proyecto son claros. El principal objetivo es el de aprender a manejar los datos recibidos a través de la interfaz del láser para analizarlos y aprender también a manejar las transiciones de datos entre ciertos elementos hardware, es decir, comprender como se transmiten los datos en los niveles más bajos, poder analizarlos y utilizarlos con el fin de mejorar el comportamiento de ciertos sistemas como pueden ser los AGVs. En sí, es una forma de comprender y utilizar los conocimientos a cerca de sistemas distribuidos que se han ido adquiriendo a lo largo del grado.\\
+En este apartado se explican los distintos objetivos identificados en este proyecto, distinguiendo entre los objetivos generales del proyecto y los objetivos técnicos.
 
-Estos dispositivos pueden emplear el sistema desarrollado en este proyecto para anticipar tanto los objetos con los que desean interactuar, con lo que podría mejorar su funcionamiento (tiempo de respuesta), como para anticipar si hay objetos no deseados en los caminos que recorren con lo que pueden evitarlos en vez de pausarse, lo que mejoraría los tiempos de recorrido de sus respectivos caminos lo que supondría una mejora en el rendimiento de la totalidad del sistema de transportes o funcionalidades para el que se encuentre dispuesto.
+\section{Objetivos generales}
+
+Los objetivos generales que se han planeado para este proyecto son:
+\begin{itemize}
+	\item Conocer el entorno en el que el programa desarrollado en el proyecto. En este caso, el programa desarrollado sera integrado con el resto de utilidades de los AVG para que reconozca objetos en las zonas importantes para su funcionamiento (donde están los objetivos o los obstáculos).
+    \item Leer los datos obtenidos de las lecturas del láser para a través de su interfaz escogiendo los contactos del RS232 del GMT-GTW para saber por cual de ellos se recogen dichos datos.
+    \item Crear un programa que, una vez analizados los datos sepa detectar si en las áreas deseadas por el usuario existe un objeto. Esto puede utilizarse para la detección de obstáculos antes mencionada o para minimizar el tiempo de recogida de objetos (dependiendo de la función de cada AGV).
+    \item Comprender y utilizar los conocimientos a cerca de sistemas distribuidos que se han ido adquiriendo a lo largo del grado.
+\end{itemize} 
+
+\section{Objetivos técnicos}
+
+Los objetivos técnicos planteados para este proyecto son:
+\begin{itemize}
+	\item Aprender el uso de de C++ para la creación del proyecto, a través de todas sus funcionalidades previstas para el objetivo de la lectura de datos del láser.
+	\item Usar librerías de C++ como TODO: poner librerías para leer los datos, es decir, aquellas utilidades relacionadas con el conector RS232.
+	\item Creación de archivos con extensión ".sh" desde Ubuntu para la ejecución de Eclipse incluyendo en el ClassPath una serie de parámetros como es la integración del OSELAS toolchain.
+\end{itemize}
+
