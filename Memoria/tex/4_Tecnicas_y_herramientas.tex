@@ -43,3 +43,11 @@ Como bien se ha dicho al principio de esta sección, la aplicación se ha instal
 
 El lenguaje de programación con este nombre es aquel desarrollado en 1979 para la ampliación del lenguaje existente conocido como C. Se creó con el objetivo de orientar ese lenguaje a los objetos, con lo que se ampliaba las posibilidades de uso del mismo.\\
 Este lenguaje ha sido el escogido para desarrollar todo el código del programa. Este lenguaje suele ser el más indicado debido a que suelen emplear algunas librerías que actúan con el equipo a bajo nivel con lo que sería tremendamente recomendable ya que sería necesario acceder directamente a los pines del RS232 del MTX-GTW a través del cable del ethernet.
+
+\section{Cableado}
+
+Para que el proyecto pueda ser desarrollado y ejecutado para la comprobación de su correcto funcionamiento es necesario suministrar corriente eléctrica a los componentes. Para ello, debido a que los dos componentes principales necesitan distintos tipos de corriente eléctrica, se han tenido que buscar dos elementos diferentes:
+\begin{itemize}
+	\item MTX-GTW: este elemento necesita ser alimentado con una corriente alterna de 12V. Debido a que, en la actualidad, la mayoría de los cargadores de los diferentes aparatos elctrónicos cotidianos no suministran más de 7 voltios se necesitó fabricar un cargador a base de un transformador que suministrase la corriente deseada unido a dos cable los cuales irán conectados al cabezal del aparato debido a que tampoco posee un cabezal convencional.
+	\item Láser: para este aparato se han utilizado dos cableados distintos ya que se debe conectar tanto a la red eléctrica para alimentarse como al dispositivo antes mencionado. Para la primera de las conexiones descritas se ha empleado un adaptador a corriente alterna ya que este láser necesita alimentarse con 24V de corriente alterna. Para la segunda conexión se necesita un cable con cabezal VGA y el otro extremos sin cabezal para poder conectar solo los cables que sean necesarios. El primero de los cables ha sido buscado y encontrado por el alumno mientras que el segundo ha sido suministrado por el tutor.
+\end{itemize}
