@@ -5,9 +5,9 @@
  *      Author: alvarorui
  */
 
-#include "Punto.h"
+#include <Punto.h>
 #include <math.h>
-#include "iostream"
+#include <iostream>
 
 using namespace std;
 
@@ -20,13 +20,7 @@ Punto::~Punto(){
 
 }
 
-void Punto::setCoors(){
-	double x;
-	double y;
-	cout<<"Introduce coordenada x: "<<endl;
-	cin>>x;
-	cout<<"Introduce coordenada y: "<<endl;
-	cin>>y;
+void Punto::setCoors(double x, double y){
 	coorX= x;
 	coorY= y;
 }

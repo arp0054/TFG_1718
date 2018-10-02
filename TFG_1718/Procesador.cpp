@@ -5,9 +5,9 @@
  *      Author: alvarorui
  */
 
+#include <Interfaz.h>
+#include <Laser.h>
 #include "Procesador.h"
-#include "Interfaz.h"
-#include "Laser.h"
 
 Procesador::Procesador() {
 }
@@ -27,7 +27,7 @@ Punto* Procesador::getEntrada(){
 }
 
 void Procesador::setEntrada(Punto* e){
-	entrada=lasr.dividirDatos();
+	entrada=lasr.getDatos();
 }
 
 Laser Procesador::getLaser(){

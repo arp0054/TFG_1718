@@ -7,7 +7,9 @@
 
 #ifndef INTERFAZ_H_
 #define INTERFAZ_H_
-#include "Laser.h"
+#include <Laser.h>
+
+#pragma comment (lib,"ws2_32.lib")
 
 class Interfaz {
 private:

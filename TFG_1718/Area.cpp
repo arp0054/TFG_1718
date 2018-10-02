@@ -5,8 +5,8 @@
  *      Author: alvarorui
  */
 
-#include "Area.h"
-#include "Punto.h"
+#include <Area.h>
+#include <Punto.h>
 
 Area::Area() {
 }

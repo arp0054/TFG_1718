@@ -5,8 +5,8 @@
  *      Author: alvarorui
  */
 
-#include "Interfaz.h"
-#include "Laser.h"
+#include <Interfaz.h>
+#include <Laser.h>
 
 Interfaz::Interfaz() {
 }

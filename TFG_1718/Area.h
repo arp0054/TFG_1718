@@ -7,7 +7,7 @@
 
 #ifndef AREA_H_
 #define AREA_H_
-#include "Punto.h"
+#include <Punto.h>
 
 
 class Area {

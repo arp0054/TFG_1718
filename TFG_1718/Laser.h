@@ -8,26 +8,32 @@
 #ifndef LASER_H_
 #define LASER_H_
 #include <stdio.h>
-#include "Interfaz.h"
+#include <Interfaz.h>
 #include "Punto.h"
-#include <Urg_driver.h>
-#include <Connection_information.h>
 #include <iostream>
+#include <string>
+#include <sstream>
+#include <errno.h>
+#include <stdlib.h>
+
+
+using namespace std;
 
 class Laser {
 private:
 	int* datos=NULL;
 	Interfaz inter=NULL;
 	Punto* entrada=NULL;
+	FILE f=NULL;
 
 public:
 	Laser();
 	~Laser();
-	Interfaz getInterfaz();
-	void setInterfaz(Interfaz);
-	Punto* dividirDatos();
+//	Interfaz getInterfaz();
+//	void setInterfaz(Interfaz);
+	Punto* setDatos();
 	int* getDatos();
-	void setDatos();
+	void conectar();
 };
 
 #endif /* LASER_H_ */
