@@ -21,21 +21,24 @@ class Punto:
     def setY(self,valY):
         self.y=valY
     
-    def tradurcirAPolares(self,valX,valY):
+    def tradurcirAPolares(self,x,y):
         c1=math.sqrt(x*x+y*y)
         c2=0
-        if x > 0:
-            if y >= 0:
-                c2=math.atan(y/x)
-            else:
-                c2=math.atan(y/x)+2*math.pi
-        elif x == 0:
+        if x == 0:
             if y > 0:
-                c2= math.pi/2
-            if y < 0:
-                c2= 3*math.pi/2
-            if y == 0:
-                c2=0
-        elif x < 0:
-            c2=math.atan(y/x)+math.pi
+                c2=90
+            elif y < 0:
+                c2=270
+        elif x > 0:
+            if y > 0:
+                c2= math.atan(y/x)
+            elif y < 0:
+                c2=360-math.atan(y/x)
+        else:
+            if y > 0:
+                c2= 180- math.atan(y/x)
+            elif y < 0:
+                c2=180+math.atan(y/x)
+            else:
+                c2=270
         return [c1,c2]
