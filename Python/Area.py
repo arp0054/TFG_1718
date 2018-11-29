@@ -6,9 +6,6 @@ class Area:
     limites=list()
     def __init__(self):
         self.limites=list()
-        """for i in range(4):
-            p=Punto()
-            self.limites.append(p)"""
     
     def setLimites(self):
         i=1
@@ -27,3 +24,17 @@ class Area:
     
     def getLimites(self):
         return self.limites
+    
+    def hayObjeto(self,puntos):
+        cx=list()
+        cy=list()
+        for p in self.limites:
+            cx.append(float(p.getX()))
+            cy.append(float(p.getY()))
+        for dato in puntos:
+            if min(cx)<dato.getX() and dato.getX() < max(cx):
+                if min(cy)<dato.getY() and dato.getY() < max(cy):
+                    return True
+                    break
+        return False
+                    
