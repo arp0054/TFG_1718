@@ -8,9 +8,8 @@ import socket
 import sys
 import binascii
 import numpy as np
-import matplotlib.pylab as plt
+import matplotlib.pyplot as plt
 import math
-import codecs
 import re
 from Area import Area
 from Punto import Punto
@@ -21,7 +20,6 @@ from Punto import Punto
 
 def introduceAreas():
     numero_areas=int(input('número de Areas: '))#.split(',')
-    numero_vertuces=numero_areas*4
     areas=list()
     for j in range(1,numero_areas+1):
         print('coordenadas del área '+str(j)+':')
@@ -217,5 +215,6 @@ for ar in areas_input:
         limY.append(float(limi.getY()))
 plt.scatter(equis,ies, color='blue')#,angulos)
 plt.scatter(np.array(limX),np.array(limY), color='red')
+plt.figure(figsize=(40,10))
 plt.show()
 
