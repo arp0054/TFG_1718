@@ -1,7 +1,6 @@
 
 # coding: utf-8
 
-# In[1]:
 
 
 import socket
@@ -15,7 +14,6 @@ from Area import Area
 from Punto import Punto
 
 
-# In[2]:
 
 
 def introduceAreas():
@@ -34,10 +32,10 @@ def toDecimal(sensin):
         res=""
         for i in elem:
             t=int(i,16)
-            if t > 0x30 and t < 0x39:
-                t = t - 0x30
-            elif t > 0x41 and t < 0x46:
-                t = t - 0x37
+            if t > int('0x30',16) and t < int('0x39',16):
+                t = t - int('0x30',16)
+            elif t > int('0x41',16) and t < int('0x46',16):
+                t = t - int('0x37',16)
             binario = bin(int(t))
             res = res + str(binario)
         total.append(str(int(res,2)))
@@ -84,21 +82,14 @@ def creaangulos(x, y, jump):
         x += jump
 
 
-# In[3]:
-
 
 areas_input=introduceAreas()
-
-
-# In[4]:
-
 
 for e in areas_input:
     for p in e.getLimites():
         print(p.getX(),p.getY())
 
 
-# In[ ]:
 
 
 # Se crea el socket
@@ -138,7 +129,6 @@ finally:
     sock.close()"""
 
 
-# In[6]:
 
 
 #Datos recogidos de lecturas
