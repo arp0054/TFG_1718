@@ -151,6 +151,8 @@ for e in datosLectura:
 #Escogemos como dato el promero de los grupos de datos y retiramos los datos correspondientes a información innecesaria.
 target=datosLectura[1][97:]
 #Separamos por el string de datos en partes de longitud 4 (longitud de cada dato)
+"""la longitud es calculada como 4324(número de caracteres de medición recibidos)/1081
+(número de mediciones realizadas por el láser) = 4(caracteres por medición) """
 datosSeparados=[ [target[i:i+4]] for i in range(0, int(len(target)), 4) ]
 """Eliminamos el último de los elementos ya que pertenece a información agena a los 
 datos de medida"""
