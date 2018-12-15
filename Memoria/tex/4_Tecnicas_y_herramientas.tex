@@ -25,12 +25,7 @@ Para este proyecto se ha decidido utilizar la metodología de SCRUM. Esta metodo
 
 \section{Patrones de diseño empleados}
 
-Los patrones de diseño son herramientas reutilizables empleadas para resolver problemas que resultan comunes a la hora tanto de desarrollar el software como el diseño de las interacciones e interfaces empleadas para que el usuario pueda emplear el sistema.\\
-En el desarrollo de el sistema en el que se basa el proyecto se han utilizado los siguientes patrones:
-\begin{itemize}
-    \item Plantilla: para la realización de las clases \textit{Láser} e \textit{Interfaz} ya que aunque cada interfaz y cada láser tienen ciertas funciones específicas hay una parte de estas que son comunes por lo que, para evitar tener que duplicar código y mejorar la eficiencia de estas partes del sistema.
-    \item Singleton: en este proyecto se va a crear la clase \textit{Procesador} como un Singleton ya que solo se debería de crear una instancia de este tipo ya solo es necesario esta instancia para el funcionamiento del  sistema. Con la utilización de este patrón nos aseguramos de solo tener una instancia de la clase antes mencionada lo que mejora el control del flujo de datos a demás de la eficiencia del sistema.\\
-\end{itemize}
+
 
 \section{Herramienta de manejo de láser}
 
@@ -38,15 +33,16 @@ Aunque el manejo de este elemento del proyecto se va a realizar a través de fun
 En este caso esta herramienta será utilizada para la comprobación de que el código desarrollado para alcanzar los objetos del proyecto funciona de forma correcta comparando los resultados obtenidos por el código y la aplicación, los cuales deberían de coincidir.\\
 Como bien se ha dicho al principio de esta sección, la aplicación se ha instalado utilizando el CD presente en el paquete en el que el láser se encuentra almacenado. 
 
-\section{C++}
+\section{Python}
 
-El lenguaje de programación con este nombre es aquel desarrollado en 1979 para la ampliación del lenguaje existente conocido como C. Se creó con el objetivo de orientar ese lenguaje a los objetos, con lo que se ampliaba las posibilidades de uso del mismo.\\
-Este lenguaje ha sido el escogido para desarrollar todo el código del programa. Este lenguaje suele ser el más indicado debido a que suelen emplear algunas librerías que actúan con el equipo a bajo nivel con lo que sería tremendamente recomendable ya que sería necesario acceder directamente a los pines del RS232 del MTX-GTW a través del cable del ethernet.
+El lenguaje de programación con este nombre es aquel desarrollado en 1991 con el objetivo de crear código con una sintaxis que favorezca un código legible.\\
+Además de esta característica, es importante destacar el hecho de que se trata de un lenguaje multiparadigma, ya que puede desarrollarse código orientado a objetos, programación imperativa y, en menor medida, programación funcional. \\
+Ha sido seleccionado debido a la sencillez que proporciona a la hora de programar distintos procedimientos que en otros lenguajes (Java, C,C$ ++$ ...) resultarían mucho más complicados como es la implementación de un socket para comunicarse (enviar mensajes y recoger datos) con el láser.
 
 \section{Cableado}
 
-Para que el proyecto pueda ser desarrollado y ejecutado para la comprobación de su correcto funcionamiento es necesario suministrar corriente eléctrica a los componentes. Para ello, debido a que los dos componentes principales necesitan distintos tipos de corriente eléctrica, se han tenido que buscar dos elementos diferentes:
+Para que el proyecto pueda ser desarrollado y ejecutado para la comprobación de su correcto funcionamiento es necesario suministrar corriente eléctrica al láser y comunicarlo de forma física con el PC. Para ello se han tenido que buscar dos cables diferentes:
 \begin{itemize}
-	\item MTX-GTW: este elemento necesita ser alimentado con una corriente alterna de 12 V. Debido a que, en la actualidad, la mayoría de los cargadores de los diferentes aparatos electrónicos cotidianos no suministran más de 7 voltios se necesitó fabricar un cargador a base de un transformador que suministrase la corriente deseada unido a dos cable los cuales irán conectados al cabezal del aparato debido a que tampoco posee un cabezal convencional.\\
-	\item Láser: para este aparato se han utilizado dos cableados distintos ya que se debe conectar tanto a la red eléctrica para alimentarse como al dispositivo antes mencionado. Para la primera de las conexiones descritas se ha empleado un adaptador a corriente alterna ya que este láser necesita alimentarse con 24 V de corriente alterna. Para la segunda conexión se necesita un cable con cabezal VGA y el otro extremos sin cabezal para poder conectar solo los cables que sean necesarios. El primero de los cables ha sido buscado y encontrado por el alumno mientras que el segundo ha sido suministrado por el tutor.
+	\item Comunicación col el PC: para este aspecto del proyecto se ha empleado un cable ethernet 100BASE-TX con conexión resistente al agua, el cual es desarrollado por la misma empresa que desarrolla el láser empleado lo cual lo hace idóneo para comunicar ambos dispositivos.\\
+	\item corriente eléctrica: para este aparato se han utilizado un adaptador a corriente alterna ya que este láser necesita alimentarse con 24 V de este tipo de corriente. Este cable ha sido buscado y encontrado por el alumno.
 \end{itemize}
