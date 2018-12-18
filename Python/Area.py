@@ -11,11 +11,11 @@ class Area:
         i=1
         while(len(self.limites)<4):
             imput=Punto()
-            intr=input('intriduce coordenada X e Y separadas por "," '+str(i)+':').split(',')
+            intr=input('intriduce coordenada X e Y en milímetros (mm) separadas por "," '+str(i)+':').split(',')
             if len(intr) != 2:
                 print('Error al intriducir coordenadas')
                 while (len(intr) != 2):
-                    intr=input('intriduce coordenada X e Y separadas por "," '+str(i)+':').split(',')
+                    intr=input('intriduce coordenada X e Y en milímetros (mm) separadas por "," '+str(i)+':').split(',')
             imput.setX(intr[0])
             imput.setY(intr[1])
             i=i+1
