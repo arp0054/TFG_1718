@@ -158,30 +158,32 @@ except socket.timeout:
     print('Error de conexion')
 try:
     cont=0
-    while 1:
-        # Envio del mensaje (000EAR01 - Envio una sola lectura de scaneo)
-        message = [bytes([2]),chr(48),chr(48),chr(48),chr(69),chr(65),chr(82),chr(48),chr(49),binascii.unhexlify(b"9B"),binascii.unhexlify(b"B1"),bytes([3])]
-        b = bytearray()
-        b.extend(map(ord, message))
-        sock.send(b)
-        # Se recoge la respuesta (En este caso la información de lectura del láser)
-        sens=""
-        data = sock.recv(9000000)
-        sens+= data.decode('utf-8')
-        # Se separa los datos del resto de información enviada por el laser
-        datosLectura=re.split('\x02|\x03',sens)
-        #Eliminamos las divisiones inecesarias (ya que se producen divisiones vacias)
-        for e in datosLectura:
-            if (len(e)<50):
-                datosLectura.remove(e)
-        #Escogemos como dato el promero de los grupos de datos y retiramos los datos correspondientes a información innecesaria.
-        try:
-            target=datosLectura[1][97:]
-        except IndexError:
-            target=[0]
-        procesadoYMuestra(target)
-        print (sys.stderr, 'Lectura nro' ,cont )
-        cont=cont+1
+    #while 1:
+    # Envio del mensaje (000EAR01 - Envio una sola lectura de scaneo)
+    message = [bytes([2]),chr(48),chr(48),chr(48),chr(69),chr(65),chr(82),chr(48),chr(49),binascii.unhexlify(b"9B"),binascii.unhexlify(b"B1"),bytes([3])]
+    b = bytearray()
+    b.extend(map(ord, message))
+    sock.send(b)
+    # Se recoge la respuesta (En este caso la información de lectura del láser)
+    sens=""
+    data = sock.recv(9000000)
+    sens+= data.decode('utf-8')
+    print(sens)
+    # Se separa los datos del resto de información enviada por el laser
+    datosLectura=re.split('\x02|\x03',sens)
+    #Eliminamos las divisiones inecesarias (ya que se producen divisiones vacias)
+    for e in datosLectura:
+        if (len(e)<50):
+            datosLectura.remove(e)
+    #Escogemos como dato el promero de los grupos de datos y retiramos los datos correspondientes a información innecesaria.
+    try:
+        target=datosLectura[1][97:]
+    except IndexError:
+        target=[0]
+    procesadoYMuestra(target)
+    print (sys.stderr, 'Lectura nro' ,cont )
+    print (sys.stderr, 'Datos recibidos' ,len(datosLectura) )
+    cont=cont+1
 
 finally:
     print (sys.stderr, 'closing socket')
