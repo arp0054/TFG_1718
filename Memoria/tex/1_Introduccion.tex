@@ -10,7 +10,11 @@ La explicación básica del funcionamiento de este proyecto es la utilización d
 
 
 Los AGV son una de las últimas innovaciones en el mundo de la industria. Son robots autónomos que sustituyen al trabajo humano en el sentido de transporte de objetos o mercancías entre las distintas secciones de las industrias. \\
+\\
 Para la realización de sus propósitos estos aparatos, además de sus aparatos de guiado, necesitan aparatos que les permitan reconocer si en su camino existe algún obstáculo o si el objeto con el que trabaja (mercancía) se encuentra cerca de ellos. Para esto, los AGVs llevan incorporado, como norma general, un láser, el cual recoge un gran conjunto de datos sobre el entorno que lo rodea.\\
+\\
 Actualmente, esta tecnología se basa en la configuración de áreas en las cuales el láser detecta las variaciones de puntos que se localizan dentro de estas áreas. Un inconveniente de esta configuración es la necesidad de que el área tenga uno de sus límites en el origen de coordenadas del gráfico trazado por las coordenadas obtenidas de las lecturas del láser por lo que para detectar si existe un objeto en un determinado límite situado en la zona media del gráfico antes mencionado pero no más cerca, se debe manejar y configurar más de un área.\\
+\\
 En este proyecto se desarrollará un sistema con el que se pretende solventar el problema antes descrito, reduciendo el número de áreas a necesitar con lo que se conseguirá una mayor eficiencia en el análisis de entorno.\\
+\\
 En este caso vamos a utilizar el Hokuyo Safety Laser Scanner (UAM-05LP-T301). Este aparato es capaz de desarrollar tres áreas de detección dependiendo de la distancia a la que detecte un elemento (puede ser de 20, 10 y 5 metros).\\

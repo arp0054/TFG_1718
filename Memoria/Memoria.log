@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.12)  16 DEC 2018 14:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.12)  30 DEC 2018 16:54
 entering extended mode
 **./Memoria.tex
 (Memoria.tex
@@ -1109,7 +1109,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-<./img/cabecera.pdf, id=111, pagebox=cropbox, 617.67549pt x 135.51413pt>
+<./img/cabecera.pdf, id=115, pagebox=cropbox, 617.67549pt x 135.51413pt>
 File: ./img/cabecera.pdf Graphic file (type pdf)
 <use ./img/cabecera.pdf>
 Package pdftex.def Info: ./img/cabecera.pdf  used on input line 346. on input l
@@ -1146,7 +1146,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 346.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 346.
-<./img/escudoInfor.pdf, id=112, pagebox=cropbox, 618.11432pt x 737.07487pt>
+<./img/escudoInfor.pdf, id=116, pagebox=cropbox, 618.11432pt x 737.07487pt>
 File: ./img/escudoInfor.pdf Graphic file (type pdf)
 <use ./img/escudoInfor.pdf>
 Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 346. on inpu
@@ -1600,7 +1600,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 10--440
+Underfull \hbox (badness 10000) in paragraph at lines 12--440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--440
 
  []
 
@@ -2484,15 +2504,9 @@ LaTeX Info: Redefining \% on input line 28.
 (tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 452.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 452.
+Package rerunfilecheck Info: File `Memoria.out' has not changed.
+(rerunfilecheck)             Checksum: 19A25BD3D641BD9723A2FC224BD44031;1862.
 
-
-Package rerunfilecheck Warning: File `Memoria.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Memoria.out':
-(rerunfilecheck)             Before: 3B2E46CEB20A3650653CB05589DCFD8F;1802
-(rerunfilecheck)             After:  19A25BD3D641BD9723A2FC224BD44031;1862.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2502,13 +2516,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 452.
  ) 
 Here is how much of TeX's memory you used:
- 13025 strings out of 493312
- 189466 string characters out of 3138895
- 356026 words of memory out of 3000000
- 16193 multiletter control sequences out of 15000+200000
- 72400 words of font info for 93 fonts, out of 3000000 for 9000
+ 13030 strings out of 493312
+ 189521 string characters out of 3138895
+ 357026 words of memory out of 3000000
+ 16194 multiletter control sequences out of 15000+200000
+ 72582 words of font info for 95 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,12n,38p,944b,683s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,12n,38p,944b,708s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12
@@ -2520,9 +2534,9 @@ Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on Memoria.pdf (29 pages, 680050 bytes).
+Output written on Memoria.pdf (29 pages, 681778 bytes).
 PDF statistics:
- 694 PDF objects out of 1000 (max. 8388607)
+ 698 PDF objects out of 1000 (max. 8388607)
  56 named destinations out of 1000 (max. 500000)
- 20195 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 20203 words of extra memory for PDF output out of 20736 (max. 10000000)
 
