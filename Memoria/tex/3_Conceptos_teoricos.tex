@@ -2,6 +2,15 @@
 
 En este proyecto se deben de emplear una gran cantidad de  conocimientos adquiridos a lo largo de las asignaturas del grado. En esta sección se describirán cuales son esos conceptos además de la forma en la que se aplican en este proyecto.
 
+\section{Organización de la infraestructura}
+
+Para la implementación del sistema que nos va a permitir el desarrollo del sistema que tiene como objetivo este proyecto se necesitarán tres elementos principales:
+\begin{itemize}
+	 \item Láser: esta parte es la que se encarga de obtener los datos de su entorno. Estos datos serán enviados a través de una interfaz hacia la unidad de tratamiento de datos. En este caso, el láser del que se dispone, y por lo tanto con el que se va a desarrollar el proyecto es el Hokuyo Safety Laser Scanner (UAM-05LP-T301). Este aparato es capaz de desarrollar tres áreas de detección dependiendo de la distancia a la que detecte un elemento (puede ser de 20, 10 y 5 metros). Aunque sea este láser con el que se va a realizar el proyecto, el principal objetivo es el de poder hacer que el programa pueda funcionar en diferentes tipos de láser con diferentes formas de obtención de datos.\\
+    \item Cable ethernet: es el soporte a través del cual se transportan tanto los mensajes enviado por el ordenador hacia el láser como las respuestas y los datos de lectura que este manda al PC demandante. Esta es la que, en la descripción del anterior elemento se conoce como la interfaz. En el caso de este proyecto se usará un UAM-NET, un cable Ethrernet de 3 metros de longitud desarrollado por Hokuyo, misma empresa desarrolladora del láser empleado, lo que hace que resulte idóneo para evitar problemas de incompatibilidad y asegurar así el correcto funcionamiento del sistema.
+    \item PC: es la parte principal del proyecto, ya que es la encargada de permitir al usuario tanto introducir las áreas donde se necesita detectar los objetos, como las órdenes que el usuario desea transmitir al láser para recibir la información. Además también es la encargada de recibir y procesar las respuestas del láser para poder mostrar al usuario los resultados de la comparación de los datos y las coordenadas de las áreas introducidas. La utilización de este aparato es debida a que este proyecto sería destinado a ser introducido dentro de un AGV pero se necesita hacer visible al usuario a través de una pantalla.\\ 
+\end{itemize}
+
 \section{Sistemas distribuidos}
 
 Se denomina sistema distribuido a aquel sistema en el que cada equipo se conecta con el resto de los integrantes del sistema para poder compartir sus recursos además de poder utilizar los recursos que comparten el resto de los equipos conectados para realizar procesos para los cuales se necesitan una cantidad de recursos que la que el usuario de cada equipo posee de forma local. Otra forma de definir este concepto es la ejecución de procesos desde un equipo en otro cuyas características se adapten mejor a las del objetivo que se desea alcanzar.\\
