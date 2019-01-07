@@ -9,23 +9,27 @@
 \contentsline {section}{\numberline {2.2}Objetivos t\IeC {\'e}cnicos}{4}{section.2.2}
 \contentsline {chapter}{Conceptos te\IeC {\'o}ricos}{5}{chapter*.6}
 \contentsline {section}{\numberline {3.1}Organizaci\IeC {\'o}n de la infraestructura}{5}{section.3.1}
-\contentsline {section}{\numberline {3.2}Sistemas distribuidos}{6}{section.3.2}
-\contentsline {section}{\numberline {3.3}Miner\IeC {\'\i }a de datos}{6}{section.3.3}
-\contentsline {section}{\numberline {3.4}Referencias}{7}{section.3.4}
-\contentsline {section}{\numberline {3.5}Im\IeC {\'a}genes}{7}{section.3.5}
-\contentsline {section}{\numberline {3.6}Listas de items}{8}{section.3.6}
-\contentsline {section}{\numberline {3.7}Tablas}{9}{section.3.7}
-\contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{11}{chapter*.7}
-\contentsline {section}{\numberline {4.1}Desarrollo de la memoria}{11}{section.4.1}
-\contentsline {section}{\numberline {4.2}Desarrollo del c\IeC {\'o}digo}{12}{section.4.2}
-\contentsline {section}{\numberline {4.3}Planteamiento de las tareas}{12}{section.4.3}
-\contentsline {section}{\numberline {4.4}Metodolog\IeC {\'\i }a de gesti\IeC {\'o}n y herramientas asociadas}{12}{section.4.4}
-\contentsline {section}{\numberline {4.5}Patrones de dise\IeC {\~n}o empleados}{13}{section.4.5}
-\contentsline {section}{\numberline {4.6}Herramienta de manejo de l\IeC {\'a}ser}{13}{section.4.6}
-\contentsline {section}{\numberline {4.7}Python}{13}{section.4.7}
-\contentsline {section}{\numberline {4.8}Cableado}{14}{section.4.8}
-\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{15}{chapter*.8}
-\contentsline {section}{\numberline {5.1}Parte Software}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}Parte Hardware}{16}{section.5.2}
-\contentsline {chapter}{Trabajos relacionados}{17}{chapter*.9}
-\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{19}{chapter*.10}
+\contentsline {subsection}{Implementaci\IeC {\'o}n final en el AGV}{6}{section*.7}
+\contentsline {section}{\numberline {3.2}Sistemas distribuidos}{7}{section.3.2}
+\contentsline {section}{\numberline {3.3}Procesado de datos}{8}{section.3.3}
+\contentsline {subsection}{Comandos disponibles}{8}{section*.8}
+\contentsline {subsection}{Env\IeC {\'\i }o y recepci\IeC {\'o}n de mensajes}{9}{section*.9}
+\contentsline {subsection}{Traducci\IeC {\'o}n de los datos}{12}{section*.10}
+\contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{13}{chapter*.11}
+\contentsline {section}{\numberline {4.1}Desarrollo de la memoria}{13}{section.4.1}
+\contentsline {section}{\numberline {4.2}Desarrollo del c\IeC {\'o}digo}{14}{section.4.2}
+\contentsline {subsection}{Jupyter Notebook}{14}{section*.12}
+\contentsline {subsection}{Spyder}{14}{section*.13}
+\contentsline {section}{\numberline {4.3}Planteamiento de las tareas}{14}{section.4.3}
+\contentsline {section}{\numberline {4.4}Metodolog\IeC {\'\i }a de gesti\IeC {\'o}n y herramientas asociadas}{15}{section.4.4}
+\contentsline {section}{\numberline {4.5}Patrones de dise\IeC {\~n}o empleados}{15}{section.4.5}
+\contentsline {section}{\numberline {4.6}Herramienta de manejo de l\IeC {\'a}ser}{15}{section.4.6}
+\contentsline {subsection}{ UAM Proyect Designer}{15}{section*.14}
+\contentsline {subsection}{RealTerm}{15}{section*.15}
+\contentsline {section}{\numberline {4.7}Python}{16}{section.4.7}
+\contentsline {section}{\numberline {4.8}Cableado}{16}{section.4.8}
+\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{19}{chapter*.16}
+\contentsline {section}{\numberline {5.1}Parte Software}{19}{section.5.1}
+\contentsline {section}{\numberline {5.2}Parte Hardware}{20}{section.5.2}
+\contentsline {chapter}{Trabajos relacionados}{21}{chapter*.17}
+\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{23}{chapter*.18}
