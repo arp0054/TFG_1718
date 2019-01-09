@@ -14,7 +14,7 @@ Para la implementación del sistema que nos va a permitir el desarrollo del sist
 \subsection{Implementación final en el AGV}
 Con esta estructura, el sistema puede ser implementado en AGVs que no posean movimiento, es decir, aquellos cuyas partes móviles no hagan desplazar toda la estructura del vehículo, ya que se necesita un ordenador para visualizar los resultados del análisis.
 
-\includegraphics[scale=0.5]{diagrmaExt3}
+\imagen{diagrmaExt3}{Implementación externa}
 
 Esta primera opción de implementación tiene ciertas ventajas pero también posee ciertos inconvenientes:
 Ventajas:
@@ -28,8 +28,7 @@ Desventajas:
 \end{enumerate}
 
 Aunque si se obvia esta característica de la detección de objetos (reduciendo ese proceso a datos booleanos) si que es posible emplear el sistema con AVGs móviles.
-
-\includegraphics[scale=0.5]{diagrmaInt3}
+\imagen{diagrmaInt3}{Implementación interna}
 
 Aunque esta opción tambien tiene sus ventajas e inconvenientes, al igual que la anterior:
 Ventajas:
@@ -55,7 +54,7 @@ Cuando el programa desarrollado se comunica con el láser, este debe recibir las
 \subsection{Comandos disponibles}
 
 Para que el láser devuelva los datos de sus lecturas se le debe de mandar un comando específico dependiendo de la forma de lectura que deseamos que realice. Hay muchos tipos de comandos disponibles para enviar al láser pero para los objetivos de este proyecto vamos a emplear un único tipo, los comandos AR.\\
-Estos comandos son los que le indican al láser la orden de enviar los datos de lectura. Dependiendo del comando AR enviado, se enviará un determinado conjunto de datos u otro. Algunos de estos comandos sirven para detener el funcionamiento provocado por otros comandos del mismo tipo. Los comandos de este tipo son 6:
+Estos comandos son los que le indican al láser la orden de enviar los datos de lectura. Dependiendo del comando AR enviado, se enviará un determinado conjunto de datos u otro. Algunos de estos comandos sirven para detener el funcionamiento provocado por otros comandos del mismo tipo. Los comandos de este tipo son 6:\\
 \begin{enumerate}
 	\item AR00: envía la medición de las distintas distancias de una única lectura del entorno.
 	\item AR01: envía las mediciones de las distintas distancias e intensidades de una única lectura del entorno.
@@ -63,10 +62,20 @@ Estos comandos son los que le indican al láser la orden de enviar los datos de 
 	\item AR03: sirve para detener el comportamiento continuado del comando AR02, se recibe después un mensaje de confirmación.
 	\item AR04: envía las mediciones de las distintas distancias e intensidades de cada una de las lecturas del entorno que realiza de forma contínua.
 	\item AR05: sirve para detener el comportamiento continuado del comando AR04, se recibe después un mensaje de confirmación.
-\end{enumerate} 
+\end{enumerate}
+\bigskip
+\tablaSmall{Resumen de las características de cada comando AR}{l c c c c c}{coamndoscaracteristicas}
+{ \multicolumn{1}{l}{Comandos} & Continuo & Unico & Distancia & Distancia-Intensidad  & Parada \\}{
+AR00 & & X & X & &\\
+AR01 & & X & & X &\\
+AR02 & X & & X & &\\
+AR03 & & & & & X\\
+AR04 & X & & & X &\\
+AR05 & & & & & X\\
+}
  \subsection{Envío y recepción de mensajes}
  Tras haber escogido el comando a utilizar, se debe construir el mensaje que se va a enviar desde el PC hacia el láser. Para esta construcción se debe de seguir una estructura específica basada en estos campos.\\
- \includegraphics[scale=0.9]{estructuraMsgEnv}
+\imagen{estructuraMsgEnv}{Mensaje de petición al láser}
  \begin{itemize}
  	\item STX: Carácter, habitualmente correspondiente a "2" codificado como Bytes, que indica al láser el comienzo del mensaje que se le desea enviar.
  	\item Command size: como su propio nombre indica, es el tamaño del mensaje que el láser va a recibir incluyendo los caracteres de inicio y fin. Para los comandos que se van a emplear en este proyecto, los 4 caracteres que representan esta parte del mensaje van a ser siempre "000E" ya que siempre tienen la misma extensión de 14 caracteres.
@@ -77,7 +86,7 @@ Estos comandos son los que le indican al láser la orden de enviar los datos de 
  \end{itemize}
  
 Tras recibir este mensaje, el láser analiza este mensaje, para comprobar que no falte ninguna de las partes descritas anteriormente y la corrección del CRC (evitando fallos de trasmisión). El mensaje de respuesta también obedece a una estructura muy estricta:\\
-\includegraphics[scale=0.9]{estructuraMsgRcv}
+\imagen{estructuraMsgRcv}{Mensaje de respuesta del láser}
 \begin{itemize}
 	\item STX y ETX: Son los caracteres de inicio y final del mensaje enviado pro el láser. su definición es identica a la de sus homólogos en el anterior mensaje descrito.
 	\item Reply size: al igual que en el anterior se especifica el tamaño del mensaje en 4 caracteres que representan este valor en hexadecimal aunque a diferencia con esta, este tamaño si que es variable ya que no siempre se van a mandar la misma cantidad de datos.
@@ -91,7 +100,7 @@ Tras recibir este mensaje, el láser analiza este mensaje, para comprobar que no
 	\item CRC: es el código de verificación que demuestra que no ha habido errores en la transmisión, de forma identica a su homólogo en el mensaje enviado en la otra dirección.
 \end{itemize}
 En el comando empleados en este proyecto (AR02) la forma que posee estos mensajes de respuesta es la siguiente:\\
-\includegraphics[scale=0.9]{respCorrAR02}
+\imagen{respCorrAR02}{Mensaje de respuesta del láser ante comando AR02}
 Como se puede observar, dentro del mensaje que posee los datos de las lecturas se pueden encontrar una grán cantidad de datos que indican otra información relevante sobre la lectura realizada aunque irrelevante para los objetivos de este proyecto, como puede ser el estado de las áreas predeterminadas, los estados de alguno de los puertos de salida, el tiempo que se ha tardado en realizar la lectura, etc.\\
 Por todo esto se debe analizar cada trama para extraer la parte en la que exclusivamente aparecen los datos, los cuales después se deben traducir.
 
@@ -104,4 +113,4 @@ Después de haber aislado los datos y haberlos dividido en sus correspondientes 
 	\item Se traduce cada dato transformado a codificación binaria.
 	\item El comjunto de caracteres binarios transformados en una cadena conjunta se traduce a decimal para extraer el dato expresado en milímetros.
 \end{enumerate}
-\includegraphics[scale=0.9]{decodeData}
+\imagen{decodeData}{Traducción de datos a decimal}
