@@ -123,10 +123,69 @@ En este sprint se pretende mejorar el comportamiento del sistema haciendo que fu
 Trascurrido este sprint no se ha conseguido la implementación continua asi que se ha devuelto el código a su forma funcional. Por la parte de la memoria se produce un avance muy significativo en cuanto a su versión final se refiere.
 \subsubsection{Investigación}
 Esta parte cuenta con la investigación en cuanto a las pruebas realizadas con otros comandos del láser usados para poder desarrollar el funcionamiento continuo, aunque, como ya se ha explicado en puntos anteriores, no se ha conseguido, teniendo que volver a la forma más funcional y estable que se tenía hasta el momento.
+
 \section{Estudio de viabilidad}
+En el desarrollo de este proyecto también se ha de estudiar si el sistema desarrollado es rentable y cumple con la legalidad vigente para poder instalarlo en los AGVs de cualquier empresa, es decir, se ha de estudiar su viabilidad, tanto económica como legal.\\
 
 \subsection{Viabilidad económica}
+En este caso se analizarán los costes de cada aspecto del proyecto los cuales tengan una importancia en este aspecto.
+
+\subsubsection{Coste de personal}
+En este caso se debe de hacer una estimación a cerca del coste que supone el trabajo del programador a lo largo de toda la duración del proyecto. Debido a que algunos periodos han sido vacacionales (en cuanto al calendario laboral estándar) y otros no se ha avanzado en el proyecto, se estimará un trabajo de 10 meses. Teniendo como salario (tambien obtenido de una estimación aproximada) de 9 euros la hora y una jornada laboral estándar de 6 horas al dia y trabajando 20 dias cada mes el suelo se calcularía como: \\
+$9 ^{euros}/_{hora} * 4 ^{horas}/_{dia} = 36 ^{euros}/_{dia}$ \\
+$36 ^{euros}/_{dia} * 20 ^{dias}/_{mes} = 720 ^{euros}/_{mes}$ \\
+$720 ^{euros}/_{mes} * 10 meses = 7200 euros$ \\
+Con esto se estima el coste de personal en 7200 euros.\\
+
+\subsubsection{Coste de materiales}
+En este caso se ha de calcular tanto el coste del sistema hardware final como el de los materiales que han sido empleados a lo largo del proyecto para el desarrollo de las investigaciones y las pruebas de otras formas de implementación del sistema. Sabiendo esto y estimando Los costes de material de pruebas en 100 euros, el precio del láser en 400 euros, el del PC en 600 euros y 15 euros del cableado de alimentación y conexión entre los dos elementos finales del sistema, estimando una duración de 6 años para los finales y 6 meses para los materiales de prueba se pueden realizar los siguientes cálculos: \\
+$(400 euros / (12 ^{meses}/_{año} * 6 años)) * 6 meses = 33.33 eurosLaser$\\
+$(600 euros / (12 ^{meses}/_{año} * 6 años)) * 6 meses = 49.99 eurosPC$\\
+$(15 euros / (12 ^{meses}/_{año} * 6 años)) * 6 meses = 1.25 eurosCables$\\
+$33.33 eurosLaser + 49.99 eurosPC + 1.25 eurosCables + 100 eurosPruebas = 184.57 eurosMaterial$\\
+Con esto se estima el coste de material en 184.57 euros.\\
+
+\subsubsection{Costes software}
+Tambien hay que tener en cuenta los costes en cuanto a los programas y aplicaciones que se han empleado. En este caso el único coste a tener en cuenta es la licencia del sistema oprativo final, Windows 10, con un valor de 120 euros con una vida útil de 4 años. El resto de software empleado no ha tenido coste económico alguno (a excepción de el programa UAM Proyect Designer el cual ya se encuentra incluido en el coste del láser previamente tenido en cuenta). Por lo tanto los cálculos a realizar son:\\
+$(120 euros / (12 ^{meses}/_{año} * 4 años)) * 6 meses = 15 eurosSO$\\
+Con esto se estima el coste del software en 15 euros.\\
+
+\subsubsection{Costes totales}
+Con todos los cálculos anteriores se puede calcular de forma estimada (ya qe, como bien se ha dicho, todos los cálculos se han realizado a través de estimaciones) el coste total del proyecto. Para ello, hay que hacer la suma de todos los costes y tener el cuenta los porcentajes correspondientes a la Cotización del desarrollador a la Seguridad Social. Se sabe que estos porcentajes son : 23.6$%$ de contingencias comunes, 5.5$%$ de desempleo y 0.6$%$ por la formación profesional. Estos porcentajes hacen un total del 29.7$%$, con lo que los costes finales se calculan como:
+$7200 + (7200 * 0.297) = 9388.4 eurosDesarrollador$\\
+$9388.4 eurosDesarrollador + 15 eurosSO + 184.57  eurosMaterial = 9537.97 eurosTotales$ \\
+Con esto se estima el coste total en 9537.97 euros.\\
+
+\subsubsection{Beneficios}
+Después de conocer en cuanto se estima el coste del sistema para la compañía, en este apartado se calculará el beneficio que este software proporciona. Debido a la orientación de este, el software se ha de distribuir instalado en los AGVs en los cuales se va a emplear.\\
+Se estima un total de 500 vehículos en los cuales este programa va a ser instalado, con un precio de 40 euros por cada uno de estos vehículos cada año. Con esto el beneficio sería de:\\
+$500 vehículos * 40 ^{euros}/_{vehículo} = 20000 ^{euros}/_{año} de beneficio $\\
+Con estos beneficios se estimará también el tiempo que e tiempo en el que la compañía será capaz de recuperar la inversión es de:
+$9537.97 eurosTotales /  20000 ^{euros}/_{año}= 0.48 años$\\
+La compañía recuperará la inversión realizada en este proyecto en poco menos de 6 meses.\\
 
 \subsection{Viabilidad legal}
+Para poder comprobar que el sistema implementado no incumple ninguna ley o norma vigente hemos de analizar dos aspectos: las licencias software (comprobando que todos los programas y aplicaciones utilizados posean licencia) y la legislación en cuanto a los AGV en los que irá instalado el software.\\
 
-
+\subsubsection{Licencias software}
+Para comenzar esta sección, se van a investigar las licencias que poseen los distintos programas utilizados para el desarrollo de este proyecto.
+\begin{itemize}
+	\item Numpy: licencia BSD.
+	\item MatPlotLib: licencia BSD.
+	\item Jupyter Notebook: licencia BSD.
+	\item Spyder: licencia BSD.
+	\item RealTerm: licencia BSD.
+	\item Eclipse: licencia EPL.
+\end{itemize}
+Por la compatibilidad con la mayoría de los programas utilizados y por ser además una de las licencias adecuadas para un proyecto Python según su guía, se ha decidido que para este proyecto se va a escoger una licencia BSD (o Berkeley Software Distribution). Se ha escogido este tipo de licencias debido a la protección que ofrece, tanto al código del programa como al creador del mismo. A pesar de tener ciertos aspectos restrictivos, también posee algunas ventajas importantes:
+\begin{itemize}
+	\item Esta licencia permite que otras versiones a crear por usuarios ajenos al desarrollo inicial puedan crear sus propias versiones con distintos tipos de licencia, e incluso, crear versiones y distribuirlas como software libre.
+	\item Se permite realizar casi cualquier acción que el usuario quiera realizar sobre el software, incluyendo el uso este para productos propietarios, es decir, productos con licencias más restrictivas.
+	\item Es una de las de las licencias que más se acerca a la definición de software libre, debido a la libertad ofrecida al usuario con respecto al software adquirido.
+\end{itemize}
+A parte de estas características, como ya se ha dicho con anterioridad, esta licencia tambien posee ciertas características no tan favorables al usuario o al software:
+\begin{itemize}
+	\item Se debe incluir el reconocimiento del origen del software en cualquier anuncio o distribución realizada aunque no es obligatorio la colocación del nombre de los autores.
+	\item No se incluye ninguna restricción en esta licencia que ayude a que las versiones sucesivas del software sean libres con lo que, como se ha comentado anteriormente, se podrían asignar licencias mucho más restrictivas a cualquiera de esas versiones.
+\end{itemize}
+En cuanto a la licencia de Eclipse, se ha tomado la decisión de no considerarla para tomar la decisión anterior debido a que solo se empleó esta aplicación para las fases iniciales del proyecto, por lo cual no tiene relevancia en el funcionamiento del sistema final.
