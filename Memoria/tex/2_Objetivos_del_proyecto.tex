@@ -4,13 +4,22 @@ En este apartado se explican los distintos objetivos identificados en este proye
 
 \section{Objetivos generales}
 
-Los objetivos generales que se han planeado para este proyecto son:
+Se tiene por objetivo crear un software capaz de realizar un análisis de los datos recibidos del láser para identificar los objetos de su entorno. Por lo tanto, los objetivos generales de este proyecto son:
 \begin{itemize}
-	\item Conocer el entorno en el que el programa desarrollado en el proyecto. En este caso, el programa desarrollado sera integrado con el resto de utilidades de los AVG para que reconozca objetos en las zonas importantes para su funcionamiento (donde están los objetivos o los obstáculos).
-    \item Leer los datos obtenidos de las lecturas del láser para a través de su interfaz escogiendo los contactos del RS232 del GMT-GTW para saber por cual de ellos se recogen dichos datos.
-    \item Crear un programa que, una vez analizados los datos sepa detectar si en las áreas deseadas por el usuario existe un objeto. Esto puede utilizarse para la detección de obstáculos antes mencionada o para minimizar el tiempo de recogida de objetos (dependiendo de la función de cada AGV).
-    \item Comprender y utilizar los conocimientos a cerca de sistemas distribuidos que se han ido adquiriendo a lo largo del grado.
+	\item Crear una conexión para la comunicación con el láser
+	\item Intercambiar mensajes con el láser para obtener sus datos de lectura.
+    \item Realizar un análisis de dichos datos para comprobar si existe o no un objeto en las áreas requeridas por el usuario.
 \end{itemize} 
+
+\section{Objetivos funcionales}
+Los objetivos funcionales estimados para este proyecto son:
+\begin{itemize}
+	\item El usuario podrá escoger el número de zonas que desea analizar, siendo este número tan grande como desee.
+	\item El usuario decidirá cada una de las coordenadas en las que se encuentran los límites de las áreas que pretende analizar.
+	\item El usuario podrá ejecutar cuantas veces quiera el programa para poder observar diferentes lecturas.
+	\item El usuario podrá observar una serie de mensajes "true" o "false" (en el orden de inserción de las áreas anteriormente establecidas) para comprobar en qué áreas se ha detectado un objeto y en cuales no.
+	\item El usuario podrá observar de forma gráfica (más concretamente en un gráfico de puntos) los resultados del análisis y la posición de las áreas establecidas.
+\end{itemize}
 
 \section{Objetivos técnicos}
 
