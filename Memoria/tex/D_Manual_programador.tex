@@ -6,9 +6,24 @@ En este apartado se mostrarán todas las herramientas que necesita un programado
 Este proyecto es accesible a través de la URL: \url{https://github.com/arp0054/TFG_ObjDetectorViaLaser}\\
 
 \section{Estructura de directorios}
-
+Debido a las diferentes formas de implementación que este proyecto ha tenido a lo largo de su desarrollo, se pueden observar una gran variedad de directorios:
+\begin{itemize}
+	\item DataSheets: en este directorio se encuentran los documentos técnicos y el protocolo de comunicación utilizado por el láser, los cuales han servido para obtener una gradn cantidad de datos que han ayudado al desarrollo del proyecto (dirección IP y número de puerto por defecto, formas de encriptación y desencriptación de los datos...).
+	\item Diagramas: en este caso el nombre es muy descriptivo, en este directorio se encuentran los diagramas de clases y de secuencia, tanto los iniciales, desarrollados para las primeras fases del proyecto, como los finales. Estos diagramas se distinguen por estar separados en los subdirectorios "Iniciales" y "Finales".
+	\item Dispositivo: también perteneciente a las fases iniciales, en él aparecen el manual de usuario del MTX-GTW, con detalladas explicaciones a cerca de sus necesidades eléctricas así como todas las aplicaciones que el hardware de este dispositivo es capaz de realizar.
+	\item Instalación: en este caso, aparecen tanto imágenes como documentos a cerca de como instalar las librerías las cuales permitían la ejecución remota en el sistema descrito en el punto anterior así como otras utilidades necesarias para el desarrollo del proyecto en su primera versión (útiles para su uso con C$++$)
+	\item Memoria: como su mismo nombre indica, este es el directorio en el que se guardan todos los archivos e imágenes que conforman la memoria de este proyecto, así como su sección de anexos.
+	\item Python: en este directorio se alamcenan todos los archivos del sistema codificados en el lenguaje de programación con el mismo nombre, los cuales forman la versión actual y funcional del proyecto. Hay dos archivos con el mismo nombre " objectDetectorViaLaser" aunque con distinta extensión, dependiendo si es un archivo para usar con Jupyter Notebook (extensión ".ipynb"), el cual se utilizó primero para desarrollo y después solo para alguna prueba, o para utilización en Spyder(extensión ".py"). De la utilización de estos archivos aparece la generación automática de los dos subdirectorios pertenecientes a esta parte del repositorio.
+	\item TFG\_ 1718: de nuevo un directorio de las primeras versiones, ya que este alberga todas las clases, ya sean funcionales o librerias, que fueron usadas en las primeras versiones para codificar el sistema objetivo en el lenguaje de programación C$++$ .
+	\item URG\_ USB\_ Driver\_ en: este directorio almacena simplemente el driver utilizado para la conexión con el láser vía USB.
+\end{itemize}
+Como se ha podido observar,algunos de los directorios pertenecen a las primeras versiones. Esto viene dado por la motivación ta expuesta en el punto 7 de la memoria, donde una de las 
 \section{Manual del programador}
-
+En esta sección se explica como se configura el entorno de trabajo para este proyecto.
+\subsection{Python}
+Como primer paso para esta configuración se debe descargar el lenguaje de programación que se va a emplear, en este caso Python. Para este proyecto no se especifica ninguna versión en especial pero para su desarrollo se ha empleado la versión número 3.6.3.\\
+\\
+Para  su descarga visitar: \url{https://www.python.org/downloads/release/python-363/}
 \section{Compilación, instalación y ejecución del proyecto}
 
 \section{Pruebas del sistema}
