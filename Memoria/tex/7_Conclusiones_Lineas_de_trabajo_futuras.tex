@@ -2,3 +2,39 @@
 
 Todo proyecto debe incluir las conclusiones que se derivan de su desarrollo. Éstas pueden ser de diferente índole, dependiendo de la tipología del proyecto, pero normalmente van a estar presentes un conjunto de conclusiones relacionadas con los resultados del proyecto y un conjunto de conclusiones técnicas. 
 Además, resulta muy útil realizar un informe crítico indicando cómo se puede mejorar el proyecto, o cómo se puede continuar trabajando en la línea del proyecto realizado. 
+\section{Introducción}
+En este apartado se expondrán las conclusiones derivadas del desarrollo del proyecto y de los resultados finales obtenidos. Por otra parte, se expondrán una serie de posibles mejoras y líneas de trabajo futuras con respecto a este proyecto.
+
+\section{Conclusiones}
+Finalizando la creación de esta memoria, se expondrán las conclusiones obtenidas del desarrollo de este proyecto:
+\begin{itemize}
+	\item Como primera de las conclusiones se ha de destacar la parte del proyecto que más ha costado conseguir o más bien la que más ha costado de conseguir de forma estable,el entorno de programación. Esta parte es una de las que más tiempo ha llevado si no es la que más debido a los problemas surgidos debido a programas como Eclipse, el cual fallo impidiendo continuar el proyecto durante un periodo de tiempo muy extenso, al igual que el uso de sistemas virtualizados como es el caso del uso del sistema operativo Ubuntu en el programa Oracle VirtualBox que al no encontrar solución posible para el problema encontrado se tuvo que rehacer varias veces. Aunque haya supuesto un problema, ha servido también para conocer estas aplicaciones en profundidad y poder investigar para solucionar estos fallos o similares en un futuro.
+	\item Otra conclusión a tener en cuenta es la cantidad de nuevos conocimientos obtenida gracias al desarrollo de este software. Se ha obtenido nueva información a cerca de comunicación entre dispositivos, sockets, formas de codificación de diferentes conjuntos de datos, diferentes formas de implementación de un sistema para obtener los mismos resultados (ya sea variando los elementos hardware o software utilizados), las ventajas y desventajas que supone crear una determinada parte del sistema dependiendo del lenguaje de programación utilizado para ello, etc.
+	\item Y hablando de las investigaciones, este proyecto ha servido también para conocer como realizar un proyecto software basado en investigaciones a cerca de temas de los que se tenía un idea muy superficial pero se ha podido descubrir más aspectos los cuales han servido para aumentar conocimientos y hacer saber la dinámica llevada a cabo en proyectos de investigación. 
+\end{itemize}
+En resumen, la experiencia en el desarrollo de este proyecto ha sido por lo general satisfactoria ya que, aún siendo una actividad realmente costosa en algunos aspectos, ha sido útil para dar a conocer la realidad sobre el proceso que este tipo de proyectos siguen para llevarse a cabo y conocer también las facilidades y dificultades que estos suponen para las personas encargadas de su desarrollo.
+
+\section{Mejoras y líneas de trabajo}
+
+\subsection{Funcionamiento continuo}
+En el sistema desarrollado, al ejecutarlo, solos se trabaja con una lectura de entorno por ejecución. Esto es debido a que, aún utilizando el comando de lectura continua AR02 no se plantea la lectura continua sino que se reciben los datos correspondientes a la primera de las lecturas antes de cerrar el socket qe conecta los elementos del sistema. Esto es debido a la velocidad por la cual el sistema analiza los datos que recibe.\\
+\\
+Al no ser un análisis inmediato, si se intentasen analizar todas las lecturas recibidas del láser el sistema tendría un retardo demasiado grande para que sea útil para su uso a nivel industrial. Además este retardo sería exponencial ya que, mientras se analiza una de las tramas de datos, el sistema ya ha recibido varias más ya que el láser realiza y envía una trama de datos (correspondiente a una lectura del entorno) cada 30 milisegundos (ms).\\
+\\
+Para este aspecto se pueden plantear varias líneas de trabajo:
+\begin{itemize}
+	\item Mejora en la eficiencia: se puede modificar el código para hacerlo más eficiente, lo que disminuiría el retraso con respecto a los datos recibidos y los analizados.
+	\item Cambio de mensaje: también es posible el cambio en cuanto a la comunicación con el láser ya que se puede enviar el mensaje AR01 en lugar del AR02 con lo que se recibiría una única lectura por cada paso de mensaje, evitando la acumulación de datos.
+	\item Programación concurrente: otro aspecto a analizar es la programación multihilo de este software, ya que se puede crear diferentes hilos que puedan ir recibiendo datos, analizando datos y representando gráficamente dichos datos respectivamente, lo cual también evitaría o por lo menos reduciría el retardo antes mencionado.
+\end{itemize}
+
+\subsection{Ejecución remota}
+Esta mejora viene motivada por, como ya se ha explicado en otros apartados, el hecho de no haber conseguido implementarlo durante el desarrollo de este proyecto.\\
+\\
+Para el desarrollo de este aspecto se necesita la inclusión en el sistema del MTX-GTW. Este instrumento es capaz de simular los recursos, y por tanto el rendimiento, presentes en un AGV. Para comunicarse con él se debe usar varios cables adicionales:
+\begin{itemize}
+	\item Cable de red: para realizar la conexión entre el MTX-GTW y el ordenador se necesita un cable de red estándar.
+	\item Cable con conector RS232: este cable es necesario para poder conectar el nuevo dispositivo con el láser.
+	\item Cable de alimentación: se necesitará tambien un cable que suministre 12 V de conrriente continua sin cabezal ya que posee uno propio al cual se han de acoplar dos hilos individuales.
+\end{itemize}
+Tras haber obtenido este sistema hardware se ha de comprobar si en el MTX-GTW se puede ejecutar código en Python, ya que si no es así sería necesario traducir el sistema a lenguajes como C$++$, el cual si que es capaz de comprender.

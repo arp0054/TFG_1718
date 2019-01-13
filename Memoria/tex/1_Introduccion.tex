@@ -1,11 +1,10 @@
 \capitulo{1}{Introducción}
 
-Los AGV son una de las últimas innovaciones en el mundo de la industria. Son robots autónomos que sustituyen al trabajo humano en el sentido de transporte de objetos o mercancías entre las distintas secciones de las industrias. \\
+Los AGV \cite{AGVdes} son una de las últimas innovaciones en el mundo de la industria. Son robots autónomos que sustituyen al trabajo humano en el sentido de transporte de objetos o mercancías entre las distintas secciones de las industrias. \\
 \\
-Para la realización de sus propósitos estos aparatos, además de sus aparatos de guiado, necesitan aparatos que les permitan reconocer si en su camino existe algún obstáculo o si el objeto con el que trabaja (mercancía) se encuentra cerca de ellos. Para esto, los AGVs llevan incorporado, como norma general, un láser de seguridad, el cual recoge un gran conjunto de datos sobre el entorno que lo rodea.\\
+Para la realización de sus propósitos estos autómatas, además de sus sistemas de guiado, necesitan estructuras que les permitan reconocer si en su camino existe algún obstáculo o si el objeto con el que trabaja (mercancía) se encuentra cerca de ellos. Para esto, los AGVs llevan incorporado, como norma general, un láser de seguridad, el cual recoge un gran conjunto de datos sobre el entorno que lo rodea.\\
 \\
-Actualmente, esta tecnología se basa en la configuración de áreas en las cuales el láser detecta las variaciones de puntos que se localizan dentro de estas áreas. Un inconveniente de esta configuración es la necesidad de que el área tenga uno de sus límites en el origen de coordenadas del gráfico trazado por las coordenadas obtenidas de las lecturas del láser por lo que para detectar si existe un objeto en un determinado límite situado en la zona media del gráfico antes mencionado pero no más cerca, se debe manejar y configurar más de un área.\\
+Actualmente, esta tecnología se basa en la configuración de áreas en las cuales el láser detecta las variaciones de puntos que se localizan dentro de estas áreas. Los láseres de seguridad poseen un número limitado de estas áreas, también denominadas campos de área, las cuales, como bien se ha dicho antes, solo ofrecen una información aproximada de donde se encuentra un objeto debido al hecho de detectar únicamente variaciones.\\
 \\
-En este proyecto se desarrollará un sistema con el que se pretende solventar el problema antes descrito, reduciendo el número de áreas a necesitar con lo que se conseguirá una mayor eficiencia en el análisis de entorno.\\
+En este proyecto se desarrollará un sistema con el que se pretende solventar los problemas anteriormente descritos, ya que permitirá un número de campos de área prácticamente ilimitado y la posibilidad de conocer de forma exacta la posición de los objetos que el láser detecte en su entorno, lo cual no se ha hecho hasta ahora con este tipo de láseres.\\
 \\
-En este caso vamos a utilizar el Hokuyo Safety Laser Scanner (UAM-05LP-T301). Este aparato es capaz de desarrollar tres áreas de detección dependiendo de la distancia a la que detecte un elemento (puede ser de 20, 10 y 5 metros).\\

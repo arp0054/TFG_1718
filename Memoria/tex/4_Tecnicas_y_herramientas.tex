@@ -1,20 +1,23 @@
 \capitulo{4}{Técnicas y herramientas}
 
 Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto. Si se han estudiado diferentes alternativas de metodologías, herramientas, bibliotecas se puede hacer un resumen de los aspectos más destacados de cada alternativa, incluyendo comparativas entre las distintas opciones y una justificación de las elecciones realizadas. \\
+\\
 No se pretende que este apartado se convierta en un capítulo de un libro dedicado a cada una de las alternativas, sino comentar los aspectos más destacados de cada opción, con un repaso somero a los fundamentos esenciales y referencias bibliográficas para que el lector pueda ampliar su conocimiento sobre el tema.
-
 
 \section{Desarrollo de la memoria}
 
 En este aspecto se ha querido emplear LaTeX en contraposición a otros programas de propósito similar como pueden ser Microsoft Word o Open Office Writer ya que esta aplicación nos permite una mayor cantidad de posibles acciones a realizar en el documento crear. \\
+\\
 Por poner un ejemplo de estas ventajas antes mencionadas, la presentación del documento puede quedar más limpia ya que el usuario puede manejar el espacio de cada hoja a su antojo y poder disponer de todo él ya que se puede variar los márgenes de las páginas de una forma sencilla (introducción de un comando), lo que en los otros programas antes mencionados resultaría demasiado complicado a demás de ser potencialmente peligroso debido a que, gracias a las acciones automáticas que poseen, podrían desajustar todo el contenido de la hoja en sí haciendo que el usuario tenga que ajustar cada uno de los elementos que antes poseía. LaTeX permite saltarse los márgenes establecidos, por ejemplo, para insertar una imagen. en cuanto a los encabezados, pies de página y numeración de página también se puede realizar con un simple comando. \\
+\\
 Con todo esto y con la característica de que permite guardar el archivo directamente en PDF sin realizar ninguna conversión (aunque para ello necesite crear algún archivo debido a la compilación) es por la que se ha escogido para este 
 
 \section{Desarrollo del código}
 
 \subsection{Jupyter Notebook}
 
-Debido a que este entorno de desarrollo ya se ha empleado en algunas asignaturas del grado, lo cual lo hace más amigable y facil de usar, se ha decidido emplear Jupyter Notebook para el desarrollo del código. Además de ser compatible con el sistema operativo, este entorno tiene la ventaja de poder obtener la conexión con el láser, y por lo tanto el intercambio de mensajes y datos con el mismo, sin necesidad de instalar ningún complemento para poder desarrollar el código sin dificultades añadidas.
+Debido a que este entorno de desarrollo ya se ha empleado en algunas asignaturas del grado, lo cual lo hace más amigable y facil de usar, se ha decidido emplear Jupyter Notebook para el desarrollo del código. Además de ser compatible con el sistema operativo, este entorno tiene la ventaja de poder obtener la conexión con el láser, y por lo tanto el intercambio de mensajes y datos con el mismo, sin necesidad de instalar ningún complemento para poder desarrollar el código sin dificultades añadidas.\\
+\\
 Este entorno, además de las ventajas antes descritas, permite desarrollar y ejecutar (y por lo tanto testar) partes del código por separado. Por este motivo, es más fácil comprobar el correcto funcionamiento del código desarrollado antes de realizar otras partes del código siendo después más difícil rectificar dicho error.
 
 \subsection{Spyder}
@@ -23,7 +26,9 @@ Este programa, desarrollado tambien por Anaconda (misma empresa que desarrolla J
 
 \section{Planteamiento de las tareas}
 
-Para organizar las actividades a realizar se ha escogido la aplicación Trello. Esta aplicación se ha escogido debido a su facilidad de uso (debido a que su interfaz de usuario es muy intuitiva), a demás de otros muchos aspectos como el hecho de que a un tablero (unidades organizativas en las que se gestionan las tareas de los diferentes proyectos que se puede gestionar desde una misma cuenta de usuario) se puede acceder más de un usuario. Esta característica permite que tanto el alumno como el profesor pueden acceder al mismo tablero para gestionar las tareas a realizar.
+\subsection{Trello}
+Para organizar las actividades a realizar se ha escogido la aplicación Trello. Esta aplicación se ha escogido debido a su facilidad de uso (debido a que su interfaz de usuario es muy intuitiva), a demás de otros muchos aspectos como el hecho de que a un tablero (unidades organizativas en las que se gestionan las tareas de los diferentes proyectos que se puede gestionar desde una misma cuenta de usuario) se puede acceder más de un usuario. Esta característica permite que tanto el alumno como el profesor pueden acceder al mismo tablero para gestionar las tareas a realizar.\\
+\imagen{interfazGraficaTrello}{Interfaz de Trello}
 
 \section{Metodología de gestión y herramientas asociadas}
 
@@ -37,7 +42,9 @@ Para este proyecto se ha decidido utilizar la metodología de SCRUM. Esta metodo
 
 \subsection{ UAM Proyect Designer}
 Aunque el manejo de este elemento del proyecto se va a realizar a través de funciones presentes en Eclipse y el código implementado para el proyecto, se va a utilizar una aplicación instalada vía CD llamada UAM Proyect Designer. Esta aplicación, cuando el equipo en el que se instala está conectado al láser, permite observar los datos relacionados con la nube de puntos creada por este aparato al realizar sus operaciones de lectura de su entorno.\\
+\\
 En este caso esta herramienta será utilizada para la comprobación de que el código desarrollado para alcanzar los objetos del proyecto funciona de forma correcta comparando los resultados obtenidos por el código y la aplicación, los cuales deberían de coincidir.\\
+\\
 Como bien se ha dicho al principio de esta sección, la aplicación se ha instalado utilizando el CD presente en el paquete en el que el láser se encuentra almacenado. 
 
 \subsection{RealTerm}
@@ -53,7 +60,8 @@ Este programa, consistente en una terminal para TCP y puerto serie (TCP/Serial p
 
 El lenguaje de programación con este nombre es aquel desarrollado en 1991 con el objetivo de crear código con una sintaxis que favorezca un código legible.\\
 Además de esta característica, es importante destacar el hecho de que se trata de un lenguaje multiparadigma, ya que puede desarrollarse código orientado a objetos, programación imperativa y, en menor medida, programación funcional. \\
-Ha sido seleccionado debido a la sencillez que proporciona a la hora de programar distintos procedimientos que en otros lenguajes (Java, C,C$ ++$ ...) resultarían mucho más complicados como es la implementación de un socket para comunicarse (enviar mensajes y recoger datos) con el láser.
+\\
+Ha sido seleccionado debido a la sencillez que proporciona a la hora de programar distintos procedimientos que en otros lenguajes (Java, C,C$++$ ...) resultarían mucho más complicados como es la implementación de un socket para comunicarse (enviar mensajes y recoger datos) con el láser.
 
 \section{Cableado}
 

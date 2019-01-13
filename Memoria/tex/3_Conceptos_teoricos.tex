@@ -1,4 +1,4 @@
-\capitulo{3}{Conceptos teóricos}
+\textit{\capitulo{3}{Conceptos teóricos}}
 
 En este proyecto se deben de emplear una gran cantidad de  conocimientos adquiridos a lo largo de las asignaturas del grado. En esta sección se describirán cuales son esos conceptos además de la forma en la que se aplican en este proyecto.
 
@@ -10,36 +10,8 @@ Para la implementación del sistema que nos va a permitir el desarrollo del prog
     \item Cable ethernet: es el soporte a través del cual se transportan tanto los mensajes enviado por el ordenador hacia el láser como las respuestas y los datos de lectura que este manda al PC demandante. Esta es la que, en la descripción del anterior elemento se conoce como la interfaz. En el caso de este proyecto se usará un UAM-NET, un cable Ethrernet de 3 metros de longitud desarrollado por Hokuyo, misma empresa desarrolladora del láser empleado, lo que hace que resulte idóneo para evitar problemas de incompatibilidad y asegurar así el correcto funcionamiento del sistema.
     \item PC: es la parte principal del proyecto, ya que es la encargada de permitir al usuario tanto introducir las áreas donde se necesita detectar los objetos, como las órdenes que el usuario desea transmitir al láser para recibir la información. Además también es la encargada de recibir y procesar las respuestas del láser para poder mostrar al usuario los resultados de la comparación de los datos y las coordenadas de las áreas introducidas. La utilización de este aparato es debida a que este proyecto sería destinado a ser introducido dentro de un AGV pero se necesita hacer visible al usuario a través de una pantalla.\\ 
 \end{itemize}
-
-\subsection{Implementación final en el AGV}
-Con esta estructura, el sistema puede ser implementado en AGVs que no posean movimiento, es decir, aquellos cuyas partes móviles no hagan desplazar toda la estructura del vehículo, ya que se necesita un ordenador para visualizar los resultados del análisis.
-
-\imagen{diagrmaExt3}{Implementación externa}
-
-Esta primera opción de implementación tiene ciertas ventajas pero también posee ciertos inconvenientes:
-Ventajas:
-\begin{enumerate}
-	\item Visualización de la gráfica que representa tanto las lecturas del láser como el resultado del análisis de forma más visual y fácil de analizar por el usuario.
-	\item Facilidad para el cambo de coordenadas de cada uno de los límites que conforman cada una de las áreas a analizar.
-\end{enumerate}
-Desventajas:
-\begin{enumerate}
-	\item Necesidad de un PC externo que realice el análisis de datos.
-\end{enumerate}
-
-Aunque si se obvia esta característica de la detección de objetos (reduciendo ese proceso a datos booleanos) si que es posible emplear el sistema con AVGs móviles.
+% Esta imagen es provisional hasta tener fotografia del sistema montado
 \imagen{diagrmaInt3}{Implementación interna}
-
-Aunque esta opción tambien tiene sus ventajas e inconvenientes, al igual que la anterior:
-Ventajas:
-\begin{enumerate}
-	\item Independencia de ningún PC externo que realice el análisis.
-	\item Reducción de utilización de recursos (tanto hardware como software) en la ejecución del sistema, debido a la omisión de la representación gráfica.
-\end{enumerate}
-Desventajas:
-\begin{enumerate}
-	\item Incapacidad de visualización de los resultados del análisis debido a la ausencia de representación antes mencionada.
-\end{enumerate}
 
 \section{Procesado de datos}
 
@@ -48,6 +20,7 @@ Cuando el programa desarrollado se comunica con el láser, este debe recibir las
 \subsection{Comandos disponibles}
 
 Para que el láser devuelva los datos de sus lecturas se le debe de mandar un comando específico dependiendo de la forma de lectura que deseamos que realice. Hay muchos tipos de comandos disponibles para enviar al láser pero para los objetivos de este proyecto vamos a emplear un único tipo, los comandos AR.\\
+\\
 Estos comandos son los que le indican al láser la orden de enviar los datos de lectura. Dependiendo del comando AR enviado, se enviará un determinado conjunto de datos u otro. Algunos de estos comandos sirven para detener el funcionamiento provocado por otros comandos del mismo tipo. Los comandos de este tipo son 6:
 \begin{enumerate}
 	\item AR00: envía la medición de las distintas distancias de una única lectura del entorno.
@@ -96,6 +69,7 @@ Tras recibir este mensaje, el láser analiza este mensaje, para comprobar que no
 En el comando empleados en este proyecto (AR02) la forma que posee estos mensajes de respuesta es la siguiente:\\
 \imagen{respCorrAR02}{Mensaje de respuesta del láser ante comando AR02}
 Como se puede observar, dentro del mensaje que posee los datos de las lecturas se pueden encontrar una grán cantidad de datos que indican otra información relevante sobre la lectura realizada aunque irrelevante para los objetivos de este proyecto, como puede ser el estado de las áreas predeterminadas, los estados de alguno de los puertos de salida, el tiempo que se ha tardado en realizar la lectura, etc.\\
+\\
 Por todo esto se debe analizar cada trama para extraer la parte en la que exclusivamente aparecen los datos, los cuales después se deben traducir.
 
 \subsection{Traducción de los datos}
@@ -108,3 +82,10 @@ Después de haber aislado los datos y haberlos dividido en sus correspondientes 
 	\item El comjunto de caracteres binarios transformados en una cadena conjunta se traduce a decimal para extraer el dato expresado en milímetros.
 \end{enumerate}
 \imagen{decodeData}{Traducción de datos a decimal}
+
+Una vez realizados estos cálculos se crea una lista con valores de ángulos expresados en grados del mismo tamaño que la lista de datos decodificados para poder asignar a cada uno de los datos su ángulo correspondiente para poder crear así una lista puntos expresados en coordenadas polares.\\
+\\
+Esta lista de puntos es traducida elemento a elemento a coordenadas cartesianas a través de dos sencillas operaciones.Teniendo en cuenta un par de coordenadas polares (r,\(\theta\) )donde "r" representa el radio y \(\theta\)  representa el ángulo, la traducción a coordenadas cartesianas (x,y) se realiza así: \\
+x = r * cos(\(\theta\))\\
+y = r * sin(\(\theta\))\\
+Una vez hechas estas traducciones se posee una lista de puntos cartesianos los cuales podemos representar en una gráfica para poder observar las lecturas ofrecidas por estos datos.

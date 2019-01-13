@@ -6,33 +6,40 @@
 \contentsline {chapter}{Introducci\IeC {\'o}n}{1}{chapter*.4}
 \contentsline {chapter}{Objetivos del proyecto}{3}{chapter*.5}
 \contentsline {section}{\numberline {2.1}Objetivos generales}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Objetivos t\IeC {\'e}cnicos}{4}{section.2.2}
-\contentsline {chapter}{Conceptos te\IeC {\'o}ricos}{5}{chapter*.6}
-\contentsline {section}{\numberline {3.1}Organizaci\IeC {\'o}n de la infraestructura}{5}{section.3.1}
-\contentsline {subsection}{Implementaci\IeC {\'o}n final en el AGV}{6}{section*.7}
+\contentsline {section}{\numberline {2.2}Objetivos funcionales}{3}{section.2.2}
+\contentsline {section}{\numberline {2.3}Objetivos t\IeC {\'e}cnicos}{4}{section.2.3}
+\contentsline {chapter}{Conceptos te\IeC {\'o}ricos}{7}{chapter*.6}
+\contentsline {section}{\numberline {3.1}Organizaci\IeC {\'o}n de la infraestructura}{7}{section.3.1}
 \contentsline {section}{\numberline {3.2}Procesado de datos}{8}{section.3.2}
-\contentsline {subsection}{Comandos disponibles}{8}{section*.8}
-\contentsline {subsection}{Env\IeC {\'\i }o y recepci\IeC {\'o}n de mensajes}{10}{section*.9}
-\contentsline {subsection}{Traducci\IeC {\'o}n de los datos}{13}{section*.10}
-\contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{15}{chapter*.11}
-\contentsline {section}{\numberline {4.1}Desarrollo de la memoria}{15}{section.4.1}
-\contentsline {section}{\numberline {4.2}Desarrollo del c\IeC {\'o}digo}{16}{section.4.2}
-\contentsline {subsection}{Jupyter Notebook}{16}{section*.12}
-\contentsline {subsection}{Spyder}{16}{section*.13}
-\contentsline {section}{\numberline {4.3}Planteamiento de las tareas}{16}{section.4.3}
-\contentsline {section}{\numberline {4.4}Metodolog\IeC {\'\i }a de gesti\IeC {\'o}n y herramientas asociadas}{17}{section.4.4}
-\contentsline {section}{\numberline {4.5}Patrones de dise\IeC {\~n}o empleados}{17}{section.4.5}
-\contentsline {section}{\numberline {4.6}Herramienta de manejo de l\IeC {\'a}ser}{17}{section.4.6}
-\contentsline {subsection}{ UAM Proyect Designer}{17}{section*.14}
-\contentsline {subsection}{RealTerm}{17}{section*.15}
-\contentsline {section}{\numberline {4.7}Python}{18}{section.4.7}
-\contentsline {section}{\numberline {4.8}Cableado}{18}{section.4.8}
-\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{21}{chapter*.16}
-\contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n del trabajo como proyecto de investigaci\IeC {\'o}n}{21}{section.5.1}
-\contentsline {section}{\numberline {5.2}Conocimientos utilizados aprendidos en el grado}{21}{section.5.2}
-\contentsline {subsection}{Codificaci\IeC {\'o}n en Python}{22}{section*.17}
-\contentsline {subsection}{Conocimiento sobre sockets}{22}{section*.18}
-\contentsline {subsection}{Conocimiento a cerca de la gesti\IeC {\'o}n del proyecto}{22}{section*.19}
-\contentsline {section}{\numberline {5.3}Conocimientos externos a lo aprendido en el grado}{22}{section.5.3}
-\contentsline {chapter}{Trabajos relacionados}{25}{chapter*.20}
-\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{27}{chapter*.21}
+\contentsline {subsection}{Comandos disponibles}{9}{section*.7}
+\contentsline {subsection}{Env\IeC {\'\i }o y recepci\IeC {\'o}n de mensajes}{10}{section*.8}
+\contentsline {subsection}{Traducci\IeC {\'o}n de los datos}{13}{section*.9}
+\contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{17}{chapter*.10}
+\contentsline {section}{\numberline {4.1}Desarrollo de la memoria}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}Desarrollo del c\IeC {\'o}digo}{18}{section.4.2}
+\contentsline {subsection}{Jupyter Notebook}{18}{section*.11}
+\contentsline {subsection}{Spyder}{18}{section*.12}
+\contentsline {section}{\numberline {4.3}Planteamiento de las tareas}{19}{section.4.3}
+\contentsline {subsection}{Trello}{19}{section*.13}
+\contentsline {section}{\numberline {4.4}Metodolog\IeC {\'\i }a de gesti\IeC {\'o}n y herramientas asociadas}{19}{section.4.4}
+\contentsline {section}{\numberline {4.5}Patrones de dise\IeC {\~n}o empleados}{20}{section.4.5}
+\contentsline {section}{\numberline {4.6}Herramienta de manejo de l\IeC {\'a}ser}{20}{section.4.6}
+\contentsline {subsection}{ UAM Proyect Designer}{20}{section*.14}
+\contentsline {subsection}{RealTerm}{20}{section*.15}
+\contentsline {section}{\numberline {4.7}Python}{21}{section.4.7}
+\contentsline {section}{\numberline {4.8}Cableado}{21}{section.4.8}
+\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{23}{chapter*.16}
+\contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n del trabajo como proyecto de investigaci\IeC {\'o}n}{23}{section.5.1}
+\contentsline {section}{\numberline {5.2}Conocimientos utilizados aprendidos en el grado}{23}{section.5.2}
+\contentsline {subsection}{Codificaci\IeC {\'o}n en Python}{24}{section*.17}
+\contentsline {subsection}{Conocimiento sobre sockets}{24}{section*.18}
+\contentsline {subsection}{Conocimiento a cerca de la gesti\IeC {\'o}n del proyecto}{24}{section*.19}
+\contentsline {section}{\numberline {5.3}Conocimientos externos a lo aprendido en el grado}{25}{section.5.3}
+\contentsline {chapter}{Trabajos relacionados}{27}{chapter*.20}
+\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{29}{chapter*.21}
+\contentsline {section}{\numberline {7.1}Introducci\IeC {\'o}n}{29}{section.7.1}
+\contentsline {section}{\numberline {7.2}Conclusiones}{29}{section.7.2}
+\contentsline {section}{\numberline {7.3}Mejoras y l\IeC {\'\i }neas de trabajo}{30}{section.7.3}
+\contentsline {subsection}{Funcionamiento continuo}{30}{section*.22}
+\contentsline {subsection}{Ejecuci\IeC {\'o}n remota}{31}{section*.23}
+\contentsline {chapter}{Bibliograf\'{\i }a}{33}{section*.25}

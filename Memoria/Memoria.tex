@@ -8,6 +8,7 @@
 \usepackage{microtype}
 \usepackage{placeins}
 \usepackage{hyperref}
+\usepackage{cite}
 
 \RequirePackage{booktabs}
 \RequirePackage[table]{xcolor}
@@ -401,12 +402,18 @@ D. nombre co-tutor
 % Abstract en castellano
 \renewcommand*\abstractname{Resumen}
 \begin{abstract}
-En este proyecto se desarrolla una aplicación del láser para detectar objetos que pueden ser utilizada para la mejora en el funcionamiento de los AGVs. Su funcionamiento básico es el análisis del mar de puntos que crea el láser y analizar las diferentes variaciones para saber donde se encuentran los objetos con el objetivo de poder evitarlo.
+Los vehículos autoguiados o AGVs son una de las grandes innovaciones en el sector de la industria de estos últimos años. Estos son capaces de cumplir trabajos de traslado y colocación de mercancías en los distintos sectores de la industria en la que se encuentran instalados sin la necesidad de operarios que los manejen.\\
+\\
+Para realizar estas tareas, además de los sistemas de guiado, necesitan un sistema de detección de objetos en su entorno, tanto para localizar los elementos a transportar como para detectar obstáculos . Para esta tarea los estos sistemas llevan incorporado un láser de seguridad el cual hace lecturas periódicas de su entorno.\\
+\\
+Dos de los problemas que poseen estos láseres son: el número de campos de área posibles y la exactitud de las detecciones. Estos láseres tienen como característica la posibilidad un número limitado de campos de área en los cuales solo se detectan las variaciones en cuanto a los puntos detectados por el láser pero sin especificar donde se encuentra el objeto exactamente, es decir, devuelven la detección de un objeto en un campo pero no en que parte del mismo se encuentra.\\
+\\
+En este proyecto se ha desarrollado un software destinado al láser para detectar objetos de manera mucho más precisa de lo que lo hacía hasta ahora los láseres y poder detectar estos objetos en un número de campos de área casi ilimitado, eliminando también la primera de las restricciones descritas anteriormente.
 \end{abstract}
 
 \renewcommand*\abstractname{Descriptores}
 \begin{abstract}
-Láser,  Ethernet, MTX-GTW, AGV\ldots
+Láser, AGV, vehículos autoguiados,detección de objetos, Python,Spyder,Jupyter Notebook\ldots
 \end{abstract}
 
 \clearpage
@@ -414,12 +421,18 @@ Láser,  Ethernet, MTX-GTW, AGV\ldots
 % Abstract en inglés
 \renewcommand*\abstractname{Abstract}
 \begin{abstract}
-A \textbf{brief} presentation of the topic addressed in the project.
+Automated guided vehicle o AGVs are one of the most important innovations in the industry of the last few years. These are able to complete labors of transfer and placement of goods in the different sectors of the industry they are installed without any driver.\\
+\\
+To perform these tasks, apart from the guidance systems, they need a object detection system in their environment, both to locate the goods to be transported and to detect obstacles. Thus, these systems incorporate a safety laser which makes periodic measurements of their surroundings. \\
+\\
+Some of the problems or aspects to improve these lasers have are 2: the limited possible areas and the accuracy of measurements.One of the problems these lasers have is the limited number of areas which only detect variations in the measurements detected by the laser with no specification about where exactly the object is.\\
+\\
+In this project software was developed for a laser to detect objects far more accurate than current lasers and be able to detect these objects in a almost unlimited number of areas, also deleting the first of the restrictions previously described.
 \end{abstract}
 
 \renewcommand*\abstractname{Keywords}
 \begin{abstract}
-keywords separated by commas.
+Láser, AGV,automated guided vehicle,object detection, Python,Spyder,Jupyter Notebook\ldots
 \end{abstract}
 
 \clearpage
@@ -446,7 +459,7 @@ keywords separated by commas.
 \include{./tex/7_Conclusiones_Lineas_de_trabajo_futuras}
 
 
-\bibliographystyle{plain}
 \bibliography{bibliografia}
+\bibliographystyle{plain}
 
 \end{document}
