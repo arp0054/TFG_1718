@@ -2,11 +2,14 @@
 
 \section{Introducción}
 En este apartado se especificará la planificación seguida en cuanto a tiempo se refiere para realizar cada una de las tareas que han conformado este proyecto, permitiendo gracias a esta planificación cumplir con los objetivos que se han establecido para el sistema desarrollado.\\
+\\
 Debido a que gran parte de este proyecto se ha basado en la investigación (ya que, como se ha explicado en otros puntos, se desconocían algunos de los procedimientos a realizar), la planificación temporal no ha podido ser tan estricta como debería ser en un proyecto cuya organización se basa en la metodología ágil conocida como SCRUM como es este caso. Otro aspecto que ha impedido seguir esa planificación ha sido la aparición de una gran cantidad de contratiempos surgidos durante cada una de las fases de este proyecto, como se describirá más adelante.\\
+\\
 En cuanto al estudio de viabilidad, la parte económica ha sido también un aspecto difícil de calcular ya que se ha necesitado probar una serie de implementaciones, tanto hardware como software, hasta dar con la idónea para cumplir los requisitos del proyecto.\\
  
 \section{Planificación temporal}
 Como bien se ha descrito en la introducción, en este apartado se especificará el desarrollo del proyecto descrito a partir de los periodos de tiempo que han llevado a desarrollar cada parte, o como se conoce en terminología SCRUM, cada uno de los sprints.\\
+
 \subsection{Sprint 0: 05/10/2017 - 22/11/2017}
 Este es el sprint inicial, donde se explica y establece los conceptos sobre los que se va a trabajar y los elementos que se van a emplear para ello. Se plante la realización de este trabajo basandose en el sistema operativo Ubuntu, en su versión 14.04 LTS, para desarrollar el código usando la aplicación conocida como Eclipse en su versión 4.8 (conocida como Photon) y el leguaje de programación C$++$. Además se plantearon las librerías a utilizar para este proceso y la utilización del dispositivo MTX-GTW para la ejecución remota del sistema en este dispositivo.\\
 \subsubsection{Tareas}
@@ -66,8 +69,11 @@ Este es uno de los sprints más largos debido a que ha sido en el que han surgid
 En este Sprint, como se ha dicho anteriormente, surgen la mayor parte de las incidencias que impiden el avance ene el proyecto por un largo periodo de tiempo. Una vez en proceso de creación del sistema, Eclipse comenzó a dar errores en cuanto a la comprensión de comandos básicos del lenguaje C$++$. Junto con esta clase de problemas surgió el inconveniente del fallo completo de Eclipse, ya que en la máquina virtual donde se estaba realizando todo el proceso, la aplicación dejó de funcionar, permitiendo verse en pantalla únicamente la barra de tareas. Para solucionar este fallo se realizaron algunas investigaciones sin éxito.\\
 \subsubsection{Investigación}
 Las investigaciones realizadas en este periodo de tiempo fueron varias aunque todas con el mismo objetivo, solucionar fallos.\\
+\\
 En un inicio, los fallos en cuanto al lenguaje de programación. Para solucionar este tipo de fallo se realizón un análisis exaustivo de la configuración completa  del proyecto, incluyendo partes que no se habían visto hasta ese momento, por si se podría haber producido algún efecto en cascada que hubiese desencadenado el error (dicho análisis fue realizado de forma conjunta con el profesor). Tras comprobar que ese no era el problema se comenzó una búsqueda por diversas páginas web para encontrar soluciones de otros usuarios que hubiesen tenido el mismo problema. Al realizar esta búsqueda, no solo se descubrió que el número de personas cone este error era muy reducido, sino que además se pudo observar que las soluciones que se les ofrecía para solucionarlo o no funcionaban o no eran útiles para el problema que se planteaba en nuestro caso. Como conclusión a este problema se decidió crear otro proyecto y dejar para más adelante la configuración realizada con anterioridad.\\
+\\
 En cuanto al problema de la visualización de Eclipse, la situación era similar a la del anterior problema. En este caso el número de personas con el mismo problema era mayor pero la solución que se daba en la mayoría de los casos era la eliminación de los recursos temporales generados al arrancar Eclipse para reiniciarlo y que los crease de nuevo, intentando solventar así los fallos que hayan podido aparecer durante el arranque. Al no conseguir solucionarlo de esta manera, se optó por la opción más drástica, extraer los cambios ya realizados en el proyecto creado para evitar el primer problema, eliminar la máquina virtual y comenzar la instalación y configuración de aplicaciones desde el principio.\\
+\\
 Este método no funcionó, por lo que se decidió tomar un camino alternativo para el proyecto.
 
 \subsection{Sprint 4: 20/05/2018 - 13/06/2018}
@@ -82,7 +88,8 @@ Tras el periodo anterior de cambios de máquina virtual y reconfiguraciones se t
 En este periodo de tiempo se consigue la realización de gran parte del código que forma el sistema software ya que no se producen errores como los del anterior sprint. También se instala y empieza a investigar el funcionamiento del programa que se encuentra adjunto al láser en un CD presente en la misma caja del aparato. Junto con este programa, tambien se descarga e instala el programa RealTerm, el cual se usará para envir y recibir mensajes por el puerto USB, ya que el láser tiene la posibilidad de conectarse al PC por esta vía.
 \subsubsection{Investigación}
 En este aspecto se empieza a investigar la configuración del programa RealTerm antes mencionado, dejando para más adelante la programación de la parte restante del sistema, para centrarse en averiguar como conseguir la conexión con el láser además de conoces como realizar el intercambio de información.\\
-Tambien se investiga la forma de configurar del programa del láser (UAM Proyect Designer) para poder ver el funcionamiento de este programa y la visualización por pantalla de las lecturas del láser, lo cual se podrá tomar como guía en la representación del resultado de la ejecución del sistema objetivo. Esto se consigue gracias a la configuración de los puertos USB de PC para que permitan instalar drivers no firmados (como son los del propio láser, los cuales tambien se tuvieron que buscar por internet para evitar la dependencia con el CD) con lo que se pudiese reconocer al láser para que el programa funcionase correctamente. Este buen comportamiento también se produjo ya que el tutor facilitó un fichero de configuración básica el cual fue enviado vía USB al propio láser, el cual lo conserva en memoria desde entonces.
+\\
+También se investiga la forma de configurar del programa del láser (UAM Proyect Designer) para poder ver el funcionamiento de este programa y la visualización por pantalla de las lecturas del láser, lo cual se podrá tomar como guía en la representación del resultado de la ejecución del sistema objetivo. Esto se consigue gracias a la configuración de los puertos USB de PC para que permitan instalar drivers no firmados (como son los del propio láser, los cuales también se tuvieron que buscar por internet para evitar la dependencia con el CD) con lo que se pudiese reconocer al láser para que el programa funcionase correctamente. Este buen comportamiento también se produjo ya que el tutor facilitó un fichero de configuración básica el cual fue enviado vía USB al propio láser, el cual lo conserva en memoria desde entonces.
 \subsection{Sprint 5: 13/06/2018 - 19/11/2018}
 En este sprint, cuya duración se debe a la aparición del último de los problemas de gran relevancia para el proyecto y la presencia del periodo de verano lo cual supone una mayor dificultad para las reuniones. En este sprint se analizan los resultados del ciclo anterior, observando las lecturas del láser por primera vez desde el inicio del proyecto. El problema antes mencionado surge al intentar crear el socket lógico en C$++$ tras conocer como crear los mensajes y provocar la comunicación entre los dos aparatos y conseguir asi implementar una de las partes más importantes del proyecto. No se consigue (entre el alumno y el profesor) que el socket conecte el PC con el láser con lo que se dedica este periodo a solucionar este problema
 \subsubsection{Tareas}
@@ -91,14 +98,14 @@ En este sprint, cuya duración se debe a la aparición del último de los proble
 	\item Cambio de lenguaje del proyecto
 \end{itemize}
 \subsubsection{Backlog}
-En este periodo se realizan algunas investigaciones con resultados nada satisfactorios y, tras no conseguir el bojetivo principal de este sprint, se decide cambiar de lenguaje. En este caso se pasa todo el código existente a Python. Este lenguaje, al ser más usado, posee un soporte mucho mayor, especialmente por parte de los usuarios que lo usan para desarrollar su código, por lo que la traducción del código se realiza de forma rápida y sencilla. Gracias a la utilización de este lenguaje se consigue configurar el socket y tenerlo plenamente operativo de forma muy sencilla, con lo que en el periodo final de este sprint se consigue solucionar el priblema inicial y provocar un grán avance.
+En este periodo se realizan algunas investigaciones con resultados nada satisfactorios y, tras no conseguir el objetivo principal de este sprint, se decide cambiar de lenguaje. En este caso se pasa todo el código existente a Python. Este lenguaje, al ser más usado, posee un soporte mucho mayor, especialmente por parte de los usuarios que lo usan para desarrollar su código, por lo que la traducción del código se realiza de forma rápida y sencilla. Gracias a la utilización de este lenguaje se consigue configurar el socket y tenerlo plenamente operativo de forma muy sencilla, con lo que en el periodo final de este sprint se consigue solucionar el problema inicial y provocar un gran avance.
 \subsubsection{Investigación}
-En este periodo la primera investigación, como ya se ha comentado anteriormente, es la solución del socket en el lenguaje de C$++$, sin resultado satisfactorio. A parte de esta, la investigación principal se centró en la creación de sockets en Python lo cual se consiguió de forma muy sencilla gracias a la ayuda proporcionada por la propia web del lenguaje y los usuarios que poseian este problema en diferentes foros web.
+En este periodo la primera investigación, como ya se ha comentado anteriormente, es la solución del socket en el lenguaje de C$++$, sin resultado satisfactorio. A parte de esta, la investigación principal se centró en la creación de sockets en Python lo cual se consiguió de forma muy sencilla gracias a la ayuda proporcionada por la propia web del lenguaje y los usuarios que poseían este problema en diferentes foros web.
 \subsubsection{Pruebas}
 Se realizan las primeras pruebas de comunicación y obtención de respuestas por parte del láser que da como resultado la implementación del procedimiento que permite extraer la lectura y conservar esos datos en el sistema para su posterior análisis.
 
 \subsection{Sprint 6: 19/11/2018 - 11/12/2018}
-En este periodo de tiempo se desarrolla el análisis de los datos recibidos por el láser (descripción del análisis en el punto 4 de la memoria). Con todos nuevos porcedimientos desarrollados, se crea la primera versión plenamente operativa del sistema software que conforma el objetivo del proyecto.
+En este periodo de tiempo se desarrolla el análisis de los datos recibidos por el láser (descripción del análisis en el punto 4 de la memoria). Con todos nuevos procedimientos desarrollados, se crea la primera versión plenamente operativa del sistema software que conforma el objetivo del proyecto.
 \subsubsection{Tareas}
 \begin{itemize}
 	\item Crear procedimientos de análisis de datos.
@@ -120,7 +127,7 @@ En este sprint se pretende mejorar el comportamiento del sistema haciendo que fu
 	\item Creación de versión final de la memoria.
 \end{itemize}
 \subsubsection{Backlog}
-Trascurrido este sprint no se ha conseguido la implementación continua asi que se ha devuelto el código a su forma funcional. Por la parte de la memoria se produce un avance muy significativo en cuanto a su versión final se refiere.
+Trascurrido este sprint no se ha conseguido la implementación continua así que se ha devuelto el código a su forma funcional. Por la parte de la memoria se produce un avance muy significativo en cuanto a su versión final se refiere.
 \subsubsection{Investigación}
 Esta parte cuenta con la investigación en cuanto a las pruebas realizadas con otros comandos del láser usados para poder desarrollar el funcionamiento continuo, aunque, como ya se ha explicado en puntos anteriores, no se ha conseguido, teniendo que volver a la forma más funcional y estable que se tenía hasta el momento.
 
@@ -131,7 +138,7 @@ En el desarrollo de este proyecto también se ha de estudiar si el sistema desar
 En este caso se analizarán los costes de cada aspecto del proyecto los cuales tengan una importancia en este aspecto.
 
 \subsubsection{Coste de personal}
-En este caso se debe de hacer una estimación a cerca del coste que supone el trabajo del programador a lo largo de toda la duración del proyecto. Debido a que algunos periodos han sido vacacionales (en cuanto al calendario laboral estándar) y otros no se ha avanzado en el proyecto, se estimará un trabajo de 10 meses. Teniendo como salario (tambien obtenido de una estimación aproximada) de 9 euros la hora y una jornada laboral estándar de 6 horas al dia y trabajando 20 dias cada mes el suelo se calcularía como: \\
+En este caso se debe de hacer una estimación a cerca del coste que supone el trabajo del programador a lo largo de toda la duración del proyecto. Debido a que algunos periodos han sido vacacionales (en cuanto al calendario laboral estándar) y otros no se ha avanzado en el proyecto, se estimará un trabajo de 10 meses. Teniendo como salario (también obtenido de una estimación aproximada) de 9 euros la hora y una jornada laboral estándar de 6 horas al día y trabajando 20 días cada mes el suelo se calcularía como: \\
 $9 ^{euros}/_{hora} * 4 ^{horas}/_{dia} = 36 ^{euros}/_{dia}$ \\
 $36 ^{euros}/_{dia} * 20 ^{dias}/_{mes} = 720 ^{euros}/_{mes}$ \\
 $720 ^{euros}/_{mes} * 10 meses = 7200 euros$ \\
@@ -146,21 +153,22 @@ $33.33 eurosLaser + 49.99 eurosPC + 1.25 eurosCables + 100 eurosPruebas = 184.57
 Con esto se estima el coste de material en 184.57 euros.\\
 
 \subsubsection{Costes software}
-Tambien hay que tener en cuenta los costes en cuanto a los programas y aplicaciones que se han empleado. En este caso el único coste a tener en cuenta es la licencia del sistema oprativo final, Windows 10, con un valor de 120 euros con una vida útil de 4 años. El resto de software empleado no ha tenido coste económico alguno (a excepción de el programa UAM Proyect Designer el cual ya se encuentra incluido en el coste del láser previamente tenido en cuenta). Por lo tanto los cálculos a realizar son:\\
+También hay que tener en cuenta los costes en cuanto a los programas y aplicaciones que se han empleado. En este caso el único coste a tener en cuenta es la licencia del sistema operativo final, Windows 10, con un valor de 120 euros con una vida útil de 4 años. El resto de software empleado no ha tenido coste económico alguno (a excepción de el programa UAM Project Designer el cual ya se encuentra incluido en el coste del láser previamente tenido en cuenta). Por lo tanto los cálculos a realizar son:\\
 $(120 euros / (12 ^{meses}/_{año} * 4 años)) * 6 meses = 15 eurosSO$\\
 Con esto se estima el coste del software en 15 euros.\\
 
 \subsubsection{Costes totales}
-Con todos los cálculos anteriores se puede calcular de forma estimada (ya que, como bien se ha dicho, todos los cálculos se han realizado a través de estimaciones) el coste total del proyecto. Para ello, hay que hacer la suma de todos los costes y tener el cuenta los porcentajes correspondientes a la Cotización del desarrollador a la Seguridad Social. Se sabe que estos porcentajes son : 23.6\% de contingencias comunes, 5.5\% de desempleo y 0.6\% por la formación profesional. Estos porcentajes hacen un total del 29.7\%, con lo que los costes finales se calculan como:
+Con todos los cálculos anteriores se puede calcular de forma estimada (ya que, como bien se ha dicho, todos los cálculos se han realizado a través de estimaciones) el coste total del proyecto. Para ello, hay que hacer la suma de todos los costes y tener el cuenta los porcentajes correspondientes a la Cotización del desarrollado a la Seguridad Social. Se sabe que estos porcentajes son : 23.6\% de contingencias comunes, 5.5\% de desempleo y 0.6\% por la formación profesional. Estos porcentajes hacen un total del 29.7\%, con lo que los costes finales se calculan como:
 $7200 + (7200 * 0.297) = 9388.4 eurosDesarrollador$\\
 $9388.4 eurosDesarrollador + 15 eurosSO + 184.57  eurosMaterial = 9537.97 eurosTotales$ \\
 Con esto se estima el coste total en 9537.97 euros.\\
 
 \subsubsection{Beneficios}
 Después de conocer en cuanto se estima el coste del sistema para la compañía, en este apartado se calculará el beneficio que este software proporciona. Debido a la orientación de este, el software se ha de distribuir instalado en los AGVs en los cuales se va a emplear.\\
+\\
 Se estima un total de 500 vehículos en los cuales este programa va a ser instalado, con un precio de 40 euros por cada uno de estos vehículos cada año. Con esto el beneficio sería de:\\
 $500 vehículos * 40 ^{euros}/_{vehículo} = 20000 ^{euros}/_{año} de beneficio $\\
-Con estos beneficios se estimará también el tiempo que e tiempo en el que la compañía será capaz de recuperar la inversión es de:
+Con estos beneficios se estimará también el tiempo que e tiempo en el que la compañía será capaz de recuperar la inversión es de:\\
 $9537.97 eurosTotales /  20000 ^{euros}/_{año}= 0.48 años$\\
 La compañía recuperará la inversión realizada en este proyecto en poco menos de 6 meses.\\
 

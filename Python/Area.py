@@ -12,9 +12,9 @@ class Area:
         while(len(self.limites)<4):
             imput=Punto()
             intr=input('intriduce coordenada X e Y en milímetros (mm) separadas por "," '+str(i)+':').split(',')
-            if len(intr) != 2:
+            if len(intr) != 2 or intr[0] == None or intr[0] == '' or intr[1] == None or intr[1] == '':
                 print('Error al intriducir coordenadas')
-                while (len(intr) != 2):
+                while (len(intr) != 2 or intr[0] == None or intr[0] == '' or intr[1] == None or intr[1] == ''):
                     intr=input('intriduce coordenada X e Y en milímetros (mm) separadas por "," '+str(i)+':').split(',')
             imput.setX(intr[0])
             imput.setY(intr[1])
@@ -34,7 +34,16 @@ class Area:
         for dato in puntos:
             if min(cx)<dato.getX() and dato.getX() < max(cx):
                 if min(cy)<dato.getY() and dato.getY() < max(cy):
+                    if dato.getX()>0 and dato.getY()>0:
+                        print('Se encontró un objeto a '+dato.getX()+' metros hacia delate y '+dato.getY()+' metros hacia la derecha.')
+                    elif dato.getX()<0 and dato.getY()>0:
+                        print('Se encontró un objeto a '+math.fabs(dato.getX())+' metros hacia atrás y '+dato.getY()+' metros hacia la derecha.')
+                    elif dato.getX()<0 and dato.getY()<0:
+                        print('Se encontró un objeto a '+math.fabs(dato.getX())+' metros hacia atrás y '+math.fabs(dato.getY())+' metros hacia la izquierda.')
+                    elif dato.getX()>0 and dato.getY()<0:
+                        print('Se encontró un objeto a '+dato.getX()+' metros hacia delate y '+math.fabs(dato.getY())+' metros hacia la izquierda.')
                     return True
                     break
+        print('No se encontró ningún objeto ene este área')
         return False
                     

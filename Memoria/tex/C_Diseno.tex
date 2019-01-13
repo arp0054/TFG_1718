@@ -2,10 +2,23 @@
 
 \section{Introducción}
 
+En esta sección se describirá el proceso de diseño de cada uno de los aspectos del proyecto que forman la base para conseguir alcanzar los objetivos propuestos para este proyecto.\\
+
 \section{Diseño de datos}
+
+En este proyecto se emplea un único tipo de datos, las coordenadas cartesianas, las cuales se dividen en dos grupos dependiendo de su procedencia:
+\begin{itemize}
+	\item Puntos de lectura: grupo formado por las lecturas que provienen de las lecturas del láser y cuya traducción de formato cadena (formato de llegada al sistema) a coordenadas cartesianas ya ha sido descrita en apartados anteriores.
+	\item Límites de áreas: grupo formado por los límites de las áreas introducidas por el usuario, las cuales no necesitan traducción ya que son introducidas directamente como coordenadas cartesianas.
+\end{itemize}
+Ambos grupos se tratan de la misma forma dentro del sistema, ya que se crean listas de instancias de la clase \textit{Punto}, creada en este proyecto.
 
 \section{Diseño procedimental}
 
+Para este apartado se ha desarrollado el siguiente diagrama de secuencia, en el que se describe el proceso de ejecución del sistema.Como se puede observar en la imágen del diagrama, la única interacción que tiene el usuario es la introducción del número de áreas y las coordenadas de cada uno de sus límites.
+\imagenPagCompleta{diagramaSec}{Diagrama de secuencia del sistema}
+
 \section{Diseño arquitectónico}
 
-
+En cuanto a la arquitectura del proyecto se destaca su simplicidad. Estos es debido a que la base del proyecto es la creación de un proceso, por lo que no posee clases como interfaces u otros elementos a dividir en varias clases.
+\imagen{diagramaClases}{Diagrama de clases del sistema}

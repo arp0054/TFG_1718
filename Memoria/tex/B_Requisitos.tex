@@ -15,7 +15,15 @@ Para el sistema software desarrollado en este proyecto, se fijan los siguientes 
 \section{Catalogo de requisitos}
 Para la realización de este catálogo se diferenciará entre dos tipos de requisitos: los requisitos funcionales y los requisitos no funcionales.
 \subsection{Requisitos funcionales}
-
+ \begin{itemize}
+ 	\item R1: Conectar con el láser.
+ 	\item R2: Enviar mensaje.
+ 	\item R3: Recoger datos.
+ 	\item R4: Traducir datos.
+ 	\item R5: Incorporar áreas al sistema.
+ 	\item R6: Representar gráficamente los datos del análisis.
+ 	\item R7: Impresión de las áreas con objetos detectados.
+ \end{itemize}
 \subsection{Requisitos no funcionales}
 \begin{itemize}
 	\item El sistema ha de detectar de la forma más precisa posible la distancia a la que se encuentra cada uno de los puntos detectados, ya se encuentren dentro o fuera de los campos de área establecidos.
@@ -23,5 +31,118 @@ Para la realización de este catálogo se diferenciará entre dos tipos de requi
 	\item Al ser una primera versión de este proyecto, es decir, al poder ser un sistema extensible y escalable, se ha codificado de forma modular.
 \end{itemize}
 \section{Especificación de requisitos}
+\subsection{R1: Conectar con el láser.}
+\textbf{Versión} 1.0\\
+\textbf{Autor} Álvaro Ruifernández Palacios\\
+\textbf{Descripción} El sistema tiene que conseguir crear conexión con el láser para poder interactuar con él y conseguir la información de sus lecturas.\\
+\textbf{Precondición} Ha tenido que comenzar la ejecución del programa principal.\\
+\textbf{Secuencia Normal} los pasos a seguir son:
+\begin{enumerate}
+	\item El usuario ejecuta el programa principal.
+	\item Se crea el objeto de tipo Socket.
+	\item Se establece la dirección IP y el número de puerto.
+\end{enumerate}
+\textbf{Postcondición} Al enviar el mensaje se recibirá una respuesta dependiendo de dicho mensaje\\
+\textbf{Excepciones} El láser no esté físicamente conectado al PC.\\
+\textbf{Importancia} Alta\\
+\textbf{Comentarios} Sin comentarios\\
 
+\subsection{R2: Enviar mensaje.}
+\textbf{Versión} 1.0\\
+\textbf{Autor} Álvaro Ruifernández Palacios\\
+\textbf{Descripción} Se crea el mensaje para, después de haberlo codificado, enviarlo a través del socket para que este devuelva la información de lectura del entorno, es decir, se crea un mensaje de petición de datos dirigido al láser.\\
+\textbf{Precondición} Se tiene que haber configurado el socket previamente (se tiene que haber cumplido R1)\\
+\textbf{Secuencia Normal} Los pasos de este requisito son:
+\begin{enumerate}
+	\item Se crea una lista con cada uno de los caracteres que forman el mensaje codificados según corresponda (explicado en el punto 3 de la memoria).
+	\item Esta lista es transformada en una array de bytes o bytearray.
+	\item Este bytearray es enviado al láser a través del socket mencionado previamente.
+\end{enumerate}
+\textbf{Postcondición} El láser enviará la información de lectura por el mismo puerto por el que se envió la petición.\\
+\textbf{Excepciones} Si el mensaje no es configurado de forma correcta (fallo en la codificación, falta de alguno de los campos...) el láser devolverá un mensaje de error.\\
+\textbf{Importancia} Alta\\
+\textbf{Comentarios} Sin comentarios.\\
+
+\subsection{R3: Recoger datos.}
+\textbf{Versión} 1.0\\
+\textbf{Autor} Álvaro Ruifernández Palacios\\
+\textbf{Descripción} Recoger y mantener en el sistema los datos recibidos de las lecturas del láser tras el paso del mensaje correcto correspondiente para su posterior análisis.\\
+\textbf{Precondición} Se debe haber enviado el mensaje correcto, es decir, se debe haber cumplido pre y postcondiciones de R2.\\
+\textbf{Secuencia Normal} Los pasos de este requisito son:
+\begin{enumerate}
+	\item El láser comienza la transmisión de información.
+	\item La variable empieza a encadenar las parte de la cadena que forma los datos recibidos.
+	\item  A la vez que esto, otra variable recoge la cantidad de información obtenida para recoger solo la información deseada.
+	\item Cuando la variable anterior llega al máximo preestablecido por el programador, se cierra el socket quedando la primera de las variables con la información de lectura deseada.
+\end{enumerate}
+\textbf{Postcondición} La información de lectura que realizó el láser queda almacenada en el programa principal para posterior análisis.\\
+\textbf{Excepciones} Si se interrumpe la conexión con el láser, la ejecución del programa queda en un bucle infinito al no haber completado la longitud máxima marcada por la segunda de las variables descritas en la enumeración.\\
+\textbf{Importancia} Alta\\
+\textbf{Comentarios} Sin comentarios.\\
+
+\subsection{R4: Traducir datos.}
+\textbf{Versión} 1.0\\
+\textbf{Autor} Álvaro Ruifernández Palacios\\
+\textbf{Descripción} Se utiliza la variable que almacena las lecturas del láser para extraer los datos y transformarlos en una colección de puntos para tenerlos el un formato amigable para el sistema.\\
+\textbf{Precondición} Se debe haber cumplido R3, con lo que el sistema tiene almacenado la información de lectura a analizar.\\
+\textbf{Secuencia Normal} Los pasos a seguir en este requisito son:
+\begin{enumerate}
+	\item Se divide la cadena de lectura según los caracteres de inicio y final de los mensajes.
+	\item Se eliminan de la lista creada de la división todas las cadenas vacías.
+	\item Se extrae a una variable la segunda de las posiciones de la lista de cadenas (ya que la primera es información de confirmación).
+	\item Se elimina la información irrelevante y se divide la cadena resultante en tantos datos como pasos da el láser en cada lectura.
+	\item Se asigna a cada dato un ángulo de una lista previamente configurada de la misma longitud que cantidad de datos de lectura
+	\item Se traduce cada par de datos a valores cartesianos (ya que la asignación anterior creaba valores polares).
+\end{enumerate}
+\textbf{Postcondición} El sistema posee una lista con las coordenadas cartesianas de cada una de las lecturas.\\
+\textbf{Excepciones} Si los cálculos de traducción de puntos fallan, se guardarían datos erróneos en el sistema.\\
+\textbf{Importancia} Alta\\
+\textbf{Comentarios} Sin comentarios.\\
+
+\subsection{R5: Incorporar áreas al sistema.}
+\textbf{Versión} 1.0\\
+\textbf{Autor} Álvaro Ruifernández Palacios\\
+\textbf{Descripción} Introducir en el sistema el número y las coordenadas de los límites de las áreas que el usuario desea analizar para comprobar si existen objetos.\\
+\textbf{Precondición} El sistema debe estar ejecutándose sin ningún tipo de fallo.\\
+\textbf{Secuencia Normal} Los pasos a seguir son:
+\begin{enumerate}
+	\item El sistema muestra un mensaje para que el usuario introduzca el número de áreas a introducir.
+	\item Tras haber introducido el número correctamente se muestra una sucesión de mensajes para introducir cada uno de los límites de cada una de las áreas.
+\end{enumerate}
+\textbf{Postcondición} El sistema guarda los datos a cerca de las áreas a analizar para conocer si existen o no objetos en ellas.\\
+\textbf{Excepciones} Si los datos son introducidos de manera incorrecta, serán registrados incorrectamente por lo que causará errores en el análisis.\\
+\textbf{Importancia} Media\\
+\textbf{Comentarios} Existe la opción de no querer introducir áreas (introduciendo 0 como número de áreas a analizar) si el usuario solo quiere observar las lecturas del láser. Esta forma de funcionamiento del programa puede ser empleada para comprobar el buen funcionamiento del sistema de traducción.\\
+
+\subsection{R6: Representar gráficamente los datos del análisis.}
+\textbf{Versión} 1.0\\
+\textbf{Autor} Álvaro Ruifernández Palacios\\
+\textbf{Descripción} Como bien se describe en el título, se representan gráficamente las coordenadas tanto de las lecturas traducidas como de las coordenadas de las áreas introducidas por el usuario.\\
+\textbf{Precondición} Ejecución del programa principal sin ningún fallo.\\
+\textbf{Secuencia Normal}Los pasos a ejecutar son:
+\begin{enumerate}
+	\item Se divide cada uno de los puntos (sea cual sea su origen) en dos listas, una con las coordenadas pertenecientes al eje de abscisas y la otra con las correspondientes al eje de ordenadas. A la hora de almacenar los datos separados en listas si que se tiene en cuenta su procedencia.
+	\item Se introducen en la gráfica los datos de lectura del láser en color azul.
+	\item Se introducen en la gráfica los datos de los límites de cada una de las áreas en color rojo.
+\end{enumerate}
+\textbf{Postcondición} Se muestran todos los datos a cerca de los puntos que posee el sistema en ese momento.\\
+\textbf{Excepciones} Se puede producir un error a la hora de representar si los datos de las áreas se encuentran mal introducidos.\\
+\textbf{Importancia} Media\\
+\textbf{Comentarios} Sin comentarios\\
+
+\subsection{R7: Impresión de las áreas con objetos detectados.}
+\textbf{Versión} 1.0\\
+\textbf{Autor} Álvaro Ruifernández Palacios\\
+\textbf{Descripción} Se imprimen los mensajes de las áreas, es decir, el sistema dice si se ha encontrado algún punto dentro de estas áreas, lo que significaría que hay un objeto en alguna de ellas.\\
+\textbf{Precondición} Los datos de las áreas deben de estar correctamente introducidos y no haber aparecido ningún mensaje de error que hubiese detenido la ejecución.\\
+\textbf{Secuencia Normal}Los pasos a seguir son:
+\begin{enumerate}
+	\item Se comprueba si las coordenadas de alguno de los puntos de lectura se encuentran entre los límites de alguna de las áreas.
+	\item En caso positivo aparece un mensaje con la posición de ese punto.
+	\item En caso negativo aparece un mensaje diciendo que no se encontró ningún objeto.
+\end{enumerate}
+\textbf{Postcondición} El usuario es informado de si en las áreas que deseaba analizar se ha encontrado o no algún objeto, indicando la posición del objeto encontrado en caso de que así fuese.\\
+\textbf{Excepciones} Se pueden producir errores dependiendo de la corrección con la que se hayan introducido las coordenadas de las áreas.\\
+\textbf{Importancia }Alta\\
+\textbf{Comentarios} Sin comentarios.\\
 

@@ -2,24 +2,24 @@ import sys
 import math
 
 class Punto:
-    x=0
-    y=0
+    CoorX=0
+    CoorY=0
     
     def __init__(self,_x=0.0,_y=0.0):
-        self.x = _x
-        self.y = _y
+        self.CoorX = _x
+        self.CoorY = _y
     
     def getX(self):
-        return self.x
+        return self.CoorX
     
     def getY(self):
-        return self.y
+        return self.CoorY
     
     def setX(self,valX):
-        self.x=valX
+        self.CoorX=valX
     
     def setY(self,valY):
-        self.y=valY
+        self.CoorY=valY
     
     def tradurcirAPolares(self,x,y):
         c1=math.sqrt(x*x+y*y)
