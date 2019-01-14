@@ -22,10 +22,43 @@ Como se ha podido observar,algunos de los directorios pertenecen a las primeras 
 En esta sección se explica como se configura el entorno de trabajo para este proyecto.
 \subsection{Python}
 Como primer paso para esta configuración se debe descargar el lenguaje de programación que se va a emplear, en este caso Python. Para este proyecto no se especifica ninguna versión en especial pero para su desarrollo se ha empleado la versión número 3.6.3.\\
+Para  su descarga visitar: \url{https://www.python.org/downloads/release/python-363/}\\
 \\
-Para  su descarga visitar: \url{https://www.python.org/downloads/release/python-363/}
+Después de descargar e instalar este lenguaje, el cual tiene incorporado el manejador de paquetes \textit{pip}, se descargan los módulos o paquetes que se emplean sobre todo en la representación gráfica con los siguientes comandos:
+\begin{itemize}
+	\item pip install matplotlib.
+	\item pip install numpy
+\end{itemize}
+Estas bibliotecas son las que permiten preparar y representar los datos a mostrar de forma gráfica tras haber pasado por el proceso de análisis y traducción.\\
 
-\subsection{}
+\subsection{IDE}
+Para poder modificar o crear nuevo código en este proyecto se necesita un entorno de desarrollo integrado o IDE. Aunque Python ya tiene el suyo propio, se ha optado por el uso de otros debido a que son más amigables y algunos de ellos se han empleado a lo largo del grado. Estos entornos son: Jupyter Notebook y Spyder.\\
+\\
+Para descargar ambos entornos se debe instalar la aplicación de Anaconda Navigator, la cual incorpora a ambos. Para descargarlo hay que visitar la página web: \url{https://anaconda.org/anaconda/anaconda-navigator} \\
+\\
+La principal diferencia entre ambos es que Jupyter utiliza una interfaz web, mientras que Spyder posee su propia interfaz.\\
+\imagen{interfazJupyter}{Interfaz gráfica de Jupyter}
+\imagen{interfazSpyder}{Interfaz gráfica de Spyder}
+
+\subsection{git}
+Este es el sistema escogido para el control de versiones del proyecto. Al no estar incluido por defecto en Windows, se debe instalar para poder utilizarlo, al igual que el resto de programas utilizados. Para poder descargarlo se ha de acceder a la pagina cuya URL es: \url{https://git-scm.com/}\\
+Dependiendo de las preferencias del programador se pueden instalar diferentes formas de instalación (consola de bash, de Windows..).
+
+\subsection{GitKraken}
+Este cliente de Git es el escogido para el mantenimiento de versiones en el repositorio, es decir, el cliente con el que se subirán cada uno de los cambios realizados al repositorio y con el  que se descargarán las últimas versiones del proyecto desde cualquier dispositivo empleado para el desarrollo de cualquiera de las partes del proyecto. Para descargarlo se debe acceder a: \url{https://www.gitkraken.com/download}\\
+\\
+Una vez descargado, hemos de acceder a GitHub y buscar el botón \textit{Clone or download} y copiar la URL que aparece tras presionarlo (\url{https://github.com/arp0054/TFG_ObjDetectorViaLaser.git}). Una vez copiada, se realizan los siguientes pasos en GitKraken: boton con el icono de directorio \rightarrow CLONE \rightarrow Clone with URL \rightarrow se selecciona el directorio donde se van a guardar los archivos del directorio en el PC \rightarrow se pega la URL previamente copiada \rightarrow Clone repo! \\
+\\
+Una vez completados esos pasos se habrá descargado el repositorio por lo que se puede usar como cualquier otro proyecto.\\
+\imagen{interfazGitKraken}{Interfaz gráfica de GitKraken}
+
 \section{Compilación, instalación y ejecución del proyecto}
-
+Si se han cumplimentado todos los pasos anteriores en cuanto a instalaciones del entorno (Python y sus librerías) el sistema es capaz de compilar y ejecutar el software de este proceso (ya que no tiene proceso de instalación como tal).\\
+\\
+Para este proceso de ejecución se puede realizar de tres formas, atendiendo a los 3 entornos posibles:
+\begin{enumerate}
+	\item por consola de comandos (CMD en Windows): para este proceso se ha de abrir el programa \textit{Símbolo del sistema} (instalado por defecto en el sistema operativo), utilizar el comando \textit{cd} para colocarnos en la carpeta donde se encuentran todas las clases de Python y escribir el comando \textbf{py objectDetectorViaLaser.py}
+	\item Por Jupyter Notebook: se debe buscar el archivo objectDetectorViaLaser.ípynb desde la interfaz de Jupyter, la cual es similar a un explorador de archivos, y de ahi presionar el botón de ejecución tantas veces como bloques de código posea el archivo.
+	\item Por Spyder: se debe de buscar el archivo desde el explorador de archivos, cimilar a cualquier otro programa, y ejecutarlo una única vez ya que en este caso no existe separación. 
+\end{enumerate}
 \section{Pruebas del sistema}
