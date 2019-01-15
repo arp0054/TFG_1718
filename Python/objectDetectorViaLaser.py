@@ -142,6 +142,7 @@ if conectado == 0:
     server_address = ('192.168.0.10', 10940)
 else:
     server_address = ('127.0.0.1', 10500)
+
 print (sys.stderr, 'connecting to %s port %s' % server_address)
 try:
     sock.connect(server_address)
