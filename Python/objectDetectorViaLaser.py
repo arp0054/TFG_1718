@@ -7,6 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 import re
+import os
 from Area import Area
 from Punto import Punto
 
@@ -136,7 +137,11 @@ for e in areas_input:
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Se conecta y se comprueba que la conexión se realizó con exito
-server_address = ('127.0.0.1', 10500)
+conectado = os.system('ping 192.168.0.10')
+if conectado == 0:
+    server_address = ('192.168.0.10', 10940)
+else:
+    server_address = ('127.0.0.1', 10500)
 print (sys.stderr, 'connecting to %s port %s' % server_address)
 try:
     sock.connect(server_address)
