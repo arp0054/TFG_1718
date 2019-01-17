@@ -131,6 +131,18 @@ Trascurrido este sprint no se ha conseguido la implementación continua así que
 \subsubsection{Investigación}
 Esta parte cuenta con la investigación en cuanto a las pruebas realizadas con otros comandos del láser usados para poder desarrollar el funcionamiento continuo, aunque, como ya se ha explicado en puntos anteriores, no se ha conseguido, teniendo que volver a la forma más funcional y estable que se tenía hasta el momento.
 
+\subsection{Sprint 8: 04/01/2019 - 20/01/2019}
+En este último sprint se termina con la tarea anterior relacionada con la memoria del proyecto además de la parte de anexos (en los cuales se explican una serie de aspectos del proyecto no introducidos en la memoria). A parte de esto, tambien se desarrolla un servidor para poder simular el comportamiento del láser sin estar físicamente conectado a él.
+\subsubsection{Tareas}
+\begin{itemize}
+	\item Creación de servidor de simulación de láser.
+	\item Fin de versión final de la memoria.
+\end{itemize}
+\subsubsection{Backlog}
+Trascurrido este sprint se posee un servidor el cual va mandando lecturas al sistema principal como si del láser se tratara para que personas las cuales no tienen acceso al láser puedan experimentar con el programa de una manera muy cercana a aquellos que si que puedan conectarse con el láser. El código del programa principal se ha modificado para hacer que se intente conectar al láser y si no lo consigue se conecte al servidor, el cual debe haber sido ejecutado previamente. También al finalizar este sprint se posee la versión final de la memoria (tanto de la propia memoria como de la parte de anexos).
+\subsubsection{Investigación}
+Para este sprint la parte de investigación se ha centrado en el desarrollo del servidor ya que, al igual que otras partes de este proyecto, es una aspecto desconocido o al menos posee una codificación desconocida en el lenguaje Python. Una vez más, gracias a la gran cantidad de usuarios que utilizan este lenguaje, se ha conseguodo la información necesaria para este desarrollo completo.
+
 \section{Estudio de viabilidad}
 En el desarrollo de este proyecto también se ha de estudiar si el sistema desarrollado es rentable y cumple con la legalidad vigente para poder instalarlo en los AGVs de cualquier empresa, es decir, se ha de estudiar su viabilidad, tanto económica como legal.\\
 
@@ -201,20 +213,3 @@ A parte de estas características, como ya se ha dicho con anterioridad, esta li
 	\item No se incluye ninguna restricción en esta licencia que ayude a que las versiones sucesivas del software sean libres con lo que, como se ha comentado anteriormente, se podrían asignar licencias mucho más restrictivas a cualquiera de esas versiones.
 \end{itemize}
 En cuanto a la licencia de Eclipse, se ha tomado la decisión de no considerarla para tomar la decisión anterior debido a que solo se empleó esta aplicación para las fases iniciales del proyecto, por lo cual no tiene relevancia en el funcionamiento del sistema final.
-\subsubsection{Legislación de sobre la robótica}
-A nivel nacional no existe ningún tipo de legislación a cerca de los robots más allá de las leyes presentes para otras creaciones (Ley de Orgánica de Protección de Datos, Ley de la Propiedad Intelectual...), pero a nivel europeo se están empezando a desarrollar una serie de normativas en lo que se refiere a diferentes aspectos relacionados con la robótica las cuales, si en un futuro son transformadas en leyes, pueden afectar al desarrollo de este tipo de sistemas:
-\begin{itemize}
-	\item Proteger a todo ser humano de los daños causados por un robot.
-	\item Respetar el derecho de una persona a negarse a ser atendido por un robot (relacionado sore todo con el cuidado de personas mayores o la robótica aplicada al sector sanitario).
-	\item Hacer que los robots respeten la autonomía de las decisiones tomadas por seres humanos.
-	\item Protección de datos con respecto a los robots: es decir, hacer que estos sistemas respeten la privacidad del ser humano, o lo que es lo mismo, asegurar el derecho a la intimidad.
-	\item Permitir al un ser humano gestionar los datos recopilados por el robot sobre si mismo para, como la anterior normativa, asegurar la protección de datos personales.
-	\item Evitar la creación de vínculos emocionales con robots: sobre todo referido a las personas mayores, niños o personas con discapacidad. Esta ley pretende evitar el aislamiento de un ser humano del resto de la sociedad, es decir, evitar la sustitución de seres humanos por robots.
-	\item Igualdad de acceso a las mejoras en la robótica tanto para los usuarios profesionales como los que no lo son.
-	\item Restringir al ser humano mejoras en la robótica que permita la creación de los denominados cyborgs, lo que se augura que podría causar la extinción de la raza humana.
-	\item Necesidad de implantar un sistema de registro, responsabilidad y cobro de impuestos para los robots: ya que al realizar un trabajo que copia al de un ser humano, se necesitaría tener un registro equivalente.
-	\item Implantación de un botón de emergencia para revertir determinadas decisiones tomadas por el robot o desconectarlo directamente. Esta normativa viene impulsada por el objetivo de preservar la seguridad del ser humano.
-\end{itemize}
-En resumen, las reglas que se están desarrollando con las nuevas tecnologías desarrolladas es la de orientarlas a la ayuda del ser humano evitando daños al mismo o perjuicios con respecto al resto de la sociedad.\\
-\\
-Centrándose más en los AGVs, hay que destacar algunas otras normas, como la UNE EN 1525. Esta norma 

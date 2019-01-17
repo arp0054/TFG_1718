@@ -10,6 +10,7 @@ En este proyecto se emplea un único tipo de datos, las coordenadas cartesianas,
 \begin{itemize}
 	\item Puntos de lectura: grupo formado por las lecturas que provienen de las lecturas del láser y cuya traducción de formato cadena (formato de llegada al sistema) a coordenadas cartesianas ya ha sido descrita en apartados anteriores.
 	\item Límites de áreas: grupo formado por los límites de las áreas introducidas por el usuario, las cuales no necesitan traducción ya que son introducidas directamente como coordenadas cartesianas.
+	\item Ángulos: en la ejecución del programa principal se crea una lista con una serie de datos correspondientes a ángulos los cuales se asignarán más tarde a cada uno de los datos del lectura para poder crea así el conjunto de puntos en coordenadas polares, el cual será más tarde analizado para obtener los datos y la gráfica final.
 \end{itemize}
 Ambos grupos se tratan de la misma forma dentro del sistema, ya que se crean listas de instancias de la clase \textit{Punto}, creada en este proyecto.
 
@@ -22,3 +23,4 @@ Para este apartado se ha desarrollado el siguiente diagrama de secuencia, en el 
 
 En cuanto a la arquitectura del proyecto se destaca su simplicidad. Estos es debido a que la base del proyecto es la creación de un proceso, por lo que no posee clases como interfaces u otros elementos a dividir en varias clases.
 \imagen{diagramaClases}{Diagrama de clases del sistema}
+A demás de estas clases, las cuales forman el sistema principal, se encuentra otro archivo correspondiente al servidor, el cual sirve como apoyo para pruebas del programa principal, así como para poder probar el programa sin la necesidad de estar conectado al láser.

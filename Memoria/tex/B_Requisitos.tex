@@ -17,12 +17,13 @@ Para la realización de este catálogo se diferenciará entre dos tipos de requi
 \subsection{Requisitos funcionales}
  \begin{itemize}
  	\item R1: Conectar con el láser.
- 	\item R2: Enviar mensaje.
- 	\item R3: Recoger datos.
- 	\item R4: Traducir datos.
- 	\item R5: Incorporar áreas al sistema.
- 	\item R6: Representar gráficamente los datos del análisis.
- 	\item R7: Impresión de las áreas con objetos detectados.
+ 	\item R2: Conectar el servidor.
+ 	\item R3: Enviar mensaje.
+ 	\item R4: Recoger datos.
+ 	\item R5: Traducir datos.
+ 	\item R6: Incorporar áreas al sistema.
+ 	\item R7: Representar gráficamente los datos del análisis.
+ 	\item R8: Impresión de las áreas con objetos detectados.
  \end{itemize}
 \subsection{Requisitos no funcionales}
 \begin{itemize}
@@ -47,11 +48,26 @@ Para la realización de este catálogo se diferenciará entre dos tipos de requi
 \textbf{Importancia} Alta\\
 \textbf{Comentarios} Sin comentarios\\
 
-\subsection{R2: Enviar mensaje.}
+\subsection{R2: conectar el servidor}
+\textbf{Versión} 1.0\\
+\textbf{Autor} Álvaro Ruifernández Palacios\\
+\textbf{Descripción} Como sistema alternativo a la conexión con el láser se puede utilizar el proceso servidor (archivo \textit{Simulator.py} en la carpeta \textit{Python} en el repositorio).  \\
+\textbf{Precondición} No poder acceder al láser en el momento de querer utilizar le código o utilizarlo como forma de apoyo por si en algún momento se pierde la conexión con el láser.\\
+\textbf{Secuencia Normal} los pasos a seguir son:
+\begin{enumerate}
+	\item Acceder a la carpeta donde se encuentra el archivo antes mencionado.
+	\item ejecutar el archivo también mencionado con anterioridad, con el comando \textit{py Simulator.py} (estos dos pasos son iguales a la ejecución del programa principal).
+\end{enumerate}
+\textbf{Postcondición} El resultado de dicho mensaje tiene un comportamiento similar al del anterior requisito ya que sin importar el mensaje que se envíe a este simulador, este va a enviar una de las lecturas que posee en una variable dentro de su código (esto es debido a que este simulador se encuentra en su primera fase de desarrollo).\\
+\textbf{Excepciones}\\
+\textbf{Importancia} Alta\\
+\textbf{Comentarios} Sin comentarios\\
+
+\subsection{R3: Enviar mensaje.}
 \textbf{Versión} 1.0\\
 \textbf{Autor} Álvaro Ruifernández Palacios\\
 \textbf{Descripción} Se crea el mensaje para, después de haberlo codificado, enviarlo a través del socket para que este devuelva la información de lectura del entorno, es decir, se crea un mensaje de petición de datos dirigido al láser.\\
-\textbf{Precondición} Se tiene que haber configurado el socket previamente (se tiene que haber cumplido R1)\\
+\textbf{Precondición} Se tiene que haber configurado el socket previamente (se tiene que haber cumplido R1 o R2 o ambos)\\
 \textbf{Secuencia Normal} Los pasos de este requisito son:
 \begin{enumerate}
 	\item Se crea una lista con cada uno de los caracteres que forman el mensaje codificados según corresponda (explicado en el punto 3 de la memoria).
@@ -63,11 +79,11 @@ Para la realización de este catálogo se diferenciará entre dos tipos de requi
 \textbf{Importancia} Alta\\
 \textbf{Comentarios} Sin comentarios.\\
 
-\subsection{R3: Recoger datos.}
+\subsection{R4: Recoger datos.}
 \textbf{Versión} 1.0\\
 \textbf{Autor} Álvaro Ruifernández Palacios\\
 \textbf{Descripción} Recoger y mantener en el sistema los datos recibidos de las lecturas del láser tras el paso del mensaje correcto correspondiente para su posterior análisis.\\
-\textbf{Precondición} Se debe haber enviado el mensaje correcto, es decir, se debe haber cumplido pre y postcondiciones de R2.\\
+\textbf{Precondición} Se debe haber enviado el mensaje correcto, es decir, se debe haber cumplido pre y postcondiciones de R3.\\
 \textbf{Secuencia Normal} Los pasos de este requisito son:
 \begin{enumerate}
 	\item El láser comienza la transmisión de información.
@@ -80,11 +96,11 @@ Para la realización de este catálogo se diferenciará entre dos tipos de requi
 \textbf{Importancia} Alta\\
 \textbf{Comentarios} Sin comentarios.\\
 
-\subsection{R4: Traducir datos.}
+\subsection{R5: Traducir datos.}
 \textbf{Versión} 1.0\\
 \textbf{Autor} Álvaro Ruifernández Palacios\\
 \textbf{Descripción} Se utiliza la variable que almacena las lecturas del láser para extraer los datos y transformarlos en una colección de puntos para tenerlos el un formato amigable para el sistema.\\
-\textbf{Precondición} Se debe haber cumplido R3, con lo que el sistema tiene almacenado la información de lectura a analizar.\\
+\textbf{Precondición} Se debe haber cumplido R4, con lo que el sistema tiene almacenado la información de lectura a analizar.\\
 \textbf{Secuencia Normal} Los pasos a seguir en este requisito son:
 \begin{enumerate}
 	\item Se divide la cadena de lectura según los caracteres de inicio y final de los mensajes.
@@ -99,7 +115,7 @@ Para la realización de este catálogo se diferenciará entre dos tipos de requi
 \textbf{Importancia} Alta\\
 \textbf{Comentarios} Sin comentarios.\\
 
-\subsection{R5: Incorporar áreas al sistema.}
+\subsection{R6: Incorporar áreas al sistema.}
 \textbf{Versión} 1.0\\
 \textbf{Autor} Álvaro Ruifernández Palacios\\
 \textbf{Descripción} Introducir en el sistema el número y las coordenadas de los límites de las áreas que el usuario desea analizar para comprobar si existen objetos.\\
@@ -114,7 +130,7 @@ Para la realización de este catálogo se diferenciará entre dos tipos de requi
 \textbf{Importancia} Media\\
 \textbf{Comentarios} Existe la opción de no querer introducir áreas (introduciendo 0 como número de áreas a analizar) si el usuario solo quiere observar las lecturas del láser. Esta forma de funcionamiento del programa puede ser empleada para comprobar el buen funcionamiento del sistema de traducción.\\
 
-\subsection{R6: Representar gráficamente los datos del análisis.}
+\subsection{R7: Representar gráficamente los datos del análisis.}
 \textbf{Versión} 1.0\\
 \textbf{Autor} Álvaro Ruifernández Palacios\\
 \textbf{Descripción} Como bien se describe en el título, se representan gráficamente las coordenadas tanto de las lecturas traducidas como de las coordenadas de las áreas introducidas por el usuario.\\
@@ -130,7 +146,7 @@ Para la realización de este catálogo se diferenciará entre dos tipos de requi
 \textbf{Importancia} Media\\
 \textbf{Comentarios} Sin comentarios\\
 
-\subsection{R7: Impresión de las áreas con objetos detectados.}
+\subsection{R8: Impresión de las áreas con objetos detectados.}
 \textbf{Versión} 1.0\\
 \textbf{Autor} Álvaro Ruifernández Palacios\\
 \textbf{Descripción} Se imprimen los mensajes de las áreas, es decir, el sistema dice si se ha encontrado algún punto dentro de estas áreas, lo que significaría que hay un objeto en alguna de ellas.\\

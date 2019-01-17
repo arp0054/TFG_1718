@@ -19,27 +19,32 @@
 \contentsline {section}{\numberline {4.2}Desarrollo del c\IeC {\'o}digo}{18}{section.4.2}
 \contentsline {subsection}{Jupyter Notebook}{18}{section*.11}
 \contentsline {subsection}{Spyder}{18}{section*.12}
+\contentsline {subsection}{Eclipse}{19}{section*.13}
 \contentsline {section}{\numberline {4.3}Planteamiento de las tareas}{19}{section.4.3}
-\contentsline {subsection}{Trello}{19}{section*.13}
-\contentsline {section}{\numberline {4.4}Metodolog\IeC {\'\i }a de gesti\IeC {\'o}n y herramientas asociadas}{19}{section.4.4}
-\contentsline {section}{\numberline {4.5}Patrones de dise\IeC {\~n}o empleados}{20}{section.4.5}
-\contentsline {section}{\numberline {4.6}Herramienta de manejo de l\IeC {\'a}ser}{20}{section.4.6}
-\contentsline {subsection}{ UAM Proyect Designer}{20}{section*.14}
-\contentsline {subsection}{RealTerm}{20}{section*.15}
-\contentsline {section}{\numberline {4.7}Python}{21}{section.4.7}
-\contentsline {section}{\numberline {4.8}Cableado}{21}{section.4.8}
-\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{23}{chapter*.16}
+\contentsline {subsection}{Trello}{19}{section*.14}
+\contentsline {section}{\numberline {4.4}Metodolog\IeC {\'\i }a de gesti\IeC {\'o}n y herramientas asociadas}{20}{section.4.4}
+\contentsline {section}{\numberline {4.5}Herramienta de manejo de l\IeC {\'a}ser}{20}{section.4.5}
+\contentsline {subsection}{ UAM Proyect Designer}{20}{section*.15}
+\contentsline {subsection}{RealTerm}{20}{section*.16}
+\contentsline {section}{\numberline {4.6}Lenguajes de programaci\IeC {\'o}n}{21}{section.4.6}
+\contentsline {subsection}{C++}{21}{section*.17}
+\contentsline {subsection}{Python}{21}{section*.18}
+\contentsline {section}{\numberline {4.7}Cableado}{22}{section.4.7}
+\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{23}{chapter*.19}
 \contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n del trabajo como proyecto de investigaci\IeC {\'o}n}{23}{section.5.1}
 \contentsline {section}{\numberline {5.2}Conocimientos utilizados aprendidos en el grado}{23}{section.5.2}
-\contentsline {subsection}{Codificaci\IeC {\'o}n en Python}{24}{section*.17}
-\contentsline {subsection}{Conocimiento sobre sockets}{24}{section*.18}
-\contentsline {subsection}{Conocimiento a cerca de la gesti\IeC {\'o}n del proyecto}{24}{section*.19}
+\contentsline {subsection}{Codificaci\IeC {\'o}n en Python}{24}{section*.20}
+\contentsline {subsection}{Conocimiento sobre sockets}{24}{section*.21}
+\contentsline {subsection}{Conocimiento a cerca de la gesti\IeC {\'o}n del proyecto}{24}{section*.22}
 \contentsline {section}{\numberline {5.3}Conocimientos externos a lo aprendido en el grado}{25}{section.5.3}
-\contentsline {chapter}{Trabajos relacionados}{27}{chapter*.20}
-\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{29}{chapter*.21}
-\contentsline {section}{\numberline {7.1}Introducci\IeC {\'o}n}{29}{section.7.1}
-\contentsline {section}{\numberline {7.2}Conclusiones}{29}{section.7.2}
-\contentsline {section}{\numberline {7.3}Mejoras y l\IeC {\'\i }neas de trabajo}{30}{section.7.3}
-\contentsline {subsection}{Funcionamiento continuo}{30}{section*.22}
-\contentsline {subsection}{Ejecuci\IeC {\'o}n remota}{31}{section*.23}
-\contentsline {chapter}{Bibliograf\'{\i }a}{33}{section*.25}
+\contentsline {subsection}{Codificaci\IeC {\'o}n de mensajes}{25}{section*.23}
+\contentsline {subsection}{Lectura de pinout del l\IeC {\'a}ser}{25}{section*.24}
+\contentsline {subsection}{Conocimientos sobre el l\IeC {\'a}ser}{26}{section*.25}
+\contentsline {chapter}{Trabajos relacionados}{29}{chapter*.26}
+\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{31}{chapter*.27}
+\contentsline {section}{\numberline {7.1}Introducci\IeC {\'o}n}{31}{section.7.1}
+\contentsline {section}{\numberline {7.2}Conclusiones}{31}{section.7.2}
+\contentsline {section}{\numberline {7.3}Mejoras y l\IeC {\'\i }neas de trabajo}{32}{section.7.3}
+\contentsline {subsection}{Funcionamiento continuo}{32}{section*.28}
+\contentsline {subsection}{Ejecuci\IeC {\'o}n remota}{33}{section*.29}
+\contentsline {chapter}{Bibliograf\'{\i }a}{35}{section*.31}

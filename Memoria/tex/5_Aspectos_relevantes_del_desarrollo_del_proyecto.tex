@@ -24,6 +24,24 @@ Este aspecto es uno de los más relevantes ya que es la parte del proyecto la cu
 \section{Conocimientos externos a lo aprendido en el grado}
 
 También existen conocimientos aprendidos gracias al desarrollo de este proyecto los cuales no se han adquirido a lo largo del grado.\\
-En cuanto a este proyecto, se ha de destacar uno solo de estos conocimientos, la creación de los mensajes. Como ya se ha explicado en apartados anteriores, para comunicarse con el láser, el PC debe enviar una serie muy concreta de comandos, los cuales deben de temen una codificación específica. Esta codificación se basa en que algunas de las partes del mensaje (inici y final del mensaje y CRC) se deben enviar codificadas como Bytes mientras que el resto deben ser enviados como código ASCII. Ninguna de estas codificaciones ha sido impartida en ninguna de las asignaturas que imparten código en Python mencionadas en el punto anterior.\\
+
+\subsection{Codificación de mensajes}
+En cuanto a este proyecto, se ha de destacar uno solo de estos conocimientos, la creación de los mensajes. Como ya se ha explicado en apartados anteriores, para comunicarse con el láser, el PC debe enviar una serie muy concreta de comandos, los cuales deben de temen una codificación específica. Esta codificación se basa en que algunas de las partes del mensaje (inicio y final del mensaje y CRC) se deben enviar codificadas como Bytes mientras que el resto deben ser enviados como código ASCII. Ninguna de estas codificaciones ha sido impartida en ninguna de las asignaturas que imparten código en Python mencionadas en el punto anterior.\\
 \\
-Estos conocimientos tienen la ventaja de que, al ser conceptos sobre uno de los  lenguajes de programación más usados, es sencillo encontrar mucha información al respecto por internet, por lo que se pueden encontrar diferentes formas de obtener el mismo  resultado (utilizando diferentes librerias o creando métodos con las librerías que están por defecto en el propio lenguaje) con lo que el programador puede escoger la que le parezca más idónea para su propósito.
+Estos conocimientos tienen la ventaja de que, al ser conceptos sobre uno de los  lenguajes de programación más usados, es sencillo encontrar mucha información al respecto por internet, por lo que se pueden encontrar diferentes formas de obtener el mismo  resultado (utilizando diferentes librerias o creando métodos con las librerías que están por defecto en el propio lenguaje) con lo que el programador puede escoger la que le parezca más idónea para su propósito.\\
+
+\subsection{Lectura de pinout del láser}
+Debido a que en el grado no se imparte ninguna asignatura obligatoria (ya que solo existe Mantenimiento de Equipos  Informáticos en el $1^{er}$ semestre del 4º curso y es una asignatura optativa) la cual tenga el hardware como base de los conocimientos impartidos en la misma, se ha obtenido conocimiento a cerca de este aspecto gracias a la necesidad de configuración del sistema a nivel físico.\\
+\\
+En este proyecto se ha necesitado estudiar y comprender el pinout del láser con el objetivo de poder usarlo. Se define pinout como el conjunto de cables que posee un sistema para conectarse con otros elementos del exterior. En el caso que se ocupa aquí, se ha necesitado conocer la función de cada uno de estos cables para saber cuales de ellos son los que abastecen de corriente eléctrica al láser, los cuales se empleará par conectarse con el cargador fabricado y poder tener el láser plenamente operativo.\\
+\imagen{pinout}{Conjunto cables (pinout) del láser.}
+Tras observar esta imagen se puede observar que son los dos primeros cables (descritos como DC 24V y DC 0V) los que se necesitan para el propósito antes descrito. Después de haberlo descubierto solo se tuvo que localizar los cables en el láser (de colores marrón y azul respectivamente) y conectarlos al cargador.\\
+
+\subsection{Conocimientos sobre el láser}
+Además de lo expresado en la sección anterior, también se ha adquirido conocimiento a cerca de otros aspectos del láser, los cuales, debido a los mismos motivos que en el punto anterior, no se han dado a lo largo del grado.\\
+\\
+En este desarrollo se ha aprendido las diferentes formas con las que un operador se puede comunicar con el láser además de los diferentes procedimientos previos que se deben realizar para poder usar cada una de estas formas de conexión. Estos procedimientos son muy distintos dependiendo de la forma de conexión:
+\begin{itemize}
+	\item USB: Para poder realizar esta conexión se necesitó previamente instalar los drivers necesarios (estos se pueden encontrar en el repositorio en la carpeta \textit{Drivers}), los cuales no eran drivers firmados por lo que, de forma temporal se habilitó el uso de este tipo de archivos en Windows para poder instalarlos para, tanto poder usar este driver como para evitar la instalación de divers maliciosos (de ahí que al volver a encender el ordenador se pueda seguir usando este archivo específico pero no otros drivers no firmados).
+	\item Ethernet: con este tipo de conexión los preparativos son más sencillos ya que el único paso a realizar es el cambio de dirección IP para hacer que el láser y el PC se encuentren en la misma red lógica para poder comunicarse.
+\end{itemize}
