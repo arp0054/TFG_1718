@@ -126,10 +126,6 @@ def procesadoYMuestra(target):
 
 areas_input=introduceAreas()
 
-for e in areas_input:
-    for p in e.getLimites():
-        print(p.getX(),p.getY())
-
 
 
 
@@ -137,7 +133,7 @@ for e in areas_input:
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Se conecta y se comprueba que la conexión se realizó con exito
-conectado = os.system('ping 192.168.0.10')
+conectado = os.system('ping -w 10 -n 2 192.168.0.10')
 if conectado == 0:
     server_address = ('192.168.0.10', 10940)
 else:

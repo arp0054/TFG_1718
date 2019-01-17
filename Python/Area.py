@@ -35,13 +35,13 @@ class Area:
             if min(cx)<dato.getX() and dato.getX() < max(cx):
                 if min(cy)<dato.getY() and dato.getY() < max(cy):
                     if dato.getX()>0 and dato.getY()>0:
-                        print('Se encontró un objeto a '+dato.getX()+' metros hacia delate y '+dato.getY()+' metros hacia la derecha.')
+                        print('Se encontró un objeto a '+str(dato.getX())+' metros hacia delate y '+str(dato.getY())+' metros hacia la derecha.')
                     elif dato.getX()<0 and dato.getY()>0:
-                        print('Se encontró un objeto a '+math.fabs(dato.getX())+' metros hacia atrás y '+dato.getY()+' metros hacia la derecha.')
+                        print('Se encontró un objeto a '+str(math.fabs(dato.getX()))+' metros hacia atrás y '+str(dato.getY())+' metros hacia la derecha.')
                     elif dato.getX()<0 and dato.getY()<0:
-                        print('Se encontró un objeto a '+math.fabs(dato.getX())+' metros hacia atrás y '+math.fabs(dato.getY())+' metros hacia la izquierda.')
+                        print('Se encontró un objeto a '+str(math.fabs(dato.getX()))+' metros hacia atrás y '+str(math.fabs(dato.getY()))+' metros hacia la izquierda.')
                     elif dato.getX()>0 and dato.getY()<0:
-                        print('Se encontró un objeto a '+dato.getX()+' metros hacia delate y '+math.fabs(dato.getY())+' metros hacia la izquierda.')
+                        print('Se encontró un objeto a '+str(dato.getX())+' metros hacia delate y '+str(math.fabs(dato.getY()))+' metros hacia la izquierda.')
                     return True
                     break
         print('No se encontró ningún objeto ene este área')

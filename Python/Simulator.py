@@ -50,7 +50,6 @@ while True:
     servidor.listen(max_conexiones)
     cliente, direccion = servidor.accept()
     print ("[*] Conexion establecida con %s:%d" % (direccion[0] , direccion[1]))
-    """conexiones(cliente)"""
     conex = threading.Thread(target=conexiones, args=(cliente,))
     conex.start()
     h_conexion.append(conex)

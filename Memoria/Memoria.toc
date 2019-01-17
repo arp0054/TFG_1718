@@ -11,7 +11,7 @@
 \contentsline {chapter}{Conceptos te\IeC {\'o}ricos}{7}{chapter*.6}
 \contentsline {section}{\numberline {3.1}Organizaci\IeC {\'o}n de la infraestructura}{7}{section.3.1}
 \contentsline {section}{\numberline {3.2}Procesado de datos}{9}{section.3.2}
-\contentsline {subsection}{Comandos disponibles}{9}{section*.7}
+\contentsline {subsection}{Comandos disponibles}{10}{section*.7}
 \contentsline {subsection}{Env\IeC {\'\i }o y recepci\IeC {\'o}n de mensajes}{11}{section*.8}
 \contentsline {subsection}{Traducci\IeC {\'o}n de los datos}{14}{section*.9}
 \contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{17}{chapter*.10}
