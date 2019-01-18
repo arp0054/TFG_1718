@@ -16,25 +16,28 @@ En resumen, la experiencia en el desarrollo de este proyecto ha sido por lo gene
 
 \section{Mejoras y líneas de trabajo}
 
-\subsection{Funcionamiento continuo}
-En el sistema desarrollado, al ejecutarlo, solos se trabaja con una lectura de entorno por ejecución. Esto es debido a que, aún utilizando el comando de lectura continua AR02 no se plantea la lectura continua sino que se reciben los datos correspondientes a la primera de las lecturas antes de cerrar el socket qe conecta los elementos del sistema. Esto es debido a la velocidad por la cual el sistema analiza los datos que recibe.\\
+\subsection{Mejora del simulador}
+Una de las últimas partes desarrolladas de este proyecto fue la creación de un servidor para poder simular el uso del láser cuando el usuario que desea utilizar el software no posee o no tiene acceso a un láser.\\
 \\
-Al no ser un análisis inmediato, si se intentasen analizar todas las lecturas recibidas del láser el sistema tendría un retardo demasiado grande para que sea útil para su uso a nivel industrial. Además este retardo sería exponencial ya que, mientras se analiza una de las tramas de datos, el sistema ya ha recibido varias más ya que el láser realiza y envía una trama de datos (correspondiente a una lectura del entorno) cada 30 milisegundos (ms).\\
-\\
-Para este aspecto se pueden plantear varias líneas de trabajo:
+Esta parte del sistema software es una parte en la que se puede extraer una linea de trabajo debido a la cantidad de mejoras que se le pueden realizar.Las más destacadas son:
 \begin{itemize}
-	\item Mejora en la eficiencia: se puede modificar el código para hacerlo más eficiente, lo que disminuiría el retraso con respecto a los datos recibidos y los analizados.
-	\item Cambio de mensaje: también es posible el cambio en cuanto a la comunicación con el láser ya que se puede enviar el mensaje AR01 en lugar del AR02 con lo que se recibiría una única lectura por cada paso de mensaje, evitando la acumulación de datos.
-	\item Programación concurrente: otro aspecto a analizar es la programación multihilo de este software, ya que se puede crear diferentes hilos que puedan ir recibiendo datos, analizando datos y representando gráficamente dichos datos respectivamente, lo cual también evitaría o por lo menos reduciría el retardo antes mencionado.
+	\item Información a enviar: en la versión actual, el servidor posee una variable en la cual almacena lecturas que se han recogido de lecturas realizadas por el láser en ejecuciones del sistema principal. Esta variable (de tipo lista, \textit{list()} en Python) es recorrida de forma continua y transmite una de sus cadenas de lectura por cada mensaje que recibe de cada cliente. Esta es una manera muy poco eficiente además de no ser la forma que el láser tiene de funcionar. Por este motivo una de las mejoras a realizar en el servidor es la implementación de un método o métodos con los cuales se puedan generar de forma automática datos de lectura aleatorios.
+	\item Seguridad: otra de las características de la versión actual de esta parte del proyecto es la nula seguridad a la hora de recibir los mensajes, es decir, el usuario puede enviar cualquier tipo de mensaje (independientemente de la estructura del mismo) y el servidor le va a seguir devolviendo una lectura de su lista. En una futura versión se puede implementar un sistema que, al igual que hace el láser, compruebe que el mensaje está formado por todos los campos, cada uno de ellos con su contenido correcto (longitud, valor). En esta futura versión el servidor podría calcular el CRC para poder compararlo con el recibido en el mensaje.
 \end{itemize}
 
 \subsection{Ejecución remota}
 Esta mejora viene motivada por, como ya se ha explicado en otros apartados, el hecho de no haber conseguido implementarlo durante el desarrollo de este proyecto.\\
 \\
-Para el desarrollo de este aspecto se necesita la inclusión en el sistema del MTX-GTW. Este instrumento es capaz de simular los recursos, y por tanto el rendimiento, presentes en un AGV. Para comunicarse con él se debe usar varios cables adicionales:
+Para el desarrollo de este aspecto se necesita la inclusión en el sistema del MTX-GTW \citep{hardware MTX-GTW}. Este instrumento es capaz de simular los recursos, y por tanto el rendimiento, presentes en un AGV. Para comunicarse con él se debe usar varios cables adicionales:
 \begin{itemize}
 	\item Cable de red: para realizar la conexión entre el MTX-GTW y el ordenador se necesita un cable de red estándar.
 	\item Cable con conector RS232: este cable es necesario para poder conectar el nuevo dispositivo con el láser.
 	\item Cable de alimentación: se necesitará tambien un cable que suministre 12 V de conrriente continua sin cabezal ya que posee uno propio al cual se han de acoplar dos hilos individuales.
 \end{itemize}
-Tras haber obtenido este sistema hardware se ha de comprobar si en el MTX-GTW se puede ejecutar código en Python, ya que si no es así sería necesario traducir el sistema a lenguajes como C$++$, el cual si que es capaz de comprender.
+Tras haber obtenido este sistema hardware se ha de comprobar si en el MTX-GTW se puede ejecutar código en Python, ya que si no es así sería necesario traducir el sistema a lenguajes como C$++$, el cual si que es capaz de comprender. En la versión de este dispositivo utilizada en las primeras fases de este proyecto, si que es capaz de reconocer y ejecutar código Python pero si se desea utilizar otra versión u otro equipo hay que leer su manual para saberlo.
+
+\subsection{Prueba en un AGV}
+
+Otra de las mejoras o trabajos derivados que pueden surgir de esta versión del software es la implantación de este software en un AGV real. Este sistema, como ya se ha descrito, detecta objetos y los localiza, lo cual puede ser usado por un AGV para su funcionamiento más habitual. En la actualidad, gracias a la tecnología láser, los AGV pueden detectar si en su entorno se encuentras algún objeto, aunque no pueden saber en que parte del entorno exactamente. Con la implantación del sistema de este proyecto en el AGV se podría ver y testar si actúa de una manera más eficiente, es decir, si puede detectar la posición del objeto y continuar con su funcionamiento habitual si esa posición no se lo impide.\\
+\\
+Para poder implementar estas pruebas se puede probar a implementar este sistema en un microprocesador, el cual irá conectado más tarde al vehículo y gestionará el análisis de estos datos. Esta implementación hará que el trabajo de análisis de datos sea ejecutado por este procesador, lo cual liberará de trabajo al procesador principal del AGV, lo que supondrá una mejora en la eficiencia del sistema completo de estos vehículos.

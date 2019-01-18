@@ -40,7 +40,7 @@ La principal diferencia entre ambos es que Jupyter utiliza una interfaz web, mie
 \imagen{interfazJupyter}{Interfaz gráfica de Jupyter}
 \imagen{interfazSpyder}{Interfaz gráfica de Spyder}
 
-\subsection{git}
+\subsection{Git}
 Este es el sistema escogido para el control de versiones del proyecto. Al no estar incluido por defecto en Windows, se debe instalar para poder utilizarlo, al igual que el resto de programas utilizados. Para poder descargarlo se ha de acceder a la pagina cuya URL es: \url{https://git-scm.com/}\\
 Dependiendo de las preferencias del programador se pueden instalar diferentes formas de instalación (consola de bash, de Windows..).
 
@@ -58,8 +58,62 @@ Si se han cumplimentado todos los pasos anteriores en cuanto a instalaciones del
 Para este proceso de ejecución se puede realizar de tres formas, atendiendo a los 3 entornos posibles:
 \begin{enumerate}
 	\item por consola de comandos (CMD en Windows): para este proceso se ha de abrir el programa \textit{Símbolo del sistema} (instalado por defecto en el sistema operativo), utilizar el comando \textit{cd} para colocarnos en la carpeta donde se encuentran todas las clases de Python y escribir el comando \textbf{objectDetectorViaLaser.py}
-	\item Por Jupyter Notebook: se debe buscar el archivo objectDetectorViaLaser.ípynb desde la interfaz de Jupyter, la cual es similar a un explorador de archivos, y de ahi presionar el botón de ejecución tantas veces como bloques de código posea el archivo.
+	\item Por Jupyter Notebook: se debe buscar el archivo objectDetectorViaLaser.ípynb desde la interfaz de Jupyter, la cual es similar a un explorador de archivos, y de ahí presionar el botón de ejecución tantas veces como bloques de código posea el archivo.
 	\item Por Spyder: se debe de buscar el archivo desde el explorador de archivos, similar a cualquier otro programa, y ejecutarlo una única vez ya que en este caso no existe separación. 
 \end{enumerate}
 Ya que son equipotenciales, se deja a decisión del programador la forma en la que se ejecuta el proceso, ya que l compilación es automática en todos ellos.
+
+
 \section{Pruebas del sistema}
+A lo largo del desarrollo de este proyecto se han ido desarrollando una serie de pruebas las cuales, según su resultado, ayudaban al desarrollo de las diferentes fases o a la detección de errores. En este apartado se expondrán las pruebas realizadas y los resultados obtenidos en las mismas. Algunas de las pruebas descritas en este apartado (3 - 6) no han sido únicas, es decir, se han realizado varias veces, pero, debido a que los datos son idénticos en cada uno de los apartados, se ha decidido exponer como caso de prueba.\\
+\\
+Además de estas pruebas se probó el funcionamientos del sistema con el simulador, lo que con las primeras pruebas hizo que se observase y se corrigiese un fallo en el manejo de los hilos de cada una de las ejecuciones del software principal, el cual se corrigió y en la versión actual no presenta ningún problema.
+\subsection{Prueba 1: Comunicación con MTX-GTW}
+\textbf{Descripción} Se prueba a utilizar el proyecto de C$++$ en el cual solo se posee un archivo que imprime por pantalla "Hola Mundo!" para que, con la configuración del proyecto se ejecute en el MTX-GTW y verificar la comunicación\\
+\textbf{Entorno} El ordenador se encuentra conectado al dispositivo antes mencionado vía cable de red y este a su vez se encuentra conectado al cargador, creado por el alumno, para poder funcionar.\\
+\textbf{Resultado esperado} Impresión por pantalla del proceso de ejecución remota (llamada a la dirección IP, mensaje de confirmación...) y la impresión por pantalla del mensaje presente en el proyecto.\\
+\textbf{Resultado obtenido} Se obtienen todos los mensajes esperados.\\
+\textbf{Conclusiones} Se observa que por el momento se aprecia una configuración y comunicación con el MTX-GTW correcta.
+\textbf{Acciones derivadas}  proseguir con el proyecto.\\
+\subsection{Prueba 2: ejecución en MTX-GTW}
+\textbf{Descripción}Después de un tiempo desarrollando partes del código, se decide ejecutar de forma remota dicho código para comprobar el buen funcionamiento del mismo. Al ser clases muy sencillas, se decide crear impresiones de pantalla para poder visualizarlo \\
+\textbf{Entorno} mismo entono que Prueba 1.\\
+\textbf{Resultado esperado} Impresión de mensajes de comunicación con el dispositivo conectado e impresiones de todos los mensajes.\\
+\textbf{Resultado obtenido} Múltiples mensajes de error indicando fallos en la comunicación.\\
+\textbf{Conclusiones} Se observan fallos en la comunicación con el dispositivo y en la configuración del proyecto.\\
+\textbf{Acciones derivadas}  Se comienza un análisis de la configuración del proyecto, con lo que se descubre que faltan algunas librerías las cuales no se pueden encontrar debido a que se encuentran desactualizadas y no se encuentra forma de acceder a ellas.\\
+
+\subsection{Prueba 3: Comunicación con RealTerm}
+\textbf{Descripción} Una vez se ha eliminado al idea de la ejecución remota se comienzan las pruebas de comunicación con el láser, estas primeras pruebas son a cerca de la creación de los mensajes que se emplearían más tarde en el código. Para ello, se envía al láser el mensaje "2,0,0,0,E,A,R,0,2,0x83,0x00,3" ya que es la estructura según establecida para el mensaje de comunicación contínua, que es es que se va a querer usar para el programa principal.Este mensaje es enviado como números.\\
+\textbf{Entorno} Se conectan láser y PC vía cable Ethernet. A su vez, el láser está conectado al cargador, creado por el alumno, para poder usarlo en la comunicación. En este caso, los alrededores del láser no son relevantes debido a que solo se está comprobando el intercambio de información\\
+\textbf{Resultado esperado} El láser devuelve una sucesión continua o muy extensa de los datos de lectura.\\
+\textbf{Resultado obtenido} No se recibe ningún mensaje o respuesta y si se reciben son mensajes de error\\
+\textbf{Conclusiones} La codificación del mensaje es incorrecta, por lo que necesita revisión.\\
+\textbf{Acciones derivadas}  Se revisa la codificación y se observa las dos diferentes codificaciones en el mismo mensaje. Se estudia como crear ese mensaje.\\
+
+\subsection{Prueba 4: Segunda comunicación con RealTerm}
+\textbf{Descripción} Tras analizar las codificaciones y la forma en la que se deben transmitir cada una de las codificaciones necesarias para la creación del mensaje. en este caso el mensaje creado es "2,48,48,48,69,65,82,48,50,0x00,0x83,3" y en este caso se transmiirá como caracateres ASCII. En cuanto al entorno, como en la anterior prueba, es irrelevante debido a que lo que se está comprobando es la forma de comunicación, no la información en sí.\\
+\textbf{Entorno} El mismo que en la prueba 3.\\
+\textbf{Resultado esperado} Conjunto grande de datos formados por varias lecturas del entorno.\\
+\textbf{Resultado obtenido} Conjunto de datos esperado, aunque con fallo por llenado de buffer de entrada configurado por RealTerm\\
+\textbf{Conclusiones} El mensaje ha sido creado correctamente\\
+\textbf{Acciones derivadas}  Se desarrolla el código en Python para la recepción, análisis de datos y representación de los mismos.
+
+\subsection{Prueba 5: Traducción y representación de datos}
+\textbf{Descripción} Una vez creado el código del programa principal en Python se desea representar los datos correspondientes a la lectura de datos con el láser apuntando hacia una pared. \\
+\textbf{Entorno} En este caso se tiene en cuenta el entorno debido a que se va a representar la lectura de una línea recta correspondiente a la pared. En cuanto al equipo, es idéntico al de las 2 pruebas anteriores.\\
+\textbf{Resultado esperado} Puntos dispersos en los laterales pero una línea de puntos al frente, representando la pared anteriormente mencionada.\\
+\textbf{Resultado obtenido} Puntos dispersos, creando círculos concéntricos, los cuales se extendian por los 360º cuando los lidar solo son capaces de leer 270º\\
+\textbf{Conclusiones} Fallo en la traducción o modificación de los datos recibidos por las lectura del láser pero, por los resultados obtenidos, se deduce que el problema es de la traducción de coordenadas.\\
+\textbf{Acciones derivadas}  Se analiza el código en busca de dicho error y, como ya se había deducido en las conclusiones, el problema surgía del paso de coordenadas polares a cartesianas debido a una confusión con los datos, lo cual se rectificó.
+
+\subsection{Prueba 6: Segunda prueba de Traducción y representación de datos}
+\textbf{Descripción} Una vez analizadas y corregidas todos los métodos de traducción de puntos utilizados, se utiliza la caja del propio láser sobre él mismo para que el sistema lo represente de forma gráfica.\\
+\textbf{Entorno} El entorno es similar al que se expone en la prueba anterior, salvo el aspecto de la sustitución de la pared por la caja para representarla gráficamente.\\
+\textbf{Resultado esperado} Dibujo de la silueta de la caja en forma de agrupación de puntos.\\
+\textbf{Resultado obtenido} Tras ejecutar el programa principal se obtiene la siguiente imagen:\\
+\imagen{pruebaCaja}{Prueba de la representación de la caja como lectura de entorno}
+\textbf{Conclusiones} La traducción de datos funciona de forma correcta.\\
+\textbf{Acciones derivadas}  Se realizaron varias repeticiones de esta prueba para la obtención de varias lecturas, las cuales se han empleado para la creación de la lista de lecturas manejada por el servidor para la simulación de comportamiento que conforma la base de su funcionamiento. Aqui un ejemplo
+\imagenGrande{prueba6E}{Entorno de una de una prueba correcta}
+\imagenGrande{prueba6G}{Gráfica resultado de una prueba correcta}

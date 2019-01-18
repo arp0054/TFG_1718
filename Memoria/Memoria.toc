@@ -45,6 +45,7 @@
 \contentsline {section}{\numberline {7.1}Introducci\IeC {\'o}n}{31}{section.7.1}
 \contentsline {section}{\numberline {7.2}Conclusiones}{31}{section.7.2}
 \contentsline {section}{\numberline {7.3}Mejoras y l\IeC {\'\i }neas de trabajo}{32}{section.7.3}
-\contentsline {subsection}{Funcionamiento continuo}{32}{section*.28}
+\contentsline {subsection}{Mejora del simulador}{32}{section*.28}
 \contentsline {subsection}{Ejecuci\IeC {\'o}n remota}{33}{section*.29}
-\contentsline {chapter}{Bibliograf\'{\i }a}{35}{section*.31}
+\contentsline {subsection}{Prueba en un AGV}{34}{section*.30}
+\contentsline {chapter}{Bibliograf\'{\i }a}{35}{section*.32}

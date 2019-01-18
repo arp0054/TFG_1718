@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.12)  17 JAN 2019 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.12)  18 JAN 2019 00:49
 entering extended mode
 **./Memoria.tex
 (Memoria.tex
@@ -875,10 +875,12 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip186
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\cite\cite.sty"
-LaTeX Info: Redefining \cite on input line 302.
-LaTeX Info: Redefining \nocite on input line 332.
-Package: cite 2015/02/27  v 5.5
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip187
+\bibsep=\skip188
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count153
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -894,9 +896,9 @@ File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks27
-\minrowclearance=\skip187
+\minrowclearance=\skip189
 )
-\rownum=\count153
+\rownum=\count154
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -909,18 +911,18 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xtab\xtab.sty"
 Package: xtab 2011/07/31 v2.3f Extended supertabular package
-\c@tracingst=\count154
+\c@tracingst=\count155
 \PWSTcapht=\dimen153
 \ST@wd=\dimen154
-\ST@rightskip=\skip188
-\ST@leftskip=\skip189
-\ST@parfillskip=\skip190
-\c@PWSTtable=\count155
-\PWSTlastpage=\count156
-\PWSTpenultimate=\count157
-\PWSTcurpage=\count158
-\PWSTtempc=\count159
-\PWSTlines=\count160
+\ST@rightskip=\skip190
+\ST@leftskip=\skip191
+\ST@parfillskip=\skip192
+\c@PWSTtable=\count156
+\PWSTlastpage=\count157
+\PWSTpenultimate=\count158
+\PWSTcurpage=\count159
+\PWSTtempc=\count160
+\PWSTlines=\count161
 \PWST@lastht=\dimen155
 \PWST@generalht=\dimen156
 \PWST@ht=\dimen157
@@ -938,14 +940,14 @@ Package: xtab 2011/07/31 v2.3f Extended supertabular package
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
-\multirow@colwidth=\skip191
-\multirow@cntb=\count161
-\multirow@dima=\skip192
+\multirow@colwidth=\skip193
+\multirow@cntb=\count162
+\multirow@dima=\skip194
 \bigstrutjot=\dimen168
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip193
+\@mathmargin=\skip256
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
@@ -963,13 +965,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count162
+\inf@bad=\count163
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count163
-\leftroot@=\count164
+\uproot@=\count164
+\leftroot@=\count165
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count165
-\DOTSCASE@=\count166
+\classnum@=\count166
+\DOTSCASE@=\count167
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
@@ -978,15 +980,15 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen171
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count167
-\c@MaxMatrixCols=\count168
+\macc@depth=\count168
+\c@MaxMatrixCols=\count169
 \dotsspace@=\muskip11
-\c@parentequation=\count169
-\dspbrk@lvl=\count170
+\c@parentequation=\count170
+\dspbrk@lvl=\count171
 \tag@help=\toks29
-\row@=\count171
-\column@=\count172
-\maxfields@=\count173
+\row@=\count172
+\column@=\count173
+\maxfields@=\count174
 \andhelp@=\toks30
 \eqnshift@=\dimen172
 \alignsep@=\dimen173
@@ -995,8 +997,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \totwidth@=\dimen176
 \lineht@=\dimen177
 \@envbody=\toks31
-\multlinegap=\skip194
-\multlinetaggap=\skip256
+\multlinegap=\skip257
+\multlinetaggap=\skip258
 \mathdisplay@stack=\toks32
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
@@ -1075,7 +1077,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count174
+\c@section@level=\count175
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1090,16 +1092,16 @@ LaTeX Info: Redefining \nameref on input line 345.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count175
+\scratchcounter=\count176
 \scratchdimen=\dimen180
 \scratchbox=\box33
-\nofMPsegments=\count176
-\nofMParguments=\count177
+\nofMPsegments=\count177
+\nofMParguments=\count178
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count178
+\MPscratchCnt=\count179
 \MPscratchDim=\dimen181
-\MPnumerator=\count179
-\makeMPintoPDFobject=\count180
+\MPnumerator=\count180
+\makeMPintoPDFobject=\count181
 \everyMPtoPDFconversion=\toks34
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -2431,7 +2433,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 33.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 33.
-<./img/interfazGraficaTrello.png, id=696, 1028.34187pt x 481.8pt>
+<./img/interfazGraficaTrello.png, id=698, 1028.34187pt x 481.8pt>
 File: ./img/interfazGraficaTrello.png Graphic file (type png)
 <use ./img/interfazGraficaTrello.png>
 Package pdftex.def Info: ./img/interfazGraficaTrello.png  used on input line 37
@@ -2548,6 +2550,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--69
 Underfull \hbox (badness 10000) in paragraph at lines 64--69
 
  []
+
+
+Package natbib Warning: Citation `python' on page 21 undefined on input line 73
+.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 72--76
@@ -2791,7 +2797,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
  []
 
-<./img/pinout.png, id=732, 465.99094pt x 411.03563pt>
+<./img/pinout.png, id=736, 465.99094pt x 411.03563pt>
 File: ./img/pinout.png Graphic file (type png)
 <use ./img/pinout.png>
 Package pdftex.def Info: ./img/pinout.png  used on input line 37. on input line
@@ -2951,7 +2957,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 1.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 1.
-<./img/laserAGV.png, id=755, 358.33875pt x 215.30438pt>
+<./img/laserAGV.png, id=759, 358.33875pt x 215.30438pt>
 File: ./img/laserAGV.png Graphic file (type png)
 <use ./img/laserAGV.png>
 Package pdftex.def Info: ./img/laserAGV.png  used on input line 8. on input lin
@@ -2996,14 +3002,26 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 8.
 [29]
-<./img/distanciaSeg.png, id=760, 289.08pt x 30.86531pt>
+<./img/distanciaSeg.png, id=764, 289.08pt x 30.86531pt>
 File: ./img/distanciaSeg.png Graphic file (type png)
 <use ./img/distanciaSeg.png>
 Package pdftex.def Info: ./img/distanciaSeg.png  used on input line 10. on inpu
 t line 10.
 Package pdftex.def Info: Requested size: 344.69766pt x 36.80551pt on input line
  10.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 14.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 12--458
+
+ []
+
 LaTeX Info: Redefining \. on input line 458.
 LaTeX Info: Redefining \% on input line 458.
 Package babel Info: Redefining spanish shorthand <<
@@ -3030,7 +3048,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 458.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 458.
- [30 <./img/laserAGV.png> <./img/distanciaSeg.png>]
+[30 <./img/laserAGV.png> <./img/distanciaSeg.png>]
 \openout2 = `./tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux'.
 
 
@@ -3113,77 +3131,81 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 17.
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--26
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--26
-
- []
-
-LaTeX Info: Redefining \. on input line 26.
-LaTeX Info: Redefining \% on input line 26.
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 24.
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
+
+Package natbib Warning: Citation `hardware MTX-GTW' on page 33 undefined on inp
+ut line 31.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--33
 
  []
 
-LaTeX Info: Redefining \. on input line 38.
-LaTeX Info: Redefining \% on input line 38.
+LaTeX Info: Redefining \. on input line 35.
+LaTeX Info: Redefining \% on input line 35.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 38.
+(babel)             in language append on input line 35.
 
 [33])
+Underfull \hbox (badness 10000) in paragraph at lines 41--459
+
+ []
+
 LaTeX Info: Redefining \. on input line 459.
 LaTeX Info: Redefining \% on input line 459.
 Package babel Info: Redefining spanish shorthand <<
@@ -3210,7 +3232,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 459.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 459.
- [34] (Memoria.bbl
+[34] (Memoria.bbl
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language append on input line 1.
 Package babel Info: Redefining spanish shorthand >>
@@ -3224,13 +3246,37 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 1.
 
-bibitemlist
+! Misplaced alignment tab character &.
+l.15 .../es.wikipedia.org/w/index.php?title=LaTeX&
+                                                  oldid=84209252,
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--18
+[]\T1/lmr/m/n/12 (+20) Wikipedia.  La-tex --- wi-ki-pe-dia, la en-ci-clo-pe-dia
+ li-bre.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--18
+\T1/lmr/m/n/12 (+20) https://es.wikipedia.org/w/index.php?title=LaTeXoldid=8420
+9252,
+ []
+
 )
 
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
 (in both cases you will find help in the memoir manual). on input line 465.
+
+
+Package natbib Warning: There were undefined citations.
 
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language append on input line 465.
@@ -3283,55 +3329,41 @@ LaTeX Info: Redefining \% on input line 28.
 (tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 465.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 465.
+Package rerunfilecheck Info: File `Memoria.out' has not changed.
+(rerunfilecheck)             Checksum: 2FCE83015D298D2137DE7FE69E086194;2100.
 
-
-Package rerunfilecheck Warning: File `Memoria.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Memoria.out':
-(rerunfilecheck)             Before: 95AD45F6E45F58383AA6A55D4AB74248;2100
-(rerunfilecheck)             After:  FDE4FE12D7DEF23666D1B8EE3082EEEF;2100.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 465.
  ) 
 Here is how much of TeX's memory you used:
- 13263 strings out of 493312
- 192875 string characters out of 3138895
- 358820 words of memory out of 3000000
- 16322 multiletter control sequences out of 15000+200000
- 83935 words of font info for 112 fonts, out of 3000000 for 9000
+ 13545 strings out of 493312
+ 196330 string characters out of 3138895
+ 363679 words of memory out of 3000000
+ 16599 multiletter control sequences out of 15000+200000
+ 84162 words of font info for 112 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,12n,38p,1262b,708s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{section*.30} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.25} has been referenced but does not exist
-, replaced by a fixed one
-
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiK
-TeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
-/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.e
-nc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/lm/lmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
-m/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
-lmro12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Memoria.pdf (47 pages, 1073703 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy
+.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/lm/lmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr1
+7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmro12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Memoria.pdf (47 pages, 1100167 bytes).
 PDF statistics:
- 874 PDF objects out of 1000 (max. 8388607)
- 115 named destinations out of 1000 (max. 500000)
- 22821 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 882 PDF objects out of 1000 (max. 8388607)
+ 116 named destinations out of 1000 (max. 500000)
+ 23333 words of extra memory for PDF output out of 24883 (max. 10000000)
 
