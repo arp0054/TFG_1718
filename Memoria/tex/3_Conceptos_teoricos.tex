@@ -31,16 +31,16 @@ Estos comandos son los que le indican al láser la orden de enviar los datos de 
 	\item AR04: envía las mediciones de las distintas distancias e intensidades de cada una de las lecturas del entorno que realiza de forma contínua.
 	\item AR05: sirve para detener el comportamiento continuado del comando AR04, se recibe después un mensaje de confirmación.
 \end{enumerate}
-\break\hfill
-\tablaSmall{Resumen de las características de cada comando AR}{l c c c c c}{coamndoscaracteristicas}
-{ \multicolumn{1}{l}{Comandos} & Continuo & Unico & Distancia & Distancia-Intensidad  & Parada \\}{
-AR00 & & X & X &\\
-AR01 & & X & & X\\
-AR02 & X & & X &\\
-AR03 & & & & & X\\
-AR04 & X & & & X\\
-AR05 & & & & & X\\
-}
+
+\tablaSmall{Características de los comandos}{|l|l|l|l|l|l|}{caracteristicascomandos}
+{\multicolumn{1}{l}{Comandos} & Contínuo & Único & Distancia & Distancia/Intensidad & Parada \\}{
+ AR00 &  & X & X &  &  \\ 
+ AR01 &  & X &  & X &  \\ 
+ AR02 & X &  & X &  &  \\ 
+ AR03 &  &  &  &  & X \\ 
+ AR04 & X &  &  & X &  \\ 
+ AR05 &  &  &  &  & X \\ 
+ }
  \subsection{Envío y recepción de mensajes}
  Tras haber escogido el comando a utilizar, se debe construir el mensaje que se va a enviar desde el PC hacia el láser. Para esta construcción se debe de seguir una estructura específica basada en estos campos.\\
 \imagen{estructuraMsgEnv}{Mensaje de petición al láser}
