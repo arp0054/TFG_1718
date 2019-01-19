@@ -28,16 +28,17 @@ Esta parte del sistema software es una parte en la que se puede extraer una line
 \subsection{Ejecución remota}
 Esta mejora viene motivada por, como ya se ha explicado en otros apartados, el hecho de no haber conseguido implementarlo durante el desarrollo de este proyecto.\\
 \\
-Para el desarrollo de este aspecto se necesita la inclusión en el sistema del MTX-GTW \cite{hardware MTX-GTW}. Este instrumento es capaz de simular los recursos, y por tanto el rendimiento, presentes en un AGV. Para comunicarse con él se debe usar varios cables adicionales:
+Para el desarrollo de este aspecto se necesita la inclusión en el sistema del MTX-GTW. Este instrumento es capaz de simular los recursos, y por tanto el rendimiento, presentes en un AGV. Para comunicarse con él se debe usar varios cables adicionales:
 \begin{itemize}
 	\item Cable de red: para realizar la conexión entre el MTX-GTW y el ordenador se necesita un cable de red estándar.
 	\item Cable con conector RS232: este cable es necesario para poder conectar el nuevo dispositivo con el láser.
 	\item Cable de alimentación: se necesitará tambien un cable que suministre 12 V de conrriente continua sin cabezal ya que posee uno propio al cual se han de acoplar dos hilos individuales.
 \end{itemize}
-Tras haber obtenido este sistema hardware se ha de comprobar si en el MTX-GTW se puede ejecutar código en Python, ya que si no es así sería necesario traducir el sistema a lenguajes como C$++$, el cual si que es capaz de comprender. En la versión de este dispositivo utilizada en las primeras fases de este proyecto, si que es capaz de reconocer y ejecutar código Python pero si se desea utilizar otra versión u otro equipo hay que leer su manual para saberlo.
+Tras haber obtenido este sistema hardware se ha de comprobar si en el MTX-GTW se puede ejecutar código en Python, ya que si no es así sería necesario traducir el sistema a lenguajes como C$++$, el cual si que es capaz de comprender. En la versión de este dispositivo utilizada en las primeras fases de este proyecto, si que es capaz de reconocer y ejecutar código Python pero si se desea utilizar otra versión u otro equipo hay que leer su manual para saberlo.\\
+\\
+El manual del MTX-GTW se encuentra en el repositorio en el directorio \textit{Dispositivo} (URL: \url{https://bit.ly/2RAju1H}).
 
 \subsection{Prueba en un AGV}
-
 Otra de las mejoras o trabajos derivados que pueden surgir de esta versión del software es la implantación de este software en un AGV real. Este sistema, como ya se ha descrito, detecta objetos y los localiza, lo cual puede ser usado por un AGV para su funcionamiento más habitual. En la actualidad, gracias a la tecnología láser, los AGV pueden detectar si en su entorno se encuentras algún objeto, aunque no pueden saber en que parte del entorno exactamente. Con la implantación del sistema de este proyecto en el AGV se podría ver y testar si actúa de una manera más eficiente, es decir, si puede detectar la posición del objeto y continuar con su funcionamiento habitual si esa posición no se lo impide.\\
 \\
 Para poder implementar estas pruebas se puede probar a implementar este sistema en un microprocesador, el cual irá conectado más tarde al vehículo y gestionará el análisis de estos datos. Esta implementación hará que el trabajo de análisis de datos sea ejecutado por este procesador, lo cual liberará de trabajo al procesador principal del AGV, lo que supondrá una mejora en la eficiencia del sistema completo de estos vehículos.

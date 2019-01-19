@@ -44,6 +44,6 @@ class Area:
                         print('Se encontró un objeto a '+str(dato.getX())+' metros hacia delate y '+str(math.fabs(dato.getY()))+' metros hacia la izquierda.')
                     return True
                     break
-        print('No se encontró ningún objeto ene este área')
+        print('No se encontró ningún objeto en este área')
         return False
                     

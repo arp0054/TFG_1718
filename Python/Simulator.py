@@ -27,7 +27,7 @@ def conexiones(socket_cliente):
     global utilizadas
     if utilizadas >= len(lecturas):
         utilizadas = 0
-    mensaje = lecturas.pop(utilizadas)
+    mensaje = lecturas[utilizadas]
     utilizadas = utilizadas+1
     b = bytearray()
     b.extend(map(ord, mensaje))

@@ -20,6 +20,15 @@ Para este paso se deben de seguir los pasos descritos en el \textit{Apéndice D}
 \end{itemize}
 
 \section{Manual del usuario}
-Para poder utilizar de forma correcta este software, una vez completado el proceso de instalación, es ejecutar el código tanto del servidor (si se desea o no se tiene acceso a un láser) como el del programa principal (en este orden para su correcto funcionamiento en el caso de no tener el láser conectado físicamente) en consola de comando o, si el usuario lo tiene instalado, un IDE que permita la ejecución de Python.\\
+Para poder utilizar de forma correcta este software, una vez completado el proceso de instalación, es ejecutar el código tanto del servidor (si se desea o no se tiene acceso a un láser) como el del programa principal (en este orden para su correcto funcionamiento en el caso de no tener el láser conectado físicamente) en consola de comando o, si el usuario lo tiene instalado, un IDE que permita la ejecución de Python. En este apartado se va a explicar paso por paso la realización de este proceso (en este caso se expondrá la forma de uso desde consola de comandos).\\
 \\
-Para poder ver una demostración, tanto del proceso de descarga del proyecto como de la ejecución del mismo, se puede ver el siguiente vídeo: \url{https://github.com/arp0054/TFG_ObjDetectorViaLaser/tree/master/Videos}
+Como primer paso, se deben abrir dos consolas de comandos con la orden \textit{cmd}. Una vez abiertas se abre el directorio donde se encuentre el proyecto, y más concretamente el directorio con los archivos Python.\\
+\imagen{locDir}{colocación de consolas en directorio Python}
+En la primera de las consolas es donde se ejecutará el servidor que actuará como simulador del láser (en caso de que el láser se encuentre conectado este paso se puede omitir) con la ejecución del comando \textit{py Simulator.py}. Por otra parte, en la segunda consola se realizará la ejecución del programa principal a través de la orden \textit{py objectDetectorViaLaser.py}.\\
+\imagen{exeProc}{Ejecución de comandos en ambas consolas}
+Tras estas ejecuciones, el programa principal muestra por pantalla un mensaje para que el usuario introduzca el número de áreas que desea. Después de  que el usuario haya completado esta tarea, se le pedirá la introducción de las coordenadas de cada una de las áreas con un mensaje indicativo de la unidad de medida en la que se van a interpretar los datos (milímetros) y la orden de separa los datos utilizando la coma (,).\\
+\imagen{intrArea}{Introducción de áreas}
+Una ve introducidas todas las áreas el sistema se intentará conectar al láser utilizando su dirección IP y su número de puerto. Al no haber podido por no estar conectado físicamente al láser, el sistema se conecta a la dirección y puerto del servidor (en caso de estar conectado al láser la conexión se realiza con este). Tras realizar esta conexión se ejecuta el resto del programa principal, haciendo aparecer el mensaje correspondiente de cada una de las áreas y la información correspondiente a la ventana que emerge a continuación con la representación gráfica de los datos, tanto de lectura simulada (o real en caso de conexión con el láser) y las áreas insertadas por el usuario.\\
+\imagen{pingYEx}{Visualización de datos de ejecución}
+\imagen{repGr}{Gráfica de representación de datos}
+Para poder mostrar de forma más visual este proceso, tanto de la descarga del proyecto como de la ejecución del mismo, se puede ver el siguiente vídeo: \url{https://github.com/arp0054/TFG_ObjDetectorViaLaser/tree/master/Videos}

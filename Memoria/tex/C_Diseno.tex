@@ -12,11 +12,18 @@ En este proyecto se emplea un único tipo de datos, las coordenadas cartesianas,
 	\item Límites de áreas: grupo formado por los límites de las áreas introducidas por el usuario, las cuales no necesitan traducción ya que son introducidas directamente como coordenadas cartesianas.
 	\item Ángulos: en la ejecución del programa principal se crea una lista con una serie de datos correspondientes a ángulos los cuales se asignarán más tarde a cada uno de los datos del lectura para poder crea así el conjunto de puntos en coordenadas polares, el cual será más tarde analizado para obtener los datos y la gráfica final.
 \end{itemize}
-Ambos grupos se tratan de la misma forma dentro del sistema, ya que se crean listas de instancias de la clase \textit{Punto}, creada en este proyecto.
+Estos datos se tratan de diferente forma dentro del sistema dependiendo de su importancia y funcionalidad:\\
+\begin{itemize}
+	\item Clase Punto: como su propio nombre indica, esta clase se utiliza para crear los puntos del sistema. Dentro de esta clase se encuentran dos variables correspondientes a las coordenadas que de forma habitual forman un punto.
+	\item Clase Area: esta clase es aquella con la que se gestionan las áreas introducidas por el usuario. Dentro de esta se crea una lista que contiene elementos de la clase \textit{Punto}.
+	\item Listas: los ángulos antes mencionados, al ser datos parcialmente relevantes (ya que únicamente son utilizados para crear los puntos en coordenadas polares) no necesitan crearse clases para poder trabajar con ellos cómodamente, por lo cual se almacenan en una lista en el programa principal.
+\end{itemize}
 
 \section{Diseño procedimental}
 
-Para este apartado se ha desarrollado el siguiente diagrama de secuencia, en el que se describe el proceso de ejecución del sistema.Como se puede observar en la imágen del diagrama, la única interacción que tiene el usuario es la introducción del número de áreas y las coordenadas de cada uno de sus límites.
+Para este apartado se ha desarrollado el siguiente diagrama de secuencia, en el que se describe el proceso de ejecución del sistema.Como se puede observar en la imagen del diagrama, la única interacción que tiene el usuario es la introducción del número de áreas y las coordenadas de cada uno de sus límites.\\
+\\
+Con los datos introducidos por el usuario, el sistema crea tantas instancias de la clase \textit{Área} como número de áreas haya deseado el usuario para esta ejecución, lo que conlleva a la creación de un número aún mayor (4 * número de áreas) de instancias de la clase \textit{Punto}. Más tarde se realiza un bucle donde en cada iteración se realiza na llamada al método \textit{hayObjeto} Presente en la clase \textit{Área}.
 \imagenPagCompleta{diagramaSec}{Diagrama de secuencia del sistema}
 
 \section{Diseño arquitectónico}

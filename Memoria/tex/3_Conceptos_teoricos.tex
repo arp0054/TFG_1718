@@ -8,10 +8,11 @@ Para la implementación del sistema que nos va a permitir el desarrollo del prog
 \begin{itemize}
 	 \item Láser: esta parte es la que se encarga de obtener los datos de su entorno. Estos datos serán enviados a través de una interfaz hacia la unidad de tratamiento de datos.  En este caso, el láser que se va a emplear es un LIDAR (o Laser Imaging Detection and Ranging). Estos dispositivos tienen un funcionamiento muy sencillo, ya que se basan en la emisión de una gran cantidad de rayos infrarrojos a través de su foco emisor, los cuales son observados gracias a una lente infrarroja. Algunos de estos dispositivos poseen una característica que podría ser tomada como una desventaja, ya que son caaces de recoger información a cerca de su entorno pero solo en un ángulo de 270º. Es por esto que algunos de estos se encuentran instalados en soportes donde se les permita girar para poder obtener información del entorno completo. Tras heber analizado algunos de los LIDAR presentes hoy en día en el mercado (Sick S300, Benewake CE30-D....) se ha decidido utilizar el Hokuyo Safety Laser Scanner (UAM-05LP-T301). Este dispositivo es capaz de desarrollar tres áreas de detección dependiendo de la distancia a la que detecte un elemento (puede ser de 20, 10 y 5 metros).\\
 	 \imagen{rangoUAM}{Rango de visión del Hokuyo}
+	 Para poder comparar con otro láser, en la siguiente imagen se puede observar un lidar de la marca Sick, concretamente el modemo S300, en el cual podemos observar la diferencia en cuanto a la forma de las áreas, la cual posee una forma más rectangular. lo cual es debido a que este tipo de láseres posee una configuración dedicada a una dirección específica.
+	 \imagen{sick}{Lidar Sick y representación de sus campos de seguridad}
     \item Cable ethernet: es el soporte a través del cual se transportan tanto los mensajes enviado por el ordenador hacia el láser como las respuestas y los datos de lectura que este manda al PC demandante. Esta es la que, en la descripción del anterior elemento se conoce como la interfaz. En el caso de este proyecto se usará un UAM-NET, un cable Ethrernet de 3 metros de longitud desarrollado por Hokuyo, misma empresa desarrolladora del láser empleado, lo que hace que resulte idóneo para evitar problemas de incompatibilidad y asegurar así el correcto funcionamiento del sistema.
     \item PC: es la parte principal del proyecto, ya que es la encargada de permitir al usuario tanto introducir las áreas donde se necesita detectar los objetos, como las órdenes que el usuario desea transmitir al láser para recibir la información. Además también es la encargada de recibir y procesar las respuestas del láser para poder mostrar al usuario los resultados de la comparación de los datos y las coordenadas de las áreas introducidas. La utilización de este aparato es debida a que este proyecto sería destinado a ser introducido dentro de un AGV pero se necesita hacer visible al usuario a través de una pantalla.\\ 
 \end{itemize}
-% Esta imagen es provisional hasta tener fotografia del sistema montado
 \imagen{sistemaHW}{Sistema hardware del proyecto}
 
 \section{Procesado de datos}
@@ -22,7 +23,7 @@ Cuando el programa desarrollado se comunica con el láser, este debe recibir las
 
 Para que el láser devuelva los datos de sus lecturas se le debe de mandar un comando específico dependiendo de la forma de lectura que deseamos que realice. Hay muchos tipos de comandos disponibles para enviar al láser pero para los objetivos de este proyecto vamos a emplear un único tipo, los comandos AR.\\
 \\
-Estos comandos son los que le indican al láser la orden de enviar los datos de lectura. Dependiendo del comando AR enviado, se enviará un determinado conjunto de datos u otro. Algunos de estos comandos sirven para detener el funcionamiento provocado por otros comandos del mismo tipo. Los comandos de este tipo son 6:
+Estos comandos son los que le indican al láser la orden de enviar los datos de lectura. Dependiendo del comando AR enviado, se enviará un determinado conjunto de datos u otro. Algunos de estos comandos sirven para detener el funcionamiento provocado por otros comandos del mismo tipo. Los comandos de este tipo son 6 (Los cuales se encuentran especificados en el manual del protocolo de comunicación del láser, suministrado por el tutor, accesible desde aquí \url{https://bit.ly/2APyvm0}):
 \begin{enumerate}
 	\item AR00: envía la medición de las distintas distancias de una única lectura del entorno.
 	\item AR01: envía las mediciones de las distintas distancias e intensidades de una única lectura del entorno.
@@ -31,7 +32,7 @@ Estos comandos son los que le indican al láser la orden de enviar los datos de 
 	\item AR04: envía las mediciones de las distintas distancias e intensidades de cada una de las lecturas del entorno que realiza de forma contínua.
 	\item AR05: sirve para detener el comportamiento continuado del comando AR04, se recibe después un mensaje de confirmación.
 \end{enumerate}
-
+\break\hfill
 \tablaSmall{Características de los comandos}{|l|l|l|l|l|l|}{caracteristicascomandos}
 {\multicolumn{1}{l}{Comandos} & Contínuo & Único & Distancia & Distancia/Intensidad & Parada \\}{
  AR00 &  & X & X &  &  \\ 
@@ -89,4 +90,10 @@ Una vez realizados estos cálculos se crea una lista con valores de ángulos exp
 Esta lista de puntos es traducida elemento a elemento a coordenadas cartesianas a través de dos sencillas operaciones.Teniendo en cuenta un par de coordenadas polares (r,\(\theta\) )donde "r" representa el radio y \(\theta\)  representa el ángulo, la traducción a coordenadas cartesianas (x,y) se realiza así: \\
 x = r * cos(\(\theta\))\\
 y = r * sin(\(\theta\))\\
-Una vez hechas estas traducciones se posee una lista de puntos cartesianos los cuales podemos representar en una gráfica para poder observar las lecturas ofrecidas por estos datos.
+Una vez hechas estas traducciones se posee una lista de puntos cartesianos los cuales podemos representar en una gráfica para poder observar las lecturas ofrecidas por estos datos.\\
+\\
+Con estos datos, unidos a las coordenadas de cada uno de los límites de cada una de las áreas, s realiza una comprobación para determinar si alguno de los puntos de lectura se encuentra dentro de cada área. En caso positivo, el sistema devolverá un mensaje con la posición del primero de los puntos encontrados traducida a indicaciones de lenguaje coloquial (hacia delante, hacia atrás, derecha o izquierda).\\
+\imagen{lecturaAreas}{Representación de lecturas y áreas}
+Como se puede ver en esta imagen, el área configurada por el usuario abarca algunos de los puntos de lectura del láser, por lo tanto el sistema realizará la traducción anteriormente mencionada para indicar al usuario esa posición.\\
+\imagen{salidaP}{Salida por pantalla al encontrar un objeto}
+En caso de que en el área que establece el usuario no haya puntos, se emite el mensaje "No se encontró ningún objeto en este área". Estos mensajes aparecen en el mismo orden en el que se introdujeron las áreas.

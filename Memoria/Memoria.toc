@@ -10,42 +10,42 @@
 \contentsline {section}{\numberline {2.3}Objetivos t\IeC {\'e}cnicos}{4}{section.2.3}
 \contentsline {chapter}{Conceptos te\IeC {\'o}ricos}{7}{chapter*.6}
 \contentsline {section}{\numberline {3.1}Organizaci\IeC {\'o}n de la infraestructura}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Procesado de datos}{9}{section.3.2}
+\contentsline {section}{\numberline {3.2}Procesado de datos}{10}{section.3.2}
 \contentsline {subsection}{Comandos disponibles}{10}{section*.7}
-\contentsline {subsection}{Env\IeC {\'\i }o y recepci\IeC {\'o}n de mensajes}{10}{section*.8}
-\contentsline {subsection}{Traducci\IeC {\'o}n de los datos}{14}{section*.9}
-\contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{17}{chapter*.10}
-\contentsline {section}{\numberline {4.1}Desarrollo de la memoria}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Desarrollo del c\IeC {\'o}digo}{18}{section.4.2}
-\contentsline {subsection}{Jupyter Notebook}{18}{section*.11}
-\contentsline {subsection}{Spyder}{18}{section*.12}
-\contentsline {subsection}{Eclipse}{19}{section*.13}
-\contentsline {section}{\numberline {4.3}Planteamiento de las tareas}{19}{section.4.3}
-\contentsline {subsection}{Trello}{19}{section*.14}
-\contentsline {section}{\numberline {4.4}Metodolog\IeC {\'\i }a de gesti\IeC {\'o}n y herramientas asociadas}{20}{section.4.4}
-\contentsline {section}{\numberline {4.5}Herramienta de manejo de l\IeC {\'a}ser}{20}{section.4.5}
-\contentsline {subsection}{ UAM Proyect Designer}{20}{section*.15}
-\contentsline {subsection}{RealTerm}{20}{section*.16}
-\contentsline {section}{\numberline {4.6}Lenguajes de programaci\IeC {\'o}n}{21}{section.4.6}
-\contentsline {subsection}{C++}{21}{section*.17}
-\contentsline {subsection}{Python}{21}{section*.18}
-\contentsline {section}{\numberline {4.7}Cableado}{22}{section.4.7}
-\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{23}{chapter*.19}
-\contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n del trabajo como proyecto de investigaci\IeC {\'o}n}{23}{section.5.1}
-\contentsline {section}{\numberline {5.2}Conocimientos utilizados aprendidos en el grado}{23}{section.5.2}
-\contentsline {subsection}{Codificaci\IeC {\'o}n en Python}{24}{section*.20}
-\contentsline {subsection}{Conocimiento sobre sockets}{24}{section*.21}
-\contentsline {subsection}{Conocimiento a cerca de la gesti\IeC {\'o}n del proyecto}{24}{section*.22}
-\contentsline {section}{\numberline {5.3}Conocimientos externos a lo aprendido en el grado}{25}{section.5.3}
-\contentsline {subsection}{Codificaci\IeC {\'o}n de mensajes}{25}{section*.23}
-\contentsline {subsection}{Lectura de pinout del l\IeC {\'a}ser}{25}{section*.24}
-\contentsline {subsection}{Conocimientos sobre el l\IeC {\'a}ser}{26}{section*.25}
-\contentsline {chapter}{Trabajos relacionados}{29}{chapter*.26}
-\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{31}{chapter*.27}
-\contentsline {section}{\numberline {7.1}Introducci\IeC {\'o}n}{31}{section.7.1}
-\contentsline {section}{\numberline {7.2}Conclusiones}{31}{section.7.2}
-\contentsline {section}{\numberline {7.3}Mejoras y l\IeC {\'\i }neas de trabajo}{32}{section.7.3}
-\contentsline {subsection}{Mejora del simulador}{32}{section*.28}
-\contentsline {subsection}{Ejecuci\IeC {\'o}n remota}{33}{section*.29}
-\contentsline {subsection}{Prueba en un AGV}{34}{section*.30}
-\contentsline {chapter}{Bibliograf\'{\i }a}{35}{section*.32}
+\contentsline {subsection}{Env\IeC {\'\i }o y recepci\IeC {\'o}n de mensajes}{12}{section*.8}
+\contentsline {subsection}{Traducci\IeC {\'o}n de los datos}{15}{section*.9}
+\contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{19}{chapter*.10}
+\contentsline {section}{\numberline {4.1}Desarrollo de la memoria}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Desarrollo del c\IeC {\'o}digo}{20}{section.4.2}
+\contentsline {subsection}{Jupyter Notebook}{20}{section*.11}
+\contentsline {subsection}{Spyder}{20}{section*.12}
+\contentsline {subsection}{Eclipse}{21}{section*.13}
+\contentsline {section}{\numberline {4.3}Planteamiento de las tareas}{21}{section.4.3}
+\contentsline {subsection}{Trello}{21}{section*.14}
+\contentsline {section}{\numberline {4.4}Metodolog\IeC {\'\i }a de gesti\IeC {\'o}n y herramientas asociadas}{22}{section.4.4}
+\contentsline {section}{\numberline {4.5}Herramienta de manejo de l\IeC {\'a}ser}{22}{section.4.5}
+\contentsline {subsection}{ UAM Proyect Designer}{22}{section*.15}
+\contentsline {subsection}{RealTerm}{22}{section*.16}
+\contentsline {section}{\numberline {4.6}Lenguajes de programaci\IeC {\'o}n}{23}{section.4.6}
+\contentsline {subsection}{C++}{23}{section*.17}
+\contentsline {subsection}{Python}{23}{section*.18}
+\contentsline {section}{\numberline {4.7}Cableado}{24}{section.4.7}
+\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{25}{chapter*.19}
+\contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n del trabajo como proyecto de investigaci\IeC {\'o}n}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}Conocimientos utilizados aprendidos en el grado}{25}{section.5.2}
+\contentsline {subsection}{Codificaci\IeC {\'o}n en Python}{26}{section*.20}
+\contentsline {subsection}{Conocimiento sobre sockets}{26}{section*.21}
+\contentsline {subsection}{Conocimiento a cerca de la gesti\IeC {\'o}n del proyecto}{26}{section*.22}
+\contentsline {section}{\numberline {5.3}Conocimientos externos a lo aprendido en el grado}{27}{section.5.3}
+\contentsline {subsection}{Codificaci\IeC {\'o}n de mensajes}{27}{section*.23}
+\contentsline {subsection}{Lectura de pinout del l\IeC {\'a}ser}{27}{section*.24}
+\contentsline {subsection}{Conocimientos sobre el l\IeC {\'a}ser}{28}{section*.25}
+\contentsline {chapter}{Trabajos relacionados}{31}{chapter*.26}
+\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{33}{chapter*.27}
+\contentsline {section}{\numberline {7.1}Introducci\IeC {\'o}n}{33}{section.7.1}
+\contentsline {section}{\numberline {7.2}Conclusiones}{33}{section.7.2}
+\contentsline {section}{\numberline {7.3}Mejoras y l\IeC {\'\i }neas de trabajo}{34}{section.7.3}
+\contentsline {subsection}{Mejora del simulador}{34}{section*.28}
+\contentsline {subsection}{Ejecuci\IeC {\'o}n remota}{35}{section*.29}
+\contentsline {subsection}{Prueba en un AGV}{36}{section*.30}
+\contentsline {chapter}{Bibliograf\'{\i }a}{37}{section*.32}
