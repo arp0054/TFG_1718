@@ -19,17 +19,17 @@
 \contentsline {section}{\numberline {4.2}Desarrollo del c\IeC {\'o}digo}{20}{section.4.2}
 \contentsline {subsection}{Jupyter Notebook}{20}{section*.11}
 \contentsline {subsection}{Spyder}{20}{section*.12}
-\contentsline {subsection}{Eclipse}{21}{section*.13}
+\contentsline {subsection}{Eclipse}{20}{section*.13}
 \contentsline {section}{\numberline {4.3}Planteamiento de las tareas}{21}{section.4.3}
 \contentsline {subsection}{Trello}{21}{section*.14}
-\contentsline {section}{\numberline {4.4}Metodolog\IeC {\'\i }a de gesti\IeC {\'o}n y herramientas asociadas}{22}{section.4.4}
+\contentsline {section}{\numberline {4.4}Metodolog\IeC {\'\i }a de gesti\IeC {\'o}n y herramientas asociadas}{21}{section.4.4}
 \contentsline {section}{\numberline {4.5}Herramienta de manejo de l\IeC {\'a}ser}{22}{section.4.5}
 \contentsline {subsection}{ UAM Proyect Designer}{22}{section*.15}
 \contentsline {subsection}{RealTerm}{22}{section*.16}
 \contentsline {section}{\numberline {4.6}Lenguajes de programaci\IeC {\'o}n}{23}{section.4.6}
 \contentsline {subsection}{C++}{23}{section*.17}
 \contentsline {subsection}{Python}{23}{section*.18}
-\contentsline {section}{\numberline {4.7}Cableado}{24}{section.4.7}
+\contentsline {section}{\numberline {4.7}Cableado}{23}{section.4.7}
 \contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{25}{chapter*.19}
 \contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n del trabajo como proyecto de investigaci\IeC {\'o}n}{25}{section.5.1}
 \contentsline {section}{\numberline {5.2}Conocimientos utilizados aprendidos en el grado}{25}{section.5.2}
@@ -39,7 +39,7 @@
 \contentsline {section}{\numberline {5.3}Conocimientos externos a lo aprendido en el grado}{27}{section.5.3}
 \contentsline {subsection}{Codificaci\IeC {\'o}n de mensajes}{27}{section*.23}
 \contentsline {subsection}{Lectura de pinout del l\IeC {\'a}ser}{27}{section*.24}
-\contentsline {subsection}{Conocimientos sobre el l\IeC {\'a}ser}{28}{section*.25}
+\contentsline {subsection}{Conocimientos sobre el l\IeC {\'a}ser}{29}{section*.25}
 \contentsline {chapter}{Trabajos relacionados}{31}{chapter*.26}
 \contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{33}{chapter*.27}
 \contentsline {section}{\numberline {7.1}Introducci\IeC {\'o}n}{33}{section.7.1}

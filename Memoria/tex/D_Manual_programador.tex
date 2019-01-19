@@ -8,13 +8,13 @@ Este proyecto es accesible a través de la URL: \url{https://github.com/arp0054/
 \section{Estructura de directorios}
 Debido a las diferentes formas de implementación que este proyecto ha tenido a lo largo de su desarrollo, se pueden observar una gran variedad de directorios:
 \begin{itemize}
-	\item DataSheets: en este directorio se encuentran los documentos técnicos y el protocolo de comunicación utilizado por el láser, los cuales han servido para obtener una gradn cantidad de datos que han ayudado al desarrollo del proyecto (dirección IP y número de puerto por defecto, formas de encriptación y desencriptación de los datos...).
+	\item DataSheets: en este directorio se encuentran los documentos técnicos y el protocolo de comunicación utilizado por el láser, los cuales han servido para obtener una gran cantidad de datos que han ayudado al desarrollo del proyecto (dirección IP y número de puerto por defecto, formas de encriptación y desencriptación de los datos...).
 	\item Diagramas: en este caso el nombre es muy descriptivo, en este directorio se encuentran los diagramas de clases y de secuencia, tanto los iniciales, desarrollados para las primeras fases del proyecto, como los finales. Estos diagramas se distinguen por estar separados en los subdirectorios "Iniciales" y "Finales".
 	\item Dispositivo: también perteneciente a las fases iniciales, en él aparecen el manual de usuario del MTX-GTW, con detalladas explicaciones a cerca de sus necesidades eléctricas así como todas las aplicaciones que el hardware de este dispositivo es capaz de realizar.
 	\item Instalación: en este caso, aparecen tanto imágenes como documentos a cerca de como instalar las librerías las cuales permitían la ejecución remota en el sistema descrito en el punto anterior así como otras utilidades necesarias para el desarrollo del proyecto en su primera versión (útiles para su uso con C$++$)
 	\item Memoria: como su mismo nombre indica, este es el directorio en el que se guardan todos los archivos e imágenes que conforman la memoria de este proyecto, así como su sección de anexos.
-	\item Python: en este directorio se alamcenan todos los archivos del sistema codificados en el lenguaje de programación con el mismo nombre, los cuales forman la versión actual y funcional del proyecto. Hay dos archivos con el mismo nombre " objectDetectorViaLaser" aunque con distinta extensión, dependiendo si es un archivo para usar con Jupyter Notebook (extensión ".ipynb"), el cual se utilizó primero para desarrollo y después solo para alguna prueba, o para utilización en Spyder(extensión ".py"). De la utilización de estos archivos aparece la generación automática de los dos subdirectorios pertenecientes a esta parte del repositorio.
-	\item TFG\_ 1718: de nuevo un directorio de las primeras versiones, ya que este alberga todas las clases, ya sean funcionales o librerias, que fueron usadas en las primeras versiones para codificar el sistema objetivo en el lenguaje de programación C$++$ .
+	\item Python: en este directorio se almacenan todos los archivos del sistema codificados en el lenguaje de programación con el mismo nombre, los cuales forman la versión actual y funcional del proyecto. Hay dos archivos con el mismo nombre " objectDetectorViaLaser" aunque con distinta extensión, dependiendo si es un archivo para usar con Jupyter Notebook (extensión ".ipynb"), el cual se utilizó primero para desarrollo y después solo para alguna prueba, o para utilización en Spyder(extensión ".py"). De la utilización de estos archivos aparece la generación automática de los dos subdirectorios pertenecientes a esta parte del repositorio.
+	\item TFG\_ 1718: de nuevo un directorio de las primeras versiones, ya que este alberga todas las clases, ya sean funcionales o librerías, que fueron usadas en las primeras versiones para codificar el sistema objetivo en el lenguaje de programación C$++$ .
 	\item Drivers: este directorio almacena simplemente el driver utilizado para la conexión con el láser vía USB.
 \end{itemize}
 Como se ha podido observar,algunos de los directorios pertenecen a las primeras versiones. Esto viene dado por la motivación ta expuesta en el punto 7 de la memoria, donde una de las 
@@ -24,7 +24,7 @@ En esta sección se explica como se configura el entorno de trabajo para este pr
 Como primer paso para esta configuración se debe descargar el lenguaje de programación que se va a emplear, en este caso Python. Para este proyecto no se especifica ninguna versión en especial pero para su desarrollo se ha empleado la versión número 3.6.3.\\
 Para  su descarga visitar: \url{https://www.python.org/downloads/release/python-363/}\\
 \\
-Después de descargar e instalar este lenguaje, el cual tiene incorporado el manejador de paquetes \textit{pip}, se descargan los módulos o paquetes que se emplean sobre todo en la representación gráfica con los siguientes comandos:
+Después de descargar e instalar este lenguaje, el cual tiene incorporado el manejador de paquetes \textit{Pip}, se descargan los módulos o paquetes que se emplean sobre todo en la representación gráfica con los siguientes comandos:
 \begin{itemize}
 	\item pip install matplotlib.
 	\item pip install numpy
@@ -47,7 +47,7 @@ Dependiendo de las preferencias del programador se pueden instalar diferentes fo
 \subsection{GitKraken}
 Este cliente de Git es el escogido para el mantenimiento de versiones en el repositorio, es decir, el cliente con el que se subirán cada uno de los cambios realizados al repositorio y con el  que se descargarán las últimas versiones del proyecto desde cualquier dispositivo empleado para el desarrollo de cualquiera de las partes del proyecto. Para descargarlo se debe acceder a: \url{https://www.gitkraken.com/download}\\
 \\
-Una vez descargado, hemos de acceder a GitHub y buscar el botón \textit{Clone or download} y copiar la URL que aparece tras presionarlo (\url{https://github.com/arp0054/TFG_ObjDetectorViaLaser.git}). Una vez copiada, se realizan los siguientes pasos en GitKraken: $boton con el icono de directorio \rightarrow CLONE \rightarrow Clone with URL \rightarrow se selecciona el directorio donde se van a guardar los archivos del directorio en el PC \rightarrow se pega la URL previamente copiada \rightarrow Clone repo! $\\
+Una vez descargado, hemos de acceder a GitHub y buscar el botón \textit{Clone or download} y copiar la URL que aparece tras presionarlo (\url{https://github.com/arp0054/TFG_ObjDetectorViaLaser.git}). Una vez copiada, se realizan los siguientes pasos en GitKraken: boton con el icono de directorio$ \rightarrow$ CLONE $\rightarrow$ Clone with URL $\rightarrow$ se selecciona el directorio donde se van a guardar los archivos del directorio en el PC $\rightarrow$ se pega la URL previamente copiada $\rightarrow$ Clone repo!\\
 \\
 Una vez completados esos pasos se habrá descargado el repositorio por lo que se puede usar como cualquier otro proyecto.\\
 \imagen{interfazGitKraken}{Interfaz gráfica de GitKraken}
@@ -84,7 +84,7 @@ Además de estas pruebas se probó el funcionamientos del sistema con el simulad
 \textbf{Acciones derivadas}  Se comienza un análisis de la configuración del proyecto, con lo que se descubre que faltan algunas librerías las cuales no se pueden encontrar debido a que se encuentran desactualizadas y no se encuentra forma de acceder a ellas.\\
 
 \subsection{Prueba 3: Comunicación con RealTerm}
-\textbf{Descripción} Una vez se ha eliminado al idea de la ejecución remota se comienzan las pruebas de comunicación con el láser, estas primeras pruebas son a cerca de la creación de los mensajes que se emplearían más tarde en el código. Para ello, se envía al láser el mensaje "2,0,0,0,E,A,R,0,2,0x83,0x00,3" ya que es la estructura según establecida para el mensaje de comunicación contínua, que es es que se va a querer usar para el programa principal.Este mensaje es enviado como números.\\
+\textbf{Descripción} Una vez se ha eliminado al idea de la ejecución remota se comienzan las pruebas de comunicación con el láser, estas primeras pruebas son a cerca de la creación de los mensajes que se emplearían más tarde en el código. Para ello, se envía al láser el mensaje \textit{2,0,0,0,E,A,R,0,2,0x83,0x00,3} ya que es la estructura según establecida para el mensaje de comunicación contínua, que es es que se va a querer usar para el programa principal.Este mensaje es enviado como números.\\
 \textbf{Entorno} Se conectan láser y PC vía cable Ethernet. A su vez, el láser está conectado al cargador, creado por el alumno, para poder usarlo en la comunicación. En este caso, los alrededores del láser no son relevantes debido a que solo se está comprobando el intercambio de información\\
 \textbf{Resultado esperado} El láser devuelve una sucesión continua o muy extensa de los datos de lectura.\\
 \textbf{Resultado obtenido} No se recibe ningún mensaje o respuesta y si se reciben son mensajes de error\\
@@ -92,7 +92,7 @@ Además de estas pruebas se probó el funcionamientos del sistema con el simulad
 \textbf{Acciones derivadas}  Se revisa la codificación y se observa las dos diferentes codificaciones en el mismo mensaje. Se estudia como crear ese mensaje.\\
 
 \subsection{Prueba 4: Segunda comunicación con RealTerm}
-\textbf{Descripción} Tras analizar las codificaciones y la forma en la que se deben transmitir cada una de las codificaciones necesarias para la creación del mensaje. en este caso el mensaje creado es "2,48,48,48,69,65,82,48,50,0x00,0x83,3" y en este caso se transmiirá como caracateres ASCII. En cuanto al entorno, como en la anterior prueba, es irrelevante debido a que lo que se está comprobando es la forma de comunicación, no la información en sí.\\
+\textbf{Descripción} Tras analizar las codificaciones y la forma en la que se deben transmitir cada una de las codificaciones necesarias para la creación del mensaje. en este caso el mensaje creado es \textit{2,48,48,48,69,65,82,48,50,0x00,0x83,3} y en este caso se transmitirá como caracteres ASCII. En cuanto al entorno, como en la anterior prueba, es irrelevante debido a que lo que se está comprobando es la forma de comunicación, no la información en sí.\\
 \textbf{Entorno} El mismo que en la prueba 3.\\
 \textbf{Resultado esperado} Conjunto grande de datos formados por varias lecturas del entorno.\\
 \textbf{Resultado obtenido} Conjunto de datos esperado, aunque con fallo por llenado de buffer de entrada configurado por RealTerm\\
@@ -103,7 +103,7 @@ Además de estas pruebas se probó el funcionamientos del sistema con el simulad
 \textbf{Descripción} Una vez creado el código del programa principal en Python se desea representar los datos correspondientes a la lectura de datos con el láser apuntando hacia una pared. \\
 \textbf{Entorno} En este caso se tiene en cuenta el entorno debido a que se va a representar la lectura de una línea recta correspondiente a la pared. En cuanto al equipo, es idéntico al de las 2 pruebas anteriores.\\
 \textbf{Resultado esperado} Puntos dispersos en los laterales pero una línea de puntos al frente, representando la pared anteriormente mencionada.\\
-\textbf{Resultado obtenido} Puntos dispersos, creando círculos concéntricos, los cuales se extendian por los 360º cuando los lidar solo son capaces de leer 270º\\
+\textbf{Resultado obtenido} Puntos dispersos, creando círculos concéntricos, los cuales se extendían por los 360º cuando los lidar solo son capaces de leer 270º\\
 \textbf{Conclusiones} Fallo en la traducción o modificación de los datos recibidos por las lectura del láser pero, por los resultados obtenidos, se deduce que el problema es de la traducción de coordenadas.\\
 \textbf{Acciones derivadas}  Se analiza el código en busca de dicho error y, como ya se había deducido en las conclusiones, el problema surgía del paso de coordenadas polares a cartesianas debido a una confusión con los datos, lo cual se rectificó.
 
@@ -114,6 +114,6 @@ Además de estas pruebas se probó el funcionamientos del sistema con el simulad
 \textbf{Resultado obtenido} Tras ejecutar el programa principal se obtiene la siguiente imagen:\\
 \imagen{pruebaCaja}{Prueba de la representación de la caja como lectura de entorno}
 \textbf{Conclusiones} La traducción de datos funciona de forma correcta.\\
-\textbf{Acciones derivadas}  Se realizaron varias repeticiones de esta prueba para la obtención de varias lecturas, las cuales se han empleado para la creación de la lista de lecturas manejada por el servidor para la simulación de comportamiento que conforma la base de su funcionamiento. Aqui un ejemplo
+\textbf{Acciones derivadas}  Se realizaron varias repeticiones de esta prueba para la obtención de varias lecturas, las cuales se han empleado para la creación de la lista de lecturas manejada por el servidor para la simulación de comportamiento que conforma la base de su funcionamiento. Aquí un ejemplo
 \imagenGrande{prueba6E}{Entorno de una de una prueba correcta}
 \imagenGrande{prueba6G}{Gráfica resultado de una prueba correcta}

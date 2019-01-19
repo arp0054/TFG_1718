@@ -1,8 +1,6 @@
 \capitulo{4}{Técnicas y herramientas}
 
-Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto. Si se han estudiado diferentes alternativas de metodologías, herramientas, bibliotecas se puede hacer un resumen de los aspectos más destacados de cada alternativa, incluyendo comparativas entre las distintas opciones y una justificación de las elecciones realizadas. \\
-\\
-No se pretende que este apartado se convierta en un capítulo de un libro dedicado a cada una de las alternativas, sino comentar los aspectos más destacados de cada opción, con un repaso somero a los fundamentos esenciales y referencias bibliográficas para que el lector pueda ampliar su conocimiento sobre el tema.
+Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto.\\
 
 \section{Desarrollo de la memoria}
 
@@ -33,12 +31,12 @@ También es un programa que permite desarrollar código en una amplia variedad d
 \section{Planteamiento de las tareas}
 
 \subsection{Trello}
-Para organizar las actividades a realizar se ha escogido la aplicación Trello. Esta aplicación se ha escogido debido a su facilidad de uso (debido a que su interfaz de usuario es muy intuitiva), a demás de otros muchos aspectos como el hecho de que a un tablero (unidades organizativas en las que se gestionan las tareas de los diferentes proyectos que se puede gestionar desde una misma cuenta de usuario) se puede acceder más de un usuario. Esta característica permite que tanto el alumno como el profesor pueden acceder al mismo tablero para gestionar las tareas a realizar.\\
+Para organizar las actividades a realizar se ha escogido la aplicación Trello. Esta aplicación se ha escogido debido a su facilidad de uso (debido a que su interfaz de usuario es muy intuitiva), a demás de otros muchos aspectos como el hecho de que a un tablero (unidades organizativas en las que se gestionan las tareas de los diferentes proyectos que se puede gestionar desde una misma cuenta de usuario) se puede acceder más de un usuario si el propietario del mismo lo desea, manteniendo así la privacidad. Esta característica permite que tanto el alumno como el profesor pueden acceder al mismo tablero para gestionar las tareas a realizar.\\
 \imagen{interfazGraficaTrello}{Interfaz de Trello}
 
 \section{Metodología de gestión y herramientas asociadas}
 
-Para este proyecto se ha decidido utilizar la metodología de SCRUM. Esta metodología esta basada en entregas incrementales pero funcionales. Para la realización de esta metodología, perteneciente a las denominadas metodologías ágiles, se va a utilizar la aplicación ZenHub. Esta aplicación se puede emplear para presentar los sprints y se puede planificar la fecha de comienzo y final cada una de las tareas.
+Para este proyecto se ha decidido utilizar la metodología de SCRUM. Esta metodología esta basada en entregas parciales pero funcionales. Para la realización de esta metodología, perteneciente a las denominadas metodologías ágiles, se va a utilizar la aplicación ZenHub. Esta aplicación se puede emplear para presentar los sprints y se puede planificar la fecha de comienzo y final cada una de las tareas.
 
 \section{Herramienta de manejo de láser}
 
@@ -51,7 +49,7 @@ Como bien se ha dicho al principio de esta sección, la aplicación se ha instal
 
 \subsection{RealTerm}
 
-Este programa, consistente en una terminal para TCP y puerto serie (TCP/Serial port terminal) consiste en, como suu propio nombre indica, transmitir mensajes via TCP a través del puesto serie. Su funcionamiento principal consta de 3 fases:
+Este programa, consistente en una terminal para TCP y puerto serie (TCP/Serial port terminal) consiste en, como su propio nombre indica, transmitir mensajes vía TCP a través del puesto serie. Su funcionamiento principal consta de 3 fases:
 \begin{itemize}
 	\item Elegir la forma de transmisión de mensajes entre los dispositivos conectados por este puesto (duplex, full duplex...).
 	\item Configurar los parámetros como la frecuencia, el puesto, la dirección IP....
@@ -65,14 +63,14 @@ Es uno de los lenguajes de programación más antiguos que existen. Surgido como
 \\
 Es por esto por lo que este lenguaje es uno de los más empleados en el mundo industrial y por lo que se decidió escoger en las primeras fases de este proyecto como lenguaje para el desarrollo del código.\\
 \\
-Por otra parte, a pesar de estas ventajas, es te lenguaje tiene sus inconvenientes. Uno de los más relevantes es la dificultad que presenta la configuración de algunos procesos. Esto, unido a la poca experiencia que se tenía en el desarrollo de código con este lenguaje en contraposición con otros, fue lo que propició la decisión de cabiar de lenguaje para pasar a utilizar otro con el que se tuviese más experiencia.
+Por otra parte, a pesar de estas ventajas, es te lenguaje tiene sus inconvenientes. Uno de los más relevantes es la dificultad que presenta la configuración de algunos procesos. Esto, unido a la poca experiencia que se tenía en el desarrollo de código con este lenguaje en contraposición con otros, fue lo que propició la decisión de cambiar de lenguaje para pasar a utilizar otro con el que se tuviese más experiencia.
 
 
 \subsection{Python}
 El lenguaje de programación con este nombre es aquel desarrollado en 1991 con el objetivo de crear código con una sintaxis que favorezca un código legible.\\
 Además de esta característica, es importante destacar el hecho de que se trata de un lenguaje multiparadigma, ya que puede desarrollarse código orientado a objetos, programación imperativa y, en menor medida, programación funcional.\cite{python} \\
 \\
-Ha sido seleccionado debido a la sencillez que proporciona a la hora de programar distintos procedimientos que en otros lenguajes (Java, C,C$++$ ...) resultarían mucho más complicados como es la implementación de un socket para comunicarse (enviar mensajes y recoger datos) con el láser.
+Ha sido seleccionado debido a la sencillez que proporciona a la hora de programar distintos procedimientos que en otros lenguajes (Java, C,C$++$ ...) resultarían mucho más complicados como es el desarrollo de un socket para comunicarse (enviar mensajes y recoger datos) con el láser.
 
 \section{Cableado}
 
